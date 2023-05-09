@@ -1,7 +1,19 @@
 ---
 title: "Jiho Kim"
+image: profile.png
+image-alt: "Profile picture"
+about:
+  template: solana
 ---
 
-Test
-Test #2
-Test #3
+Hi there! I am a junior at <a class="link" href="https://computing.calvin.edu/academics/bcs">Calvin University</a> studying Computer Science. I am currently working as a research assistant with <a class="link" href="https://kenarnold.org">Dr. Kenneth Arnold</a>. We are researching an AI writing tool that gives users more creative freedom and control over their content.
+
+My research interests are in human-computer interaction, natural language processing, and data science. I am actively seeking research opportunities and hoping to pursue a PhD in the future.
+
+**[<a class="link" href="/">Contact</a>]**
+&nbsp;
+**[<a class="link" href="/">CV</a>]**
+&nbsp;
+**[<a class="link" href="https://github.com/nghtctrl">GitHub</a>]**
+&nbsp;
+**[<a class="link" href="https://linkedin.com/in/nghtctrl">LinkedIn</a>]**
