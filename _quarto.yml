@@ -9,6 +9,8 @@ website:
     right:
       - text: "Blog"
         href: blog
+      - text: "Projects"
+        href: projects
   sidebar:
     - id: posts
       title: "Blog"
@@ -17,6 +19,13 @@ website:
       contents:
         - text: "Blog"
           href: blog/index.qmd
+    - id: projects
+      title: "Projects"
+      style: "floating"
+      collapse-level: 1
+      contents:
+        - text: "Projects"
+          href: projects/index.qmd
 
 format:
   html:
