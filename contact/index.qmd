@@ -1,0 +1,17 @@
+---
+title: "Contact"
+---
+
+**Address:**<br>
+<p class="contact">
+    Jiho Kim<br>
+    Calvin University<br>
+    3201 Burton St SE<br>
+    Grand Rapids, MI 49546-4388<br>
+    United States of America
+</p>
+
+**Email:**<br>
+<p class="contact">
+    $\text{jk249 (at) calvin (dot) edu}$
+</p>

@@ -10,7 +10,7 @@ Hi there! I am a junior at <a class="link" href="https://computing.calvin.edu/ac
 
 My research interests are in human-computer interaction, natural language processing, and data science. I am actively seeking research opportunities and hoping to pursue a PhD in the future.
 
-**[<a class="link" href="/">Contact</a>]**
+**[<a class="link" href="contact/index.qmd">Contact</a>]**
 &nbsp;
 **[<a class="link" href="/">CV</a>]**
 &nbsp;
