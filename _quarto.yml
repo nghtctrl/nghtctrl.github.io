@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Jiho Kim"
+  favicon: favicon.ico
 
 format:
   html:
