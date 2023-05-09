@@ -5,6 +5,18 @@ website:
   title: "Jiho Kim"
   description: "I am passionate about using technology to make a positive impact on the world. Check out my website for my work in AI, data science, and more!"
   favicon: favicon.ico
+  navbar:
+    right:
+      - text: "Blog"
+        href: blog
+  sidebar:
+    - id: posts
+      title: "Blog"
+      style: "floating"
+      collapse-level: 1
+      contents:
+        - text: "Blog"
+          href: blog/index.qmd
 
 format:
   html:

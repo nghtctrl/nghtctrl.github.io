@@ -1,0 +1,4 @@
+---
+title: "Notes on Deep Learning for Coders"
+subtitle: "What I Learned from Deep Learning for Coders with fastai & PyTorch"
+---
