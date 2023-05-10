@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jiho Kim">
+<meta name="dcterms.date" content="2023-05-01">
 
 <title>Jiho Kim - Notes on Deep Learning for Coders</title>
 <style>
@@ -60,12 +61,15 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed fullcontent">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -126,7 +130,19 @@ ul.task-list li input[type="checkbox"] {
             </div>
     </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 1, 2023</p>
+      </div>
+    </div>
     
+      <div>
+      <div class="quarto-title-meta-heading">Modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">May 9, 2023</p>
+      </div>
+    </div>
       
     </div>
     
@@ -147,17 +163,136 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#deep-learning-process" id="toc-deep-learning-process" class="nav-link active" data-scroll-target="#deep-learning-process">Deep Learning Process</a>
+  <ul class="collapse">
+  <li><a href="#dataset-splitting" id="toc-dataset-splitting" class="nav-link" data-scroll-target="#dataset-splitting">Dataset Splitting</a></li>
+  <li><a href="#training" id="toc-training" class="nav-link" data-scroll-target="#training">Training</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
+<section id="deep-learning-process" class="level2">
+<h2 class="anchored" data-anchor-id="deep-learning-process">Deep Learning Process</h2>
+<section id="dataset-splitting" class="level3">
+<h3 class="anchored" data-anchor-id="dataset-splitting">Dataset Splitting</h3>
+<p>Before you begin setting up a deep learning network, make sure you split your dataset into three subsets: <strong>training</strong>, <strong>validation</strong>, and <strong>testing</strong>. The training set is used to fit the parameters (this is what we mean by <em>training</em> the model), the validation set is used to adjust the hyperparameters (e.g., learning rate, number of layers, etc.) and to evaluate how well the model is generalizing (and not overfitting), and the testing set is used as a final measure of how well the model performs on an unseen data. This figure shows how the dataset should be splitted:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+    dataset[(Dataset)] --&gt; train[(Training set)]
+    dataset --&gt; valid[(Validation set)]
+    dataset --&gt; test[(Testing set)]
+</pre>
+</div>
+</div>
+</div>
+</div>
+<p><br> The validation set is data that is hidden from the model, and the testing set is data that is hidden from human modelers (people who are adjusting the hyperparameters). We use the validation set to prevent the model from memorizing the training set instead of generalizing, and we use the testing set to prevent the human modelers from adjusting too much of the hyperparameters to fit the validation set rather than on unseen data that the model is supposed to perform on.</p>
+<p>Note that depending on data availability, having a testing set may not always be possible. However, it is crucial to at least have a validation set.</p>
+</section>
+<section id="training" class="level3">
+<h3 class="anchored" data-anchor-id="training">Training</h3>
+<p>These figures are my attempt to summarize a typical single epoch of training a deep learning model. Remember that <em>training</em> is a machine learning term for finding the most optimal parameters. Some processes may vary depending on the specific model and techniques used.</p>
+<p>Figure 1 (Training set):</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+    train[(Training set)]
+    indep(Independent variable)
+    depen(Dependent variable)
+    arch{Architecture}
+    param(Current parameters)
+    newpa(Updated parameters)
+    pred[(Prediction)]
+    lossfn[[Loss function]]
+    metric[[Metric function]]
+    met(Batch accuracy)
+    loss(Training loss)
+    gdfn[[Backpropagation]]
+    lr(Learning rate)
+    gd(Gradient of parameters)
+    step[[Gradient descent]]
+
+    train --&gt; indep
+    train --&gt; depen
+    indep --&gt; arch
+    depen --&gt; lossfn
+    depen --&gt; metric
+    param --&gt; arch
+    arch --&gt; pred
+    pred --&gt; lossfn
+    pred --&gt; metric
+    metric --&gt; met
+    lossfn --&gt; loss
+    lossfn --&gt; gdfn
+    param --&gt; gdfn
+    gdfn --&gt; gd
+    gd --&gt; step
+    lr --&gt; step
+    step --&gt; newpa
+</pre>
+</div>
+</div>
+</div>
+</div>
+<p><br> Figure 2 (Validation set):</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+    valid[(Validation set)]
+    param(Current parameters)
+    indep(Independent variable)
+    depen(Dependent variable)
+    arch{Architecture}
+    pred[(Prediction)]
+    lossfn[[Loss function]]
+    loss(Validation loss)
+
+    valid --&gt; indep
+    valid --&gt; depen
+    indep --&gt; arch
+    param --&gt; arch
+    depen --&gt; lossfn
+    arch --&gt; pred
+    pred --&gt; lossfn
+    lossfn --&gt; loss
+</pre>
+</div>
+</div>
+</div>
+</div>
+<p><br> An <strong>architecture</strong> is composed of an input layer, hidden layers, and an output layer. The function of the input layer is to receive the input data (<strong>independent variable</strong>) and pass it to the hidden layers. The function of the hidden layers is then to pick up on the patterns by extracting and combining different features<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> of the input data (technically, of the previous layer) in an increasing level of generalization.</p>
+<p>More specifically, each hidden layer is made up of neurons. These neurons produce outputs, known as activations. The activations are calculated by taking the dot product of the weights<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> and the activations from the previous layer, adding a bias, and then passing the result through an activation function.</p>
 
 
+</section>
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Features are measurable characteristics or properties of the input data. Features can be as simple as individual pixel values of an image or as complex as an existence of a particular shape in the input data.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Weights and biases are what is known as <strong>parameters</strong> of a neural network.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
