@@ -71,9 +71,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -185,30 +185,35 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-date-sort="1682899200000" data-listing-file-modified-sort="1683694429519" data-listing-date-modified-sort="1683590400000" data-listing-reading-time-sort="4">
-<a href="../blog/posts/notes-on-deep-learning-for-coders/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1682899200000" data-listing-file-modified-sort="1683698356692" data-listing-date-modified-sort="1683590400000" data-listing-reading-time-sort="4">
+<div class="thumbnail">
+<p><a href="../blog/posts/notes-on-deep-learning-for-coders/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+</div>
+<div class="body">
+<a href="../blog/posts/notes-on-deep-learning-for-coders/index.html">
+<h3 class="no-anchor listing-title">
 Notes on Deep Learning for Coders
-</h5>
-<div class="card-text listing-description">
-Before you begin setting up a deep learning network, make sure you split your dataset into three subsets: <strong>training</strong>, <strong>validation</strong>, and <strong>testing</strong>. The training set is used to fit…<em></em>
+</h3>
+<div class="listing-subtitle">
+What I Learned from Deep Learning for Coders with fastai &amp; PyTorch
 </div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Jiho Kim
+<div class="listing-description">
+Before you begin setting up a deep learning network, make sure you split your dataset into three subsets: <strong>training</strong>, <strong>validation</strong>, and <strong>testing</strong>.…<strong></strong><sup></sup><em></em><strong></strong><sup></sup>
 </div>
+</a>
+</div>
+<div class="metadata">
+<a href="../blog/posts/notes-on-deep-learning-for-coders/index.html">
 <div class="listing-date">
 May 1, 2023
 </div>
-</div>
-</div>
+<div class="listing-author">
+Jiho Kim
 </div>
 </a>
+</div>
 </div>
 </div>
 <div class="listing-no-matching d-none">

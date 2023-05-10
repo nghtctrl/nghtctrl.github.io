@@ -186,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="deep-learning-process">Deep Learning Process</h2>
 <section id="dataset-splitting" class="level3">
 <h3 class="anchored" data-anchor-id="dataset-splitting">Dataset Splitting</h3>
-<p>Before you begin setting up a deep learning network, make sure you split your dataset into three subsets: <strong>training</strong>, <strong>validation</strong>, and <strong>testing</strong>. The training set is used to fit the parameters (this is what we mean by <em>training</em> the model), the validation set is used to adjust the hyperparameters (e.g., learning rate, number of layers, etc.) and to evaluate how well the model is generalizing (and not overfitting), and the testing set is used as a final measure of how well the model performs on an unseen data. This figure shows how the dataset should be splitted:</p>
+<p>Before you begin setting up a deep learning network, make sure you split your dataset into three subsets: <strong>training</strong>, <strong>validation</strong>, and <strong>testing</strong>. The training set is used to fit the <strong>parameters</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> (this is what we mean by <em>training</em> the model), the validation set is used to adjust the <strong>hyperparameters</strong><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> and to evaluate how well the model is generalizing (and not overfitting), and the testing set is used as a final measure of how well the model performs on an unseen data. This figure shows how the dataset should be splitted:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -205,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="training" class="level3">
 <h3 class="anchored" data-anchor-id="training">Training</h3>
-<p>These figures are my attempt to summarize a typical single epoch of training a deep learning model. Remember that <em>training</em> is a machine learning term for finding the most optimal parameters. Some processes may vary depending on the specific model and techniques used.</p>
+<p>These figures are my attempt to summarize a typical single epoch of training a deep learning model. Remember that <em>training</em> is a machine learning term for finding the most optimal parameters. Some processes may vary depending on the specific architecture and techniques used.</p>
 <p>Figure 1 (Training set):</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -278,8 +278,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p><br> An <strong>architecture</strong> is composed of an input layer, hidden layers, and an output layer. The function of the input layer is to receive the input data (<strong>independent variable</strong>) and pass it to the hidden layers. The function of the hidden layers is then to pick up on the patterns by extracting and combining different features<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> of the input data (technically, of the previous layer) in an increasing level of generalization.</p>
-<p>More specifically, each hidden layer is made up of neurons. These neurons produce outputs, known as activations. The activations are calculated by taking the dot product of the weights<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> and the activations from the previous layer, adding a bias, and then passing the result through an activation function.</p>
+<p><br> An <strong>architecture</strong> is composed of an input layer, hidden layers, and an output layer. The function of the input layer is to receive the input data (<strong>independent variable</strong>) and pass it to the hidden layers. The function of the hidden layers is then to pick up on the patterns by extracting and combining different <strong>features</strong><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> of the input data (technically, of the previous layer) in an increasing level of generalization.</p>
+<p>More specifically, each hidden layer is made up of <strong>neurons</strong>. These neurons produce outputs, known as <strong>activations</strong>. The activations are calculated by taking the dot product of the weights and the activations from the previous layer, adding a bias, and then passing the result through an <strong>activation function</strong>.</p>
 
 
 </section>
@@ -289,8 +289,9 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>Features are measurable characteristics or properties of the input data. Features can be as simple as individual pixel values of an image or as complex as an existence of a particular shape in the input data.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Weights and biases are what is known as <strong>parameters</strong> of a neural network.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Weights and biases.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Learning rate, number of neurons, number of layers, etc.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Features are measurable characteristics or properties of the input data. Features can be as simple as individual pixel values of an image or as complex as an existence of a particular shape in the input data.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
