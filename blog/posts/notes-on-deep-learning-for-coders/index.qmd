@@ -1,4 +1,97 @@
 ---
 title: "Notes on Deep Learning for Coders"
 subtitle: "What I Learned from Deep Learning for Coders with fastai & PyTorch"
+date: "2023-05-01"
+date-modified: "2023-05-09"
 ---
+
+## Deep Learning Process
+
+### Dataset Splitting
+
+Before you begin setting up a deep learning network, make sure you split your dataset into three subsets: **training**, **validation**, and **testing**. The training set is used to fit the parameters (this is what we mean by *training* the model), the validation set is used to adjust the hyperparameters (e.g., learning rate, number of layers, etc.) and to evaluate how well the model is generalizing (and not overfitting), and the testing set is used as a final measure of how well the model performs on an unseen data. This figure shows how the dataset should be splitted:
+
+```{mermaid}
+flowchart TB
+    dataset[(Dataset)] --> train[(Training set)]
+    dataset --> valid[(Validation set)]
+    dataset --> test[(Testing set)]
+```
+<br>
+The validation set is data that is hidden from the model, and the testing set is data that is hidden from human modelers (people who are adjusting the hyperparameters). We use the validation set to prevent the model from memorizing the training set instead of generalizing, and we use the testing set to prevent the human modelers from adjusting too much of the hyperparameters to fit the validation set rather than on unseen data that the model is supposed to perform on.
+
+Note that depending on data availability, having a testing set may not always be possible. However, it is crucial to at least have a validation set.
+
+### Training
+
+These figures are my attempt to summarize a typical single epoch of training a deep learning model. Remember that *training* is a machine learning term for finding the most optimal parameters. Some processes may vary depending on the specific model and techniques used.
+
+Figure 1 (Training set):
+
+```{mermaid}
+flowchart TB
+    train[(Training set)]
+    indep(Independent variable)
+    depen(Dependent variable)
+    arch{Architecture}
+    param(Current parameters)
+    newpa(Updated parameters)
+    pred[(Prediction)]
+    lossfn[[Loss function]]
+    metric[[Metric function]]
+    met(Batch accuracy)
+    loss(Training loss)
+    gdfn[[Backpropagation]]
+    lr(Learning rate)
+    gd(Gradient of parameters)
+    step[[Gradient descent]]
+
+    train --> indep
+    train --> depen
+    indep --> arch
+    depen --> lossfn
+    depen --> metric
+    param --> arch
+    arch --> pred
+    pred --> lossfn
+    pred --> metric
+    metric --> met
+    lossfn --> loss
+    lossfn --> gdfn
+    param --> gdfn
+    gdfn --> gd
+    gd --> step
+    lr --> step
+    step --> newpa
+```
+<br>
+Figure 2 (Validation set):
+
+```{mermaid}
+flowchart TB
+    valid[(Validation set)]
+    param(Current parameters)
+    indep(Independent variable)
+    depen(Dependent variable)
+    arch{Architecture}
+    pred[(Prediction)]
+    lossfn[[Loss function]]
+    loss(Validation loss)
+
+    valid --> indep
+    valid --> depen
+    indep --> arch
+    param --> arch
+    depen --> lossfn
+    arch --> pred
+    pred --> lossfn
+    lossfn --> loss
+```
+<br>
+An **architecture** is composed of an input layer, hidden layers, and an output layer. The function of the input layer is to receive the input data (**independent variable**) and pass it to the hidden layers. The function of the hidden layers is then to pick up on the patterns by extracting and combining different features[^1] of the input data (technically, of the previous layer) in an increasing level of generalization.
+
+More specifically, each hidden layer is made up of neurons. These neurons produce outputs, known as activations. The activations are calculated by taking the dot product of the weights[^2] and the activations from the previous layer, adding a bias, and then passing the result through an activation function.
+
+[^1]: Features are measurable characteristics or properties of the input data. Features can be as simple as individual pixel values of an image or as complex as an existence of a particular shape in the input data.
+
+[^2]: Weights and biases are what is known as **parameters** of a neural network.
