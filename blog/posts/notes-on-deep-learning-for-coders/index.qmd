@@ -9,7 +9,7 @@ date-modified: "2023-05-09"
 
 ### Dataset Splitting
 
-Before you begin setting up a deep learning network, make sure you split your dataset into three subsets: **training**, **validation**, and **testing**. The training set is used to fit the parameters (this is what we mean by *training* the model), the validation set is used to adjust the hyperparameters (e.g., learning rate, number of layers, etc.) and to evaluate how well the model is generalizing (and not overfitting), and the testing set is used as a final measure of how well the model performs on an unseen data. This figure shows how the dataset should be splitted:
+Before you begin setting up a deep learning network, make sure you split your dataset into three subsets: **training**, **validation**, and **testing**. The training set is used to fit the **parameters**[^1] (this is what we mean by *training* the model), the validation set is used to adjust the **hyperparameters**[^2] and to evaluate how well the model is generalizing (and not overfitting), and the testing set is used as a final measure of how well the model performs on an unseen data. This figure shows how the dataset should be splitted:
 
 ```{mermaid}
 flowchart TB
@@ -24,7 +24,7 @@ Note that depending on data availability, having a testing set may not always be
 
 ### Training
 
-These figures are my attempt to summarize a typical single epoch of training a deep learning model. Remember that *training* is a machine learning term for finding the most optimal parameters. Some processes may vary depending on the specific model and techniques used.
+These figures are my attempt to summarize a typical single epoch of training a deep learning model. Remember that *training* is a machine learning term for finding the most optimal parameters. Some processes may vary depending on the specific architecture and techniques used.
 
 Figure 1 (Training set):
 
@@ -88,10 +88,12 @@ flowchart TB
     lossfn --> loss
 ```
 <br>
-An **architecture** is composed of an input layer, hidden layers, and an output layer. The function of the input layer is to receive the input data (**independent variable**) and pass it to the hidden layers. The function of the hidden layers is then to pick up on the patterns by extracting and combining different features[^1] of the input data (technically, of the previous layer) in an increasing level of generalization.
+An **architecture** is composed of an input layer, hidden layers, and an output layer. The function of the input layer is to receive the input data (**independent variable**) and pass it to the hidden layers. The function of the hidden layers is then to pick up on the patterns by extracting and combining different **features**[^3] of the input data (technically, of the previous layer) in an increasing level of generalization.
 
-More specifically, each hidden layer is made up of neurons. These neurons produce outputs, known as activations. The activations are calculated by taking the dot product of the weights[^2] and the activations from the previous layer, adding a bias, and then passing the result through an activation function.
+More specifically, each hidden layer is made up of **neurons**. These neurons produce outputs, known as **activations**. The activations are calculated by taking the dot product of the weights and the activations from the previous layer, adding a bias, and then passing the result through an **activation function**.
 
-[^1]: Features are measurable characteristics or properties of the input data. Features can be as simple as individual pixel values of an image or as complex as an existence of a particular shape in the input data.
+[^1]: Weights and biases.
 
-[^2]: Weights and biases are what is known as **parameters** of a neural network.
+[^2]: Learning rate, number of neurons, number of layers, etc.
+
+[^3]: Features are measurable characteristics or properties of the input data. Features can be as simple as individual pixel values of an image or as complex as an existence of a particular shape in the input data.
