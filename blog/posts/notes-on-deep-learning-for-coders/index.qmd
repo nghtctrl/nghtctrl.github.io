@@ -2,7 +2,7 @@
 title: "Notes on Deep Learning for Coders"
 subtitle: "What I Learned from Deep Learning for Coders with fastai & PyTorch"
 date: "2023-05-01"
-date-modified: "2023-05-09"
+date-modified: "2023-05-10"
 ---
 
 ## Deep Learning Process
@@ -39,7 +39,7 @@ flowchart TB
     pred[(Prediction)]
     lossfn[[Loss function]]
     metric[[Metric function]]
-    met(Batch accuracy)
+    met(Accuracy)
     loss(Training loss)
     gdfn[[Backpropagation]]
     lr(Learning rate)
@@ -90,10 +90,20 @@ flowchart TB
 <br>
 An **architecture** is composed of an input layer, hidden layers, and an output layer. The function of the input layer is to receive the input data (**independent variable**) and pass it to the hidden layers. The function of the hidden layers is then to pick up on the patterns by extracting and combining different **features**[^3] of the input data (technically, of the previous layer) in an increasing level of generalization.
 
-More specifically, each hidden layer is made up of **neurons**. These neurons produce outputs, known as **activations**. The activations are calculated by taking the dot product of the weights and the activations from the previous layer, adding a bias, and then passing the result through an **activation function**.
+More specifically, each hidden layer is made up of **neurons**. These neurons produce outputs, known as **activations**. The activations are typically calculated by taking the dot product of the weights and the activations from the previous layer, adding a bias, and then passing the result through an **activation function**[^4].
+
+Weights determine the amount of *influence* a neuron has on the activation of another neuron in the subsequent layer. Negative weights decrease the activation, while positive weights increase the activation. The *magnitude* of the weighted sum indicates the *significance* of the activation. Bias controls the *sensitivity* of the activation by setting a certain threshold for when the neuron will activate based on the weighted sum.
+
+The output layer produces the model’s best guess based on the learned features (encoded as parameters in the hidden layers) from the input data in the training set. The output layer is also known as the **prediction**.
+
+As a side note, we can use the principles of OOP to understand the difference between an architecture and a model. An architecture strictly refers to the structure of a neural network, including the number of neurons and layers, and how they are connected. It is like a class in OOP. A model, on the other hand, is an instance of an architecture that has been trained and has fitted parameters. In OOP terms, a model is like an object created from the architecture class.
+
+**Accuracy** is a metric used to evaluate the performance of a model by measuring the percentage of correct predictions made by the model. It uses the training set’s label (independent variable) as the reference. Note that accuracy is only used in classification models and not in regression models. 
 
 [^1]: Weights and biases.
 
 [^2]: Learning rate, number of neurons, number of layers, etc.
 
 [^3]: Features are measurable characteristics or properties of the input data. Features can be as simple as individual pixel values of an image or as complex as an existence of a particular shape in the input data.
+
+[^4]: Sigmoid, ReLU, Heaviside, Linear, etc.
