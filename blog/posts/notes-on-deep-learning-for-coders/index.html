@@ -140,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">May 9, 2023</p>
+        <p class="date-modified">May 10, 2023</p>
       </div>
     </div>
       
@@ -221,7 +221,7 @@ ul.task-list li input[type="checkbox"] {
     pred[(Prediction)]
     lossfn[[Loss function]]
     metric[[Metric function]]
-    met(Batch accuracy)
+    met(Accuracy)
     loss(Training loss)
     gdfn[[Backpropagation]]
     lr(Learning rate)
@@ -279,7 +279,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p><br> An <strong>architecture</strong> is composed of an input layer, hidden layers, and an output layer. The function of the input layer is to receive the input data (<strong>independent variable</strong>) and pass it to the hidden layers. The function of the hidden layers is then to pick up on the patterns by extracting and combining different <strong>features</strong><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> of the input data (technically, of the previous layer) in an increasing level of generalization.</p>
-<p>More specifically, each hidden layer is made up of <strong>neurons</strong>. These neurons produce outputs, known as <strong>activations</strong>. The activations are calculated by taking the dot product of the weights and the activations from the previous layer, adding a bias, and then passing the result through an <strong>activation function</strong>.</p>
+<p>More specifically, each hidden layer is made up of <strong>neurons</strong>. These neurons produce outputs, known as <strong>activations</strong>. The activations are typically calculated by taking the dot product of the weights and the activations from the previous layer, adding a bias, and then passing the result through an <strong>activation function</strong><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
+<p>Weights determine the amount of <em>influence</em> a neuron has on the activation of another neuron in the subsequent layer. Negative weights decrease the activation, while positive weights increase the activation. The <em>magnitude</em> of the weighted sum indicates the <em>significance</em> of the activation. Bias controls the <em>sensitivity</em> of the activation by setting a certain threshold for when the neuron will activate based on the weighted sum.</p>
+<p>The output layer produces the model’s best guess based on the learned features (encoded as parameters in the hidden layers) from the input data in the training set. The output layer is also known as the <strong>prediction</strong>.</p>
+<p>As a side note, we can use the principles of OOP to understand the difference between an architecture and a model. An architecture strictly refers to the structure of a neural network, including the number of neurons and layers, and how they are connected. It is like a class in OOP. A model, on the other hand, is an instance of an architecture that has been trained and has fitted parameters. In OOP terms, a model is like an object created from the architecture class.</p>
+<p><strong>Accuracy</strong> is a metric used to evaluate the performance of a model by measuring the percentage of correct predictions made by the model. It uses the training set’s label (independent variable) as the reference. Note that accuracy is only used in classification models and not in regression models.</p>
 
 
 </section>
@@ -292,6 +296,7 @@ ul.task-list li input[type="checkbox"] {
 <li id="fn1"><p>Weights and biases.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Learning rate, number of neurons, number of layers, etc.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>Features are measurable characteristics or properties of the input data. Features can be as simple as individual pixel values of an image or as complex as an existence of a particular shape in the input data.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Sigmoid, ReLU, Heaviside, Linear, etc.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
