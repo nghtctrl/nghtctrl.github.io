@@ -170,7 +170,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#deep-learning-process" id="toc-deep-learning-process" class="nav-link active" data-scroll-target="#deep-learning-process">Deep Learning Process</a>
   <ul class="collapse">
-  <li><a href="#dataset-splitting" id="toc-dataset-splitting" class="nav-link" data-scroll-target="#dataset-splitting">Dataset Splitting</a></li>
+  <li><a href="#splitting" id="toc-splitting" class="nav-link" data-scroll-target="#splitting">Splitting</a></li>
   <li><a href="#training" id="toc-training" class="nav-link" data-scroll-target="#training">Training</a></li>
   </ul></li>
   </ul>
@@ -184,8 +184,8 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="deep-learning-process" class="level2">
 <h2 class="anchored" data-anchor-id="deep-learning-process">Deep Learning Process</h2>
-<section id="dataset-splitting" class="level3">
-<h3 class="anchored" data-anchor-id="dataset-splitting">Dataset Splitting</h3>
+<section id="splitting" class="level3">
+<h3 class="anchored" data-anchor-id="splitting">Splitting</h3>
 <p>Before you begin setting up a deep learning network, make sure you split your dataset into three subsets: <strong>training</strong>, <strong>validation</strong>, and <strong>testing</strong>. The training set is used to fit the <strong>parameters</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> (this is what we mean by <em>training</em> the model), the validation set is used to adjust the <strong>hyperparameters</strong><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> and to evaluate how well the model is generalizing (and not overfitting), and the testing set is used as a final measure of how well the model performs on an unseen data. This figure shows how the dataset should be splitted:</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -283,7 +283,10 @@ ul.task-list li input[type="checkbox"] {
 <p>Weights determine the amount of <em>influence</em> a neuron has on the activation of another neuron in the subsequent layer. Negative weights decrease the activation, while positive weights increase the activation. The <em>magnitude</em> of the weighted sum indicates the <em>significance</em> of the activation. Bias controls the <em>sensitivity</em> of the activation by setting a certain threshold for when the neuron will activate based on the weighted sum.</p>
 <p>The output layer produces the model’s best guess based on the learned features (encoded as parameters in the hidden layers) from the input data in the training set. The output layer is also known as the <strong>prediction</strong>.</p>
 <p>As a side note, we can use the principles of OOP to understand the difference between an architecture and a model. An architecture strictly refers to the structure of a neural network, including the number of neurons and layers, and how they are connected. It is like a class in OOP. A model, on the other hand, is an instance of an architecture that has been trained and has fitted parameters. In OOP terms, a model is like an object created from the architecture class.</p>
-<p><strong>Accuracy</strong> is a metric used to evaluate the performance of a model by measuring the percentage of correct predictions made by the model. It uses the training set’s label (independent variable) as the reference. Note that accuracy is only used in classification models and not in regression models.</p>
+<p><strong>Accuracy</strong><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> is a metric used to evaluate the performance of a model by measuring the percentage of correct predictions made by the model. It uses the training set’s label (independent variable) as the reference.</p>
+<p><strong>Loss</strong> is a function used to train a model by measuring the difference (also known as the error) between its predictions and the label. Conventionally, a high difference would indicate poor model performance, while a low difference would indicate good model performance.</p>
+<p>The goal of training a model is to minimize the <strong>training loss</strong> value, which is typically done through an optimization process that involves calculating the gradient (<strong>backpropagation</strong>) and using it to update the model’s parameters (<strong>gradient descent</strong>).</p>
+<p><strong>Validation loss</strong>, on the other hand, is value used for monitoring <strong>overfitting</strong>. Since it is not used to fit the model’s parameters, it provides a measure of the model’s performance on data it has not been trained on. Overfitting occurs when the model begins to memorize its training set rather than generalize. This is indicated by a decreasing training loss and an increasing validation loss.</p>
 
 
 </section>
@@ -297,6 +300,7 @@ ul.task-list li input[type="checkbox"] {
 <li id="fn2"><p>Learning rate, number of neurons, number of layers, etc.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>Features are measurable characteristics or properties of the input data. Features can be as simple as individual pixel values of an image or as complex as an existence of a particular shape in the input data.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>Sigmoid, ReLU, Heaviside, Linear, etc.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Note that accuracy is only used in classification models and not in regression models.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
