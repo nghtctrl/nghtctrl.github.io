@@ -7,7 +7,7 @@ date-modified: "2023-05-10"
 
 ## Deep Learning Process
 
-### Dataset Splitting
+### Splitting
 
 Before you begin setting up a deep learning network, make sure you split your dataset into three subsets: **training**, **validation**, and **testing**. The training set is used to fit the **parameters**[^1] (this is what we mean by *training* the model), the validation set is used to adjust the **hyperparameters**[^2] and to evaluate how well the model is generalizing (and not overfitting), and the testing set is used as a final measure of how well the model performs on an unseen data. This figure shows how the dataset should be splitted:
 
@@ -98,7 +98,13 @@ The output layer produces the model’s best guess based on the learned features
 
 As a side note, we can use the principles of OOP to understand the difference between an architecture and a model. An architecture strictly refers to the structure of a neural network, including the number of neurons and layers, and how they are connected. It is like a class in OOP. A model, on the other hand, is an instance of an architecture that has been trained and has fitted parameters. In OOP terms, a model is like an object created from the architecture class.
 
-**Accuracy** is a metric used to evaluate the performance of a model by measuring the percentage of correct predictions made by the model. It uses the training set’s label (independent variable) as the reference. Note that accuracy is only used in classification models and not in regression models. 
+**Accuracy**[^5] is a metric used to evaluate the performance of a model by measuring the percentage of correct predictions made by the model. It uses the training set’s label (independent variable) as the reference.
+
+**Loss** is a function used to train a model by measuring the difference (also known as the error) between its predictions and the label. Conventionally, a high difference would indicate poor model performance, while a low difference would indicate good model performance. 
+
+The goal of training a model is to minimize the **training loss** value, which is typically done through an optimization process that involves calculating the gradient (**backpropagation**) and using it to update the model’s parameters (**gradient descent**).
+
+**Validation loss**, on the other hand, is value used for monitoring **overfitting**. Since it is not used to fit the model’s parameters, it provides a measure of the model’s performance on data it has not been trained on. Overfitting occurs when the model begins to memorize its training set rather than generalize. This is indicated by a decreasing training loss and an increasing validation loss.
 
 [^1]: Weights and biases.
 
@@ -107,3 +113,5 @@ As a side note, we can use the principles of OOP to understand the difference be
 [^3]: Features are measurable characteristics or properties of the input data. Features can be as simple as individual pixel values of an image or as complex as an existence of a particular shape in the input data.
 
 [^4]: Sigmoid, ReLU, Heaviside, Linear, etc.
+
+[^5]: Note that accuracy is only used in classification models and not in regression models.
