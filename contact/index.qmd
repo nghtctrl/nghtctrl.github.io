@@ -11,7 +11,12 @@ title: "Contact"
     United States of America
 </p>
 
+**Phone:**<br>
+<p class="contact">
+    \+1 6&#49;6 228 207&#52;
+</p>
+
 **Email:**<br>
 <p class="contact">
-    $\text{jk249 (at) calvin (dot) edu}$
+    <a href='mailto&#58;%6Ak249%&#52;&#48;c&#97;%&#54;C&#118;&#105;&#110;&#46;&#101;d%7&#53;'>jk249&#64;ca&#108;vin&#46;&#101;&#100;u</a>
 </p>
