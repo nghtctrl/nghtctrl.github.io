@@ -1,1 +1,1 @@
-Sitemap: https://github.com/nghtctrl/nghtctrl.github.io/sitemap.xml
+Sitemap: https://jihokim.dev/sitemap.xml
