@@ -140,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">May 10, 2023</p>
+        <p class="date-modified">May 12, 2023</p>
       </div>
     </div>
       
@@ -168,10 +168,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#deep-learning-process" id="toc-deep-learning-process" class="nav-link active" data-scroll-target="#deep-learning-process">Deep Learning Process</a>
+  <li><a href="#deep-learning-overview" id="toc-deep-learning-overview" class="nav-link active" data-scroll-target="#deep-learning-overview">Deep Learning Overview</a>
   <ul class="collapse">
   <li><a href="#splitting" id="toc-splitting" class="nav-link" data-scroll-target="#splitting">Splitting</a></li>
   <li><a href="#training" id="toc-training" class="nav-link" data-scroll-target="#training">Training</a></li>
+  <li><a href="#evaluating" id="toc-evaluating" class="nav-link" data-scroll-target="#evaluating">Evaluating</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -182,8 +183,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="deep-learning-process" class="level2">
-<h2 class="anchored" data-anchor-id="deep-learning-process">Deep Learning Process</h2>
+<section id="deep-learning-overview" class="level2">
+<h2 class="anchored" data-anchor-id="deep-learning-overview">Deep Learning Overview</h2>
 <section id="splitting" class="level3">
 <h3 class="anchored" data-anchor-id="splitting">Splitting</h3>
 <p>Before you begin setting up a deep learning network, make sure you split your dataset into three subsets: <strong>training</strong>, <strong>validation</strong>, and <strong>testing</strong>. The training set is used to fit the <strong>parameters</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> (this is what we mean by <em>training</em> the model), the validation set is used to adjust the <strong>hyperparameters</strong><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> and to evaluate how well the model is generalizing (and not overfitting), and the testing set is used as a final measure of how well the model performs on an unseen data. This figure shows how the dataset should be splitted:</p>
@@ -194,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
 <pre class="mermaid mermaid-js">flowchart TB
     dataset[(Dataset)] --&gt; train[(Training set)]
     dataset --&gt; valid[(Validation set)]
-    dataset --&gt; test[(Testing set)]
+    dataset -.-&gt; test[(Testing set)]
 </pre>
 </div>
 </div>
@@ -206,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="training" class="level3">
 <h3 class="anchored" data-anchor-id="training">Training</h3>
 <p>These figures are my attempt to summarize a typical single epoch of training a deep learning model. Remember that <em>training</em> is a machine learning term for finding the most optimal parameters. Some processes may vary depending on the specific architecture and techniques used.</p>
-<p>Figure 1 (Training set):</p>
+<p><strong>Figure 1:</strong></p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -250,7 +251,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p><br> Figure 2 (Validation set):</p>
+<p><br> <strong>Figure 2:</strong></p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -278,15 +279,21 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p><br> An <strong>architecture</strong> is composed of an input layer, hidden layers, and an output layer. The function of the input layer is to receive the input data (<strong>independent variable</strong>) and pass it to the hidden layers. The function of the hidden layers is then to pick up on the patterns by extracting and combining different <strong>features</strong><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> of the input data (technically, of the previous layer) in an increasing level of generalization.</p>
+<p><br> Note that the process illustrated in Figure 2 occurs immediately after the completion of the process shown in Figure 1. Both processes must be fully executed for one epoch of training to be considered complete.</p>
+<p>An <strong>architecture</strong> is composed of an input layer, hidden layers, and an output layer. The function of the input layer is to receive the input data (<strong>independent variable</strong>) and pass it to the hidden layers. The function of the hidden layers is then to pick up on the patterns by extracting and combining different <strong>features</strong><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> of the input data (technically, of the previous layer) in an increasing level of generalization.</p>
 <p>More specifically, each hidden layer is made up of <strong>neurons</strong>. These neurons produce outputs, known as <strong>activations</strong>. The activations are typically calculated by taking the dot product of the weights and the activations from the previous layer, adding a bias, and then passing the result through an <strong>activation function</strong><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
 <p>Weights determine the amount of <em>influence</em> a neuron has on the activation of another neuron in the subsequent layer. Negative weights decrease the activation, while positive weights increase the activation. The <em>magnitude</em> of the weighted sum indicates the <em>significance</em> of the activation. Bias controls the <em>sensitivity</em> of the activation by setting a certain threshold for when the neuron will activate based on the weighted sum.</p>
 <p>The output layer produces the model’s best guess based on the learned features (encoded as parameters in the hidden layers) from the input data in the training set. The output layer is also known as the <strong>prediction</strong>.</p>
 <p>As a side note, we can use the principles of OOP to understand the difference between an architecture and a model. An architecture strictly refers to the structure of a neural network, including the number of neurons and layers, and how they are connected. It is like a class in OOP. A model, on the other hand, is an instance of an architecture that has been trained and has fitted parameters. In OOP terms, a model is like an object created from the architecture class.</p>
-<p><strong>Accuracy</strong><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> is a metric used to evaluate the performance of a model by measuring the percentage of correct predictions made by the model. It uses the training set’s label (independent variable) as the reference.</p>
+<p><strong>Accuracy</strong><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> is a metric used to measure the percentage of correct predictions made by the model. It uses the training set’s label (independent variable) as the reference.</p>
 <p><strong>Loss</strong> is a function used to train a model by measuring the difference (also known as the error) between its predictions and the label. Conventionally, a high difference would indicate poor model performance, while a low difference would indicate good model performance.</p>
 <p>The goal of training a model is to minimize the <strong>training loss</strong> value, which is typically done through an optimization process that involves calculating the gradient (<strong>backpropagation</strong>) and using it to update the model’s parameters (<strong>gradient descent</strong>).</p>
 <p><strong>Validation loss</strong>, on the other hand, is value used for monitoring <strong>overfitting</strong>. Since it is not used to fit the model’s parameters, it provides a measure of the model’s performance on data it has not been trained on. Overfitting occurs when the model begins to memorize its training set rather than generalize. This is indicated by a decreasing training loss and an increasing validation loss.</p>
+</section>
+<section id="evaluating" class="level3">
+<h3 class="anchored" data-anchor-id="evaluating">Evaluating</h3>
+<p>Before deploying a model for production, it is important to evaluate its performance on a testing set (this is where metrics such as accuracy come in handy). This provides an unbiased assessment of how well the model will perform on unseen data. While it may seem redundant, this step may be necessary because hyperparameters are adjusted based on the model’s performance on the validation set. Without a testing set, there is a risk that human modelers may overfit the validation set.</p>
+<p>It is important to consider AI ethics such as feedback loops, bias, etc., throughout the entire deep learning process. While the focus of this blog is on the technical aspects on deep learning, the ethical implications of AI are a significant area of research with no clear answers and should not be overlooked (even the experts get it wrong, and often catch their mistakes after the damage has already been done). In the future, I plan to explore this topic in more detail and share my thoughts on the importance of ethical considerations in AI.</p>
 
 
 </section>
