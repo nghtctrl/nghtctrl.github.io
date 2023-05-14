@@ -11,7 +11,7 @@
     "href": "blog/index.html",
     "title": "Blog",
     "section": "",
-    "text": "Notes on Deep Learning for Coders\n\n\nWhat I Learned from Deep Learning for Coders with fastai & PyTorch\n\n\n\n\n\n\n\n\n\nMay 1, 2023\n\n\nJiho Kim\n\n\n\n\n\n\nNo matching items"
+    "text": "Quarto Tips\n\n\nMissing Documentation for Quarto\n\n\n\n\n\n\n\n\n\nMay 13, 2023\n\n\nJiho Kim\n\n\n\n\n\n\n  \n\n\n\n\nNotes on Deep Learning for Coders\n\n\nWhat I Learned from Deep Learning for Coders with fastai & PyTorch\n\n\n\n\n\n\n\n\n\nMay 1, 2023\n\n\nJiho Kim\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/posts/notes-on-deep-learning-for-coders/index.html",
@@ -33,6 +33,13 @@
     "title": "Notes on Deep Learning for Coders",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nWeights and biases.↩︎\nLearning rate, number of neurons, number of layers, etc.↩︎\nFeatures are measurable characteristics or properties of the input data. Features can be as simple as individual pixel values of an image or as complex as an existence of a particular shape in the input data.↩︎\nSigmoid, ReLU, Heaviside, Linear, etc.↩︎\nNote that accuracy is only used in classification models and not in regression models.↩︎"
+  },
+  {
+    "objectID": "blog/posts/quarto-tips/index.html",
+    "href": "blog/posts/quarto-tips/index.html",
+    "title": "Quarto Tips",
+    "section": "",
+    "text": "Custom Domain and CNAME\nIf you are looking to host your Quarto project on GitHub Pages, Quarto documentation offers several publishing options. However, they all seem to remove the CNAME file added through repository settings whenever the website is rendered again.\nHowever, according to this GitHub discussion, you can easily prevent the issue by adding a CNAME file with your custom domain to your project directory and linking it to the project configuration file:\nresources:\n  - CNAME"
   },
   {
     "objectID": "index.html",

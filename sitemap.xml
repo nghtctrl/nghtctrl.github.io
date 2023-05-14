@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jihokim.dev/contact/index.html</loc>
-    <lastmod>2023-05-13T06:57:55.933Z</lastmod>
+    <lastmod>2023-05-14T09:54:01.508Z</lastmod>
   </url>
   <url>
     <loc>https://jihokim.dev/blog/index.html</loc>
-    <lastmod>2023-05-13T06:57:56.645Z</lastmod>
+    <lastmod>2023-05-14T09:54:02.380Z</lastmod>
   </url>
   <url>
     <loc>https://jihokim.dev/blog/posts/notes-on-deep-learning-for-coders/index.html</loc>
-    <lastmod>2023-05-13T06:57:57.153Z</lastmod>
+    <lastmod>2023-05-14T09:54:02.948Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jihokim.dev/blog/posts/quarto-tips/index.html</loc>
+    <lastmod>2023-05-14T09:54:03.552Z</lastmod>
   </url>
   <url>
     <loc>https://jihokim.dev/index.html</loc>
-    <lastmod>2023-05-13T06:57:57.457Z</lastmod>
+    <lastmod>2023-05-14T09:54:03.880Z</lastmod>
   </url>
   <url>
     <loc>https://jihokim.dev/projects/index.html</loc>
-    <lastmod>2023-05-13T06:57:57.725Z</lastmod>
+    <lastmod>2023-05-14T09:54:04.188Z</lastmod>
   </url>
 </urlset>
