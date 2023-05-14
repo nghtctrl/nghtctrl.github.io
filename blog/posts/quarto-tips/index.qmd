@@ -1,0 +1,16 @@
+---
+title: "Quarto Tips"
+subtitle: "Missing Documentation for Quarto"
+date: "2023-05-13"
+---
+
+### Custom Domain and CNAME
+
+If you are looking to host your Quarto project on GitHub Pages, Quarto documentation offers [several publishing options](https://quarto.org/docs/publishing/github-pages.html). However, they all seem to remove the CNAME file added through repository settings whenever the website is rendered again. 
+
+However, according to [this](https://github.com/quarto-dev/quarto-cli/discussions/3249) GitHub discussion, you can easily prevent the issue by adding a CNAME file with your custom domain to your project directory and linking it to the project configuration file:
+
+```yml
+resources:
+  - CNAME
+```
