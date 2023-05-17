@@ -114,6 +114,8 @@ Before deploying a model for production, it is important to evaluate its perform
 
 It is important to consider AI ethics such as feedback loops, bias, etc., throughout the entire deep learning process. While the focus of this blog is on the technical aspects on deep learning, the ethical implications of AI are a significant area of research with no clear answers and should not be overlooked (even the experts get it wrong, and often catch their mistakes after the damage has already been done). In the future, I plan to explore this topic in more detail and share my thoughts on the importance of ethical considerations in AI.
 
+## Gradient Descent
+
 [^1]: Weights and biases.
 
 [^2]: Learning rate, number of neurons, number of layers, etc.
