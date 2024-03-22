@@ -6,10 +6,10 @@ website:
   title: "Jiho Kim"
   navbar:
     search: true
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+    # left:
+    #   - href: index.qmd
+    #     text: Home
+    #   - about.qmd
 
 format:
   html:

@@ -1,30 +1,23 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Jiho Kim",
     "section": "",
-    "text": "Hi there! I am a junior studying Computer Science at Calvin University. I am currently working as an undergraduate research assistant with Kenneth C. Arnold.\nMy research interests lie at the intersection of HCI and AI. I design, implement, and evaluate AI-powered systems that augment and empower human capabilities. I am currently researching UI affordances that facilitate human-AI collaboration without allowing AI to overstep human ingenuity and autonomy."
-  },
-  {
-    "objectID": "index.html#updates",
-    "href": "index.html#updates",
-    "title": "Jiho Kim",
-    "section": "Updates",
-    "text": "Updates\n\nMarch 18, 2024: I presented our workshop paper from summer research at HAI-GEN at ACM IUI in Greenville, SC.\nNovember 4, 2023: I presented our poster from summer research at WMRUGS at Van Andel Institute in Grand Rapids, MI.\nJune 1, 2023: I started a working as an undergraduate summer researcher with Kenneth C. Arnold."
+    "text": "Hi there! I am a junior studying Computer Science at Calvin University. I am currently working as an undergraduate research assistant with Kenneth C. Arnold.\nMy research interests lie at the intersection of HCI and AI. I design, implement, and evaluate AI-powered systems that augment and empower human capabilities. I am currently researching UI affordances that facilitate human-AI collaboration without allowing AI to overstep human ingenuity and autonomy.\nEmail: jihokim8 at acm.org"
   },
   {
     "objectID": "index.html#publications",
     "href": "index.html#publications",
     "title": "Jiho Kim",
     "section": "Publications",
-    "text": "Publications"
+    "text": "Publications\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthors\n\n\n\n\n\n\n3/2/24\n\n\nTowards Full Authorship with AI: Supporting Revision with AI-Generated Views\n\n\nJ. Kim, R. C. Flanagan, N. E. Haviland, Z. Sun, S. N. Yakubu, E. A. Maru, K. C. Arnold\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#updates",
+    "href": "index.html#updates",
+    "title": "Jiho Kim",
+    "section": "Updates",
+    "text": "Updates\n\nMarch 18, 2024: I presented our workshop paper from summer research at HAI-GEN at ACM IUI ’24 in Greenville, SC.\nFebruary 9, 2024: I was awarded a $1290 travel grant from the NSF to attend ACM IUI ’24 as a student volunteer.\nNovember 4, 2023: I presented our poster from summer research at 2023 WMRUGS at Van Andel Institute in Grand Rapids, MI.\nJune 1, 2023: I started a working as an undergraduate summer researcher with Kenneth C. Arnold."
   }
 ]

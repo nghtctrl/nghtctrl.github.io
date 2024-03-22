@@ -1,31 +1,52 @@
 ---
 title: "Jiho Kim"
 about:
-    template: solana
-    image: public/profile.jpeg
-    links:
-        - text: "{{< iconify academicons google-scholar >}} Google Scholar"
-          url: https://scholar.google.com/citations?hl=en&user=aWisTO4AAAAJ&view_op=list_works&sortby=pubdate
-        - text: "{{< iconify academicons orcid >}} ORCID"
-          url: https://orcid.org/0000-0002-1434-4440
-        - text: "{{< iconify fa6-brands mastodon >}} Mastodon"
-          url: https://hci.social/@jihokim
-        - text: "{{< iconify fa6-brands x-twitter >}} Twitter"
-          url: https://twitter.com/nghtctrl
-        - text: "{{< iconify fa6-brands linkedin >}} LinkedIn"
-          url: https://www.linkedin.com/in/nghtctrl
+  template: solana
+  image: public/profile.jpeg
+  image-alt: "Profile picture of Jiho Kim"
+  links:
+    - text: "{{< iconify academicons google-scholar >}} Google Scholar"
+      url: https://scholar.google.com/citations?hl=en&user=aWisTO4AAAAJ&view_op=list_works&sortby=pubdate
+    # - text: "{{< iconify academicons orcid >}} ORCID"
+    #   url: https://orcid.org/0000-0002-1434-4440
+    - text: "{{< iconify academicons semantic-scholar >}} Semantic Scholar"
+      url: https://www.semanticscholar.org/author/Jiho-Kim/2289885996?sort=pub-date
+    - text: "{{< iconify fa6-brands mastodon >}} Mastodon"
+      url: https://hci.social/@jihokim
+    # - text: "{{< iconify fa6-brands x-twitter >}} Twitter"
+    #   url: https://twitter.com/nghtctrl
+    - text: "{{< iconify fa6-brands linkedin >}} LinkedIn"
+      url: https://www.linkedin.com/in/nghtctrl
+listing:
+  - id: pubs
+    contents: pubs
+    type: table
+    sort-ui: false
+    filter-ui: false
+    sort: "date desc"
+    field-display-names:
+      author: "Authors"
+    date-format: short
+toc: false
 ---
 
 Hi there! I am a junior studying Computer Science at <a class="link" href="https://computing.calvin.edu/academics/bcs">Calvin University</a>. I am currently working as an undergraduate research assistant with <a class="link" href="https://kenarnold.org">Kenneth C. Arnold</a>.
 
 My research interests lie at the intersection of HCI and AI. I design, implement, and evaluate AI-powered systems that augment and empower human capabilities. I am currently researching UI affordances that facilitate human-AI collaboration without allowing AI to overstep human ingenuity and autonomy.
 
-## Updates
-
-- **March 18, 2024:** I presented our workshop paper from summer research at <a class="link" href="https://hai-gen.github.io/2024/program/">HAI-GEN</a> at ACM IUI in Greenville, SC.
-
-- **November 4, 2023:** I presented our poster from summer research at <a class="link" href="https://www.vai.org/event/2023-west-michigan-regional-undergraduate-science-research-conference/">WMRUGS</a> at Van Andel Institute in Grand Rapids, MI.
-
-- **June 1, 2023:** I started a working as an undergraduate summer researcher with Kenneth C. Arnold.
+Email: jihokim8 _at_ acm.org
 
 ## Publications
+
+::: {#pubs}
+:::
+
+## Updates
+
+- **March 18, 2024:** I presented our workshop paper from summer research at <a class="link" href="https://hai-gen.github.io/2024/program/">HAI-GEN</a> at ACM IUI '24 in Greenville, SC.
+
+- **February 9, 2024:** I was awarded a $1290 travel grant from the NSF to attend ACM IUI '24 as a <a class="link" href="https://iui.acm.org/2024/call_for_student_volunteers.html">student volunteer</a>.
+
+- **November 4, 2023:** I presented our poster from summer research at <a class="link" href="https://www.vai.org/event/2023-west-michigan-regional-undergraduate-science-research-conference/">2023 WMRUGS</a> at Van Andel Institute in Grand Rapids, MI.
+
+- **June 1, 2023:** I started a working as an undergraduate summer researcher with Kenneth C. Arnold.

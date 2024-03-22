@@ -1,0 +1,7 @@
+---
+title: "Towards Full Authorship with AI: Supporting Revision with AI-Generated Views"
+author: J. Kim, R. C. Flanagan, N. E. Haviland, Z. Sun, S. N. Yakubu, E. A. Maru, K. C. Arnold
+date: 2024-03-02
+image: tfawai.jpeg
+image-alt: "Thumbnail of the paper"
+---
