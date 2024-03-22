@@ -3,8 +3,9 @@ project:
   output-dir: docs
 
 website:
-  title: "nghtctrl.github.io"
+  title: "Jiho Kim"
   navbar:
+    search: true
     left:
       - href: index.qmd
         text: Home
@@ -15,6 +16,3 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
-
-
-

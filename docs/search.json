@@ -9,8 +9,22 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "nghtctrl.github.io",
+    "title": "Jiho Kim",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Hi there! I am a junior studying Computer Science at Calvin University. I am currently working as an undergraduate research assistant with Kenneth C. Arnold.\nMy research interests lie at the intersection of HCI and AI. I design, implement, and evaluate AI-powered systems that augment and empower human capabilities. I am currently researching UI affordances that facilitate human-AI collaboration without allowing AI to overstep human ingenuity and autonomy."
+  },
+  {
+    "objectID": "index.html#updates",
+    "href": "index.html#updates",
+    "title": "Jiho Kim",
+    "section": "Updates",
+    "text": "Updates\n\nMarch 18, 2024: I presented our workshop paper from summer research at HAI-GEN at ACM IUI in Greenville, SC.\nNovember 4, 2023: I presented our poster from summer research at WMRUGS at Van Andel Institute in Grand Rapids, MI.\nJune 1, 2023: I started a working as an undergraduate summer researcher with Kenneth C. Arnold."
+  },
+  {
+    "objectID": "index.html#publications",
+    "href": "index.html#publications",
+    "title": "Jiho Kim",
+    "section": "Publications",
+    "text": "Publications"
   }
 ]
