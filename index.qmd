@@ -28,6 +28,7 @@ listing:
       author: "Authors"
     date-format: short
 toc: false
+back-to-top-navigation: false
 ---
 
 Hi there! I am an undergraduate junior studying Computer Science at <a class="link" href="https://computing.calvin.edu/academics/bcs">Calvin University</a>. I am currently working as a research assistant with <a class="link" href="https://kenarnold.org">Kenneth C. Arnold</a>.
