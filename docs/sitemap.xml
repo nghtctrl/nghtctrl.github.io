@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jihokim.dev/pubs/towards-full-authorship-with-ai.html</loc>
-    <lastmod>2024-03-22T23:09:36.969Z</lastmod>
+    <loc>https://jihokim.dev/pubs/towards-full-authorship-with-ai/index.html</loc>
+    <lastmod>2024-03-22T23:20:22.365Z</lastmod>
   </url>
   <url>
     <loc>https://jihokim.dev/index.html</loc>
     <lastmod>2024-03-22T22:57:48.112Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jihokim.dev/pubs/towards-full-authorship-with-ai/index.html</loc>
-    <lastmod>2024-03-22T23:20:22.365Z</lastmod>
   </url>
 </urlset>
