@@ -10,6 +10,7 @@ website:
     #   - href: index.qmd
     #     text: Home
     #   - about.qmd
+  page-footer: "Unless otherwise noted, all content is licensed under <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>."
 
 format:
   html:
