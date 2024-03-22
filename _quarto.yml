@@ -13,8 +13,17 @@ website:
     #   - href: index.qmd
     #     text: Home
     #   - about.qmd
+  open-graph: true
+  twitter-card: true
+  google-analytics: G-HWSQBSH4R7
+  site-url: https://jihokim.dev
+  repo-url: https://github.com/nghtctrl/nghtctrl.github.io
+  issue-url: https://github.com/nghtctrl/nghtctrl.github.io/issues/new/choose
+  repo-actions: [source, issue]
+  page-navigation: true
+  bread-crumbs: true
   page-footer: "Unless otherwise noted, all content is licensed under <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>."
-
+  
 format:
   html:
     theme:
