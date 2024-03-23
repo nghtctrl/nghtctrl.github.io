@@ -1,7 +1,7 @@
 ---
 title: "Towards Full Authorship with AI: Supporting Revision with AI-Generated Views"
 description: "Accepted to 5th Workshop on Human-AI Co-Creation with Generative Models (HAI-GEN) at ACM IUI 2024"
-author: Jiho Kim, Ray C. Flanagan, Noelle E. Haviland, ZeAi Sun, Souad N. Yakubu, Edom A. Maru, Kenneth C. Arnold
+author: [Jiho Kim, Ray C. Flanagan, Noelle E. Haviland, ZeAi Sun, Souad N. Yakubu, Edom A. Maru, Kenneth C. Arnold]
 field-display-names:
     author: "Authors"
 date: 2024-03-02
