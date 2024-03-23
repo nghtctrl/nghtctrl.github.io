@@ -60,4 +60,4 @@ My research interests lie at the intersection of HCI and AI. I design, implement
 
 - **November 4, 2023:** I presented our poster from summer research at <a class="link" href="https://www.vai.org/event/2023-west-michigan-regional-undergraduate-science-research-conference/">2023 WMRUGS</a> at Van Andel Institute in Grand Rapids, MI.
 
-- **June 1, 2023:** I started a working as an undergraduate summer researcher with Kenneth C. Arnold.
+- **June 1, 2023:** I started working as an undergraduate summer researcher with <a class="link" href="https://kenarnold.org">Kenneth C. Arnold</a>.
