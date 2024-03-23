@@ -9,6 +9,9 @@ website:
   title: "Jiho Kim"
   navbar:
     search: true
+    left:
+      - text: "Publications"
+        href: pubs
     # left:
     #   - href: index.qmd
     #     text: Home

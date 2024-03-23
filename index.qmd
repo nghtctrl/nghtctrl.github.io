@@ -18,8 +18,10 @@ about:
   #   - text: "{{< iconify fa6-brands linkedin >}} LinkedIn"
   #     url: https://www.linkedin.com/in/nghtctrl
 listing:
+  # List of selected publications
   - id: pubs
-    contents: pubs
+    contents:
+      - pubs/towards-full-authorship-with-ai
     type: table
     sort-ui: false
     filter-ui: false
