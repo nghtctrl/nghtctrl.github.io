@@ -12,10 +12,8 @@ website:
     left:
       - text: "Publications"
         href: pubs
-    # left:
-    #   - href: index.qmd
-    #     text: Home
-    #   - about.qmd
+      - text: "Blog"
+        href: blog
   open-graph: true
   twitter-card: true
   google-analytics: G-HWSQBSH4R7
@@ -35,3 +33,6 @@ format:
       dark: darkly
     css: styles.css
     toc: true
+
+execute:
+  freeze: auto
