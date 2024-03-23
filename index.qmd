@@ -1,6 +1,6 @@
 ---
 title: "Jiho Kim"
-description: <a class="link" href="https://pronouns.org/">he/him</a>
+description: he/him
 about:
   template: solana
   image: public/profile.jpeg
