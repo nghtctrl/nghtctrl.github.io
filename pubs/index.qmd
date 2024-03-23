@@ -1,6 +1,6 @@
 ---
 title: "Publications"
-description: "This page lists all my peer-reviewed publications. For less formal writings, please see my blog."
+description: "This page lists all my peer-reviewed publications. For less formal writings, please see my <a href='../blog'>blog</a>."
 listing:
     contents:
         - "towards-full-authorship-with-ai"
