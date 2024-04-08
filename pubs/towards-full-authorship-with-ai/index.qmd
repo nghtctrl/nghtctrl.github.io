@@ -13,9 +13,9 @@ back-to-top-navigation: false
 
 ![Textfocals user interface prototype implemented as Microsoft Word add-in](Textfocals.svg){fig-alt="Textfocals user interface prototype implemented as Microsoft Word add-in"}
 
-**[<a class="link" href="https://arxiv.org/abs/2403.01055">arXiv</a>]**
-&nbsp;
-**[<a class="link" href="https://arxiv.org/pdf/2403.01055.pdf>">PDF</a>]**
+<!-- **[<a class="link" href="https://arxiv.org/abs/2403.01055">arXiv</a>]**
+&nbsp; -->
+**[<a class="link" href="https://ceur-ws.org/Vol-3660/paper17.pdf">PDF</a>]**
 &nbsp;
 **[<a class="link" href="https://docs.google.com/drawings/d/1VoC5iZqSQemHDAV23cCFmxoq3AMkmeOdXeF3ZD-JxN4/edit?usp=sharing">Poster</a>]**
 &nbsp;
