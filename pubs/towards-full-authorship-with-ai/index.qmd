@@ -1,6 +1,6 @@
 ---
 title: "Towards Full Authorship with AI: Supporting Revision with AI-Generated Views"
-description: "Accepted to 5th Workshop on Human-AI Co-Creation with Generative Models (HAI-GEN) at ACM IUI 2024"
+description: "Accepted to [5th Workshop on Human-AI Co-Creation with Generative Models (HAI-GEN)](https://hai-gen.github.io/2024) at ACM IUI 2024"
 author: [<a class="link" href="https://jihokim.dev">Jiho Kim</a>, Ray C. Flanagan, Noelle E. Haviland, ZeAi Sun, Souad N. Yakubu, Edom A. Maru, <a class="link" href="https://kenarnold.org">Kenneth C. Arnold</a>]
 categories: "Workshop paper"
 date: 2024-03-02
