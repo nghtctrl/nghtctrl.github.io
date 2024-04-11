@@ -1,5 +1,11 @@
 [
   {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/transformer-visualized/index.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
       "/pubs/towards-full-authorship-with-ai/index.html"
