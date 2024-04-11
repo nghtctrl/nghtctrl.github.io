@@ -1,5 +1,12 @@
 ---
 title: "Blog"
+listing:
+    contents:
+        - "transformer-visualized"
+    type: default
+    sort: "date desc"
+    sort-ui: true
+    filter-ui: true
+    categories: true
+    feed: true
 ---
-
-Under construction...

@@ -1,0 +1,14 @@
+---
+title: "Transformer Visualized"
+description: "Visualizing the transformer architecture with shapes"
+categories: ["NLP"]
+author: "Jiho Kim"
+date: 2024-04-11
+format:
+  html:
+    default-image-extension: svg
+toc: false
+back-to-top-navigation: false
+---
+
+![](tokenization.svg)
