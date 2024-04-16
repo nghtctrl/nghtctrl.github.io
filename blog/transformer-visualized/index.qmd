@@ -12,3 +12,9 @@ back-to-top-navigation: false
 ---
 
 ![](tokenization.svg)
+
+![](input_embedding.svg)
+
+![](position_embedding.svg)
+
+![](input_and_position_embedding.svg)
