@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jihokim.dev/pubs/towards-full-authorship-with-ai/index.html</loc>
-    <lastmod>2024-04-13T20:05:23.888Z</lastmod>
+    <lastmod>2024-05-03T17:12:50.747Z</lastmod>
   </url>
   <url>
     <loc>https://jihokim.dev/blog/index.html</loc>
-    <lastmod>2024-04-11T21:33:33.636Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jihokim.dev/index.html</loc>
-    <lastmod>2024-04-18T03:34:05.736Z</lastmod>
+    <lastmod>2024-05-03T17:19:04.902Z</lastmod>
   </url>
   <url>
     <loc>https://jihokim.dev/blog/transformer-visualized/index.html</loc>
-    <lastmod>2024-04-18T03:33:35.608Z</lastmod>
+    <lastmod>2024-05-03T17:12:50.731Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jihokim.dev/index.html</loc>
+    <lastmod>2024-05-03T17:12:50.743Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jihokim.dev/blog/inspirative-text-prediction/index.html</loc>
+    <lastmod>2024-05-03T17:16:51.387Z</lastmod>
   </url>
   <url>
     <loc>https://jihokim.dev/pubs/index.html</loc>
-    <lastmod>2024-04-11T21:32:52.091Z</lastmod>
+    <lastmod>2024-05-03T17:12:50.744Z</lastmod>
   </url>
 </urlset>

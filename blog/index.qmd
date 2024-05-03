@@ -3,6 +3,7 @@ title: "Blog"
 listing:
     contents:
         - "transformer-visualized"
+        - "inspirative-text-prediction"
     type: default
     sort: "date desc"
     sort-ui: true

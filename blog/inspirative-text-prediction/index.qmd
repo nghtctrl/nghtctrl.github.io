@@ -1,7 +1,7 @@
 ---
 title: Inspirative Text Prediction
 date: "2023-12-12"
-date-modified: "2023-12-14"
+# date-modified: "2023-12-14"
 bibliography: references.bib
 csl: association-for-computing-machinery.csl
 execute:
@@ -32,7 +32,7 @@ Suppose a writer writes an independent clause: "The plant grew taller." Instead 
 
 ## Exploratory Data Analysis
 
-```{python}
+```{.python}
 import plotly.io as pio
 import plotly.express as px
 import pandas as pd
@@ -49,7 +49,7 @@ nlp = spacy.load("en_core_web_sm")
 
 Let's start by defining a function to download a book from [Project Gutenberg](https://www.gutenberg.org/). To accomplish this, we will use [Gutendex](https://gutendex.com/) to retrieve the book's metadata and then download the book using the URL to the plain text version of the book provided in the metadata. For the purpose of this blog post, we will only download books in English.
 
-```{python}
+```{.python}
 #| code-fold: True
 
 def download_book(book_id: int) -> tuple[str, str]:
@@ -98,7 +98,7 @@ def download_book(book_id: int) -> tuple[str, str]:
 
 For this EDA, we will download _The Strange Case of Dr. Jekyll and Mr. Hyde_ by Robert Louis Stevenson.
 
-```{python}
+```{.python}
 # Book ID for The Strange Case of Dr. Jekyll and Mr. Hyde
 book_id = 43
 
@@ -111,7 +111,7 @@ book_data = pd.DataFrame(book_data, columns=["title", "text"])
 
 Let's take a look at the downloaded text:
 
-```{python}
+```{.python}
 #| echo: false
 
 # Print the first 256 characters of the book
@@ -129,7 +129,7 @@ Specifically, we will use the markers provided by [Project Gutenberg](https://ww
 
 > *** END OF THE PROJECT GUTENBERG EBOOK ...
 
-```{python}
+```{.python}
 #| code-fold: true
 
 def sanitize_text(text: str) -> str:
@@ -158,14 +158,14 @@ def sanitize_text(text: str) -> str:
     return text
 ```
 
-```{python}
+```{.python}
 # Sanitize the text and store it in a new column
 book_data["clean_text"] = book_data["text"].apply(sanitize_text)
 ```
 
 Let's take a look at the cleaned text:
 
-```{python}
+```{.python}
 #| echo: false
 
 # Print the first 256 characters of the book
@@ -177,7 +177,7 @@ print(book_data["clean_text"].iloc[0][-256:].strip())
 
 This looks much better! Our next step is to split the text into sentences to analyze it at the sentence level. We will use [spaCy](https://spacy.io/) to do this:
 
-```{python}
+```{.python}
 #| code-fold: true
 
 def sentence_spliter(text: str) -> list[str]:
@@ -199,7 +199,7 @@ def sentence_spliter(text: str) -> list[str]:
     return [sent.text.strip() for doc in doc for sent in doc.sents]
 ```
 
-```{python}
+```{.python}
 # Split the text into sentences and store them in a DataFrame
 sentences = sentence_spliter(book_data["clean_text"].iloc[0])
 sentences = pd.DataFrame(sentences, columns=["sentence"])
@@ -209,7 +209,7 @@ sentences.tail()
 
 How many sentences are there in the book?
 
-```{python}
+```{.python}
 #| echo: false
 
 print(f"There are {len(sentences)} sentences in the book.")
@@ -217,7 +217,7 @@ print(f"There are {len(sentences)} sentences in the book.")
 
 How many sentence use subordinating conjunctions? In order to answer this question, we will use [spaCy](https://spacy.io/)'s part-of-speech tagger to identify sentences that contain subordinating conjunctions:
 
-```{python}
+```{.python}
 #| code-fold: true
 
 def doc_pipe(sentence: str):
@@ -245,7 +245,7 @@ def has_sconj(sentence: str):
     return pd.Series([False, None])
 ```
 
-```{python}
+```{.python}
 #| code-overflow: wrap
 
 # Check if the sentence contains a subordinating conjunction and store the result in a new column
@@ -259,7 +259,7 @@ sentences.tail()
 
 How many of the sentences contain subordinating conjunctions? How many of the sentences do not contain subordinating conjunctions?
 
-```{python}
+```{.python}
 #| echo: false
 
 print(
@@ -273,7 +273,7 @@ Let's try visualizing one of the sentences that contains a subordinating conjunc
 
 **Figure 1.** Visualization of a Sentence That Contains a Subordinating Conjunction
 
-```{python}
+```{.python}
 #| code-fold: true
 
 # Grab a sentence that contains a subordinating conjunction
@@ -286,7 +286,7 @@ spacy.displacy.render(doc, style="dep", jupyter=True, options={"distance": 110})
 
 What about the distribution of subordinating conjunctions in the book?
 
-```{python}
+```{.python}
 #| code-fold: true
 
 # Lower case the subordinating conjunctions and count them
@@ -311,7 +311,7 @@ This result is somewhat surprising to me. I did not expect "that" to be the most
 
 ## Preliminary Modeling
 
-```{python}
+```{.python}
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from torch.nn.functional import softmax, cross_entropy
 from datasets import load_dataset
@@ -331,7 +331,7 @@ nlp = spacy.load("en_core_web_sm")
 
 We will use the [Llama-2-7b-chat-hf](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf) model to evaluate an LLM's likelihood of predicting subordinating conjunctions. Unfortunately, running the model is computationally expensive on most machines. Therefore, we used [AutoAWQ](https://github.com/casper-hansen/AutoAWQ) to quantize the model into 4-bit precision[^2]. This reduces the amount of computational resources required to run inference on the model while still maintaining a high level of accuracy. We have provided our code for quantizing the model in the Appendix. In the meantime, you can access our quantized model here: [CalvinU/Llama-2-7b-chat-hf-awq](https://huggingface.co/CalvinU/Llama-2-7b-chat-hf-awq).
 
-```{python}
+```{.python}
 model_name = "CalvinU/Llama-2-7b-chat-hf-awq"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -342,7 +342,7 @@ model = AutoModelForCausalLM.from_pretrained(model_name).to(device)
 
 We have also described in the Appendix a scalable approach to collecting and processing data from [Project Gutenberg](https://www.gutenberg.org/). In the meantime, you can access our dataset here: [CalvinU/project-gutenberg](https://huggingface.co/datasets/CalvinU/project-gutenberg).
 
-```{python}
+```{.python}
 dataset_name = "CalvinU/project-gutenberg"
 
 dataset = load_dataset(dataset_name, split="train")
@@ -351,7 +351,7 @@ dataset_df = pd.DataFrame(dataset)
 
 The dataset contains 10 random books downloaded from [Project Gutenberg](https://www.gutenberg.org/). These books have already been sanitized and split into sentences based on their `book_id` and `title`. Therefore, each row in the dataset represents an ordered sentence from one of the books. Let's take a look at the dataset:
 
-```{python}
+```{.python}
 dataset_df.tail()
 ```
 
@@ -359,7 +359,7 @@ dataset_df.tail()
 
 Since we already have an ordered list of sentences, we can apply the same approach we used in the EDA section to identify sentences that contain subordinating conjunctions:
 
-```{python}
+```{.python}
 #| code-fold: true
 
 def doc_pipe(sentence: str):
@@ -387,7 +387,7 @@ def has_sconj(sentence: str):
     return pd.Series([False, None])
 ```
 
-```{python}
+```{.python}
 # Check if the sentence contains a subordinating conjunction and store the result in a new column
 dataset_df[["has_sconj", "sconj"]] = dataset_df["sentence"].apply(has_sconj)
 
@@ -399,7 +399,7 @@ dataset_df.tail()
 
 Number of sentences and number of sentences that contain subordinating conjunctions for each book:
 
-```{python}
+```{.python}
 summary = dataset_df.groupby(["book_id", "title"], as_index=False).agg(
     num_sents=("sentence", "count"),
     num_sconj=("has_sconj", "sum"),
@@ -429,7 +429,7 @@ In order to evaluate the likelihood of an LLM predicting subordinating conjuncti
 
 To get started, let's select one of the books from the dataset titled _	The Adventures of a Dog, and a Good Dog Too_ by Alfred Elwes:
 
-```{python}
+```{.python}
 #| code-fold: true
 
 # Book ID for The Adventures of a Dog, and a Good Dog Too
@@ -441,7 +441,7 @@ selected_book.tail()
 
 How many sentences are there in the book? How many of the sentences contain subordinating conjunctions?
 
-```{python}
+```{.python}
 #| echo: false
 
 print(
@@ -451,7 +451,7 @@ print(
 
 It appears that this book uses a significant number of subordinating conjunctions! Let's choose one of the last sentences that includes a subordinating conjunction and select a maximum of 100 sentences preceding it as the context:
 
-```{python}
+```{.python}
 last_sconj_index = selected_book[selected_book["has_sconj"]].index[-3]
 
 context = selected_book.iloc[max(last_sconj_index - 100, 0) : last_sconj_index][
@@ -465,7 +465,7 @@ sentence = selected_book.iloc[last_sconj_index]["sentence"]
 
 Let's take a small peek at the context:
 
-```{python}
+```{.python}
 #| echo: false
 
 # Print the first 50 characters of the context
@@ -477,7 +477,7 @@ print(context[-100:].strip(), end="\n\n")
 
 Let's take a look at the sentence with the subordinating conjunction:
 
-```{python}
+```{.python}
 #| echo: false
 
 # Print the sentence
@@ -486,7 +486,7 @@ print(sentence)
 
 Let's tokenize the context and the sentence, and then feed them into the model to get the predicted logits:
 
-```{python}
+```{.python}
 #| code-fold: true
 
 # Tokenize the context (to be used later, not as an input sequence)
@@ -505,7 +505,7 @@ prompt_input_ids = prompt_tokenized.input_ids
 model_logits = model(prompt_input_ids).logits
 ```
 
-```{python}
+```{.python}
 #| code-fold: true
 
 # Get the subordinating conjunction from the book
@@ -554,7 +554,7 @@ subordinate_clause_tokenized = tokenizer(
 
 Given that we have fed in the context exactly as it appears in the book, let's take a look at the top k probability spectrum at the subordinating conjunction:
 
-```{python}
+```{.python}
 #| code-fold: true
 
 def probability_spectrum_at(logits, input_ids, i, k=6):
@@ -670,7 +670,7 @@ def cross_entropy_per_token(logits, input_ids, matching_sequence_tokenized):
     )
 ```
 
-```{python}
+```{.python}
 #| code-fold: true
 
 prob_spectrum = probability_spectrum_at(
@@ -682,7 +682,7 @@ prob_spectrum
 
 Let's also look at the cross-entropy and perplexity of the sentence with the subordinating conjunction:
 
-```{python}
+```{.python}
 #| code-fold: true
 
 # Cross-entropy of the sentence with the subordinating conjunction (entire input sequence)
@@ -731,7 +731,7 @@ subordinating_conjunction_cross_entropy = cross_entropy_at(
 subordinating_conjunction_perplexity = np.exp(subordinating_conjunction_cross_entropy)
 ```
 
-```{python}
+```{.python}
 #| echo: false
 
 # Print in the order of the sentence structure
@@ -765,7 +765,7 @@ else:
 
 Let's shuffle the context and feed it into the model to get the predicted logits:
 
-```{python}
+```{.python}
 last_sconj_index = selected_book[selected_book["has_sconj"]].index[-3]
 
 context = selected_book.iloc[max(last_sconj_index - 100, 0) : last_sconj_index][
@@ -781,7 +781,7 @@ sentence = selected_book.iloc[last_sconj_index]["sentence"]
 
 Let's take a small peek at the context:
 
-```{python}
+```{.python}
 #| echo: false
 
 # Print the first 50 characters of the context
@@ -793,7 +793,7 @@ print(context[-100:].strip(), end="\n\n")
 
 Let's take a look at the sentence with the subordinating conjunction:
 
-```{python}
+```{.python}
 #| echo: false
 
 # Print the sentence
@@ -802,7 +802,7 @@ print(sentence)
 
 Same steps as before:
 
-```{python}
+```{.python}
 #| code-fold: true
 
 # Tokenize the context (to be used later, not as an input sequence)
@@ -821,7 +821,7 @@ prompt_input_ids = prompt_tokenized.input_ids
 model_logits = model(prompt_input_ids).logits
 ```
 
-```{python}
+```{.python}
 #| code-fold: true
 
 # Get the subordinating conjunction from the book
@@ -870,7 +870,7 @@ subordinate_clause_tokenized = tokenizer(
 
 Given that we have fed in a randomly shuffled context, let's take a look at the top k probability spectrum at the subordinating conjunction:
 
-```{python}
+```{.python}
 prob_spectrum = probability_spectrum_at(
     model_logits, prompt_input_ids, sconj_token_index
 )
@@ -880,7 +880,7 @@ prob_spectrum
 
 Let's also look at the cross-entropy and perplexity of the sentence with the subordinating conjunction:
 
-```{python}
+```{.python}
 #| code-fold: true
 
 # Cross-entropy of the sentence with the subordinating conjunction (entire input sequence)
@@ -929,7 +929,7 @@ subordinating_conjunction_cross_entropy = cross_entropy_at(
 subordinating_conjunction_perplexity = np.exp(subordinating_conjunction_cross_entropy)
 ```
 
-```{python}
+```{.python}
 #| echo: false
 
 # Print in the order of the sentence structure
