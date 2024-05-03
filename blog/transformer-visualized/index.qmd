@@ -1,5 +1,5 @@
 ---
-title: "Transformer Visualized"
+title: "Transformer in a Nutshell"
 description: "Visualizing the transformer architecture with shapes"
 categories: ["NLP"]
 author: "Jiho Kim"
@@ -10,6 +10,8 @@ format:
 toc: false
 back-to-top-navigation: false
 ---
+
+# 🚧 Under Construction 🚧
 
 ![](tokenization.svg)
 

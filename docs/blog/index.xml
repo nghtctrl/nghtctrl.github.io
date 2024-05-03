@@ -12,7 +12,7 @@
 <generator>quarto-1.4.553</generator>
 <lastBuildDate>Thu, 11 Apr 2024 04:00:00 GMT</lastBuildDate>
 <item>
-  <title>Transformer Visualized</title>
+  <title>Transformer in a Nutshell</title>
   <dc:creator>Jiho Kim</dc:creator>
   <link>https://jihokim.dev/blog/transformer-visualized/</link>
   <description><![CDATA[ 
@@ -20,12 +20,15 @@
 
 
 
+<section id="under-construction" class="level1">
+<h1>🚧 Under Construction 🚧</h1>
 <p><img src="https://jihokim.dev/blog/transformer-visualized/tokenization.svg" class="img-fluid"></p>
 <p><img src="https://jihokim.dev/blog/transformer-visualized/input_embedding.svg" class="img-fluid"></p>
 <p><img src="https://jihokim.dev/blog/transformer-visualized/position_embedding.svg" class="img-fluid"></p>
 <p><img src="https://jihokim.dev/blog/transformer-visualized/input_and_position_embedding.svg" class="img-fluid"></p>
 
 
+</section>
 
  ]]></description>
   <category>NLP</category>
