@@ -3,7 +3,7 @@ title: "Jiho Kim"
 description: he/him
 about:
   template: solana
-  image: public/profile.jpeg
+  image: profile.jpeg
   image-alt: "Profile picture of Jiho Kim"
   # links:
   #   - text: "{{< iconify academicons google-scholar >}} Google Scholar"
@@ -40,7 +40,7 @@ My research interests lie at the intersection of HCI and AI. I design, implement
 
 **[<a class="link" href="mailto:jihokim8@acm.org">Email</a>]**
 &nbsp;
-**[<a class="link" href="/public/cv.pdf">Current CV</a>]**
+**[<a class="link" href="cv.pdf">Current CV</a>]**
 &nbsp;
 **[<a class="link" href="https://scholar.google.com/citations?hl=en&user=aWisTO4AAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>]**
 &nbsp;
