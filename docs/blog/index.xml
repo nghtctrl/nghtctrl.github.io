@@ -9,8 +9,481 @@
 <link>https://jihokim.dev/blog/</link>
 <atom:link href="https://jihokim.dev/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.4.553</generator>
-<lastBuildDate>Thu, 11 Apr 2024 04:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.554</generator>
+<lastBuildDate>Fri, 03 May 2024 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Statistical Inference in Nutshell</title>
+  <dc:creator>Jiho Kim</dc:creator>
+  <link>https://jihokim.dev/blog/statistical-inference/</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="single-proportion" class="level2">
+<h2 class="anchored" data-anchor-id="single-proportion">Single Proportion</h2>
+<section id="confidence-interval" class="level3">
+<h3 class="anchored" data-anchor-id="confidence-interval">Confidence Interval</h3>
+<p>If the population follows a normal distribution or if the sample size <img src="https://latex.codecogs.com/png.latex?n"> is sufficiently large so that <img src="https://latex.codecogs.com/png.latex?n%20%5Chat%7Bp%7D%20%5Cgeq%2010"> and <img src="https://latex.codecogs.com/png.latex?n%20(1%20-%20%5Chat%7Bp%7D)%20%5Cgeq%2010"> for the sample proportion <img src="https://latex.codecogs.com/png.latex?%5Chat%7Bp%7D">, then a confidence interval for the population proportion <img src="https://latex.codecogs.com/png.latex?p"> can be calculated as: <img src="https://latex.codecogs.com/png.latex?%5Chat%7Bp%7D%20%5Cpm%20z%5E*%20%5Csqrt%7B%5Cdfrac%7B%5Chat%7Bp%7D%20(1%20-%20%5Chat%7Bp%7D)%7D%7Bn%7D%7D"> where <img src="https://latex.codecogs.com/png.latex?z%5E*"> is chosen such that <img src="https://latex.codecogs.com/png.latex?P(-z%5E*%20%3C%20Z%20%3C%20z%5E*)%20=%201%20-%20%5Calpha"> for a given significance level <img src="https://latex.codecogs.com/png.latex?%5Calpha">.</p>
+<section id="example" class="level4">
+<h4 class="anchored" data-anchor-id="example">Example</h4>
+<p>Suppose we are given a sample size of <img src="https://latex.codecogs.com/png.latex?n%20=%20400">, a sample proportion of <img src="https://latex.codecogs.com/png.latex?%5Chat%7Bp%7D%20=%200.84">, and a significance level of <img src="https://latex.codecogs.com/png.latex?%5Calpha%20=%200.05"> (or a <img src="https://latex.codecogs.com/png.latex?1%20-%20%5Calpha%20=%200.95"> confidence level).</p>
+<p>Without knowing whether the population follows a normal distribution, we verify that both <img src="https://latex.codecogs.com/png.latex?n%20%5Chat%7Bp%7D%20=%20(400)(0.84)%20=%20336%20%5Cgeq%2010"> and <img src="https://latex.codecogs.com/png.latex?n%20(1%20-%20%5Chat%7Bp%7D)%20=%20(400)(0.16)%20=%2064%20%5Cgeq%2010"> are satisfied. Therefore, we can proceed with calculating the confidence interval:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-1" style="background: #f1f3f5;"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-1-1">n <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">400</span></span>
+<span id="annotated-cell-1-2">p_hat <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.84</span></span>
+<span id="annotated-cell-1-3">alpha <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.05</span></span>
+<span id="annotated-cell-1-4"></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-1-5" class="code-annotation-target">z_star <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">qnorm</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> (alpha <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>))</span>
+<span id="annotated-cell-1-6">standard_error <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sqrt</span>((p_hat <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> (<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> p_hat)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> n)</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-1-7" class="code-annotation-target">interval <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> p_hat <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> z_star <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> standard_error</span>
+<span id="annotated-cell-1-8"></span>
+<span id="annotated-cell-1-9"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cat</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"("</span>, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">round</span>(interval[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>], <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>), <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">", "</span>, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">round</span>(interval[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>], <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>), <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">")"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sep =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">""</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="5" data-code-annotation="1">Divide alpha by 2 to determine the area for one tail, then subtract it from 1 to obtain the area up to the right tail. Then find the z-score that corresponds to this area using the <code>qnorm</code> function.</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="7" data-code-annotation="2">Multiplying the critical value by <code>c(-1, 1)</code> is just a lazy yet convenient way to calculate the lower and upper bounds of the confidence interval simultaneously.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(0.8041, 0.8759)</code></pre>
+</div>
+</div>
+<!-- ```{r}
+n <- 400
+p_hat <- 0.84
+conf_level <- 0.95
+
+z_star <- qnorm((conf_level + 1) / 2)                   # <1>
+standard_error <- sqrt((p_hat * (1 - p_hat)) / n)
+interval <- p_hat + c(-1, 1) * z_star * standard_error
+
+cat("(", round(interval[1], 4), ", ", round(interval[2], 4), ")", sep = "")
+```
+1. The `qnorm` function takes the area up to the right tail as an argument, so we add 1 to the confidence level and divide it by 2 to get the area up to the right tail. -->
+<!-- Here is how to interpret the confidence interval:
+
+> We are not certain whether the true population proportion is within the constructed interval; however, the procedure used to construct the interval has a 95% success rate of capturing the true population proportion. -->
+</section>
+</section>
+<section id="determination-of-sample-size" class="level3">
+<h3 class="anchored" data-anchor-id="determination-of-sample-size">Determination of Sample Size</h3>
+<p>To determine the sample size <img src="https://latex.codecogs.com/png.latex?n"> required to estimate the population proportion <img src="https://latex.codecogs.com/png.latex?p"> with a desired margin of error <img src="https://latex.codecogs.com/png.latex?ME"> and a significance level <img src="https://latex.codecogs.com/png.latex?%5Calpha">, we can use the following formula: <img src="https://latex.codecogs.com/png.latex?n%20=%20%5Clceil%5Cbigg(%5Cdfrac%7Bz%5E*%7D%7BME%7D%5Cbigg)%5E2%20%5Ctilde%7Bp%7D%20(1%20-%20%5Ctilde%7Bp%7D)%5Crceil"> where <img src="https://latex.codecogs.com/png.latex?z%5E*"> is chosen such that <img src="https://latex.codecogs.com/png.latex?P(-z%5E*%20%3C%20Z%20%3C%20z%5E*)%20=%201%20-%20%5Calpha"> for a given significance level <img src="https://latex.codecogs.com/png.latex?%5Calpha"> and <img src="https://latex.codecogs.com/png.latex?%5Ctilde%7Bp%7D"> is an estimate of the population proportion <img src="https://latex.codecogs.com/png.latex?p"> (use <img src="https://latex.codecogs.com/png.latex?%5Ctilde%7Bp%7D%20=%200.5"> if no estimate is available).</p>
+</section>
+<section id="hypothesis-testing" class="level3">
+<h3 class="anchored" data-anchor-id="hypothesis-testing">Hypothesis Testing</h3>
+<p>To test the null hypothesis <img src="https://latex.codecogs.com/png.latex?H_0:%20p%20=%20p_0"> against the alternative hypothesis <img src="https://latex.codecogs.com/png.latex?H_1:%20p%20%5Cneq%20p_0"> (or a one-tailed alternative), we use the following test statistic: <img src="https://latex.codecogs.com/png.latex?z%20=%20%5Cdfrac%7B%5Chat%7Bp%7D%20-%20p_0%7D%7B%5Csqrt%7B%5Cdfrac%7Bp_0%20(1%20-%20p_0)%7D%7Bn%7D%7D%7D"> where <img src="https://latex.codecogs.com/png.latex?n"> is the sample size and <img src="https://latex.codecogs.com/png.latex?%5Chat%7Bp%7D"> is the sample proportion, provided that the population follows a normal distribution or that the sample size <img src="https://latex.codecogs.com/png.latex?n"> is sufficiently large so that <img src="https://latex.codecogs.com/png.latex?n%20p_0%20%5Cgeq%2010"> and <img src="https://latex.codecogs.com/png.latex?n%20(1%20-%20p_0)%20%5Cgeq%2010">.</p>
+<p>There are two approaches to hypothesis testing: critical value approach and p-value approach.</p>
+<section id="critical-value-approach" class="level4">
+<h4 class="anchored" data-anchor-id="critical-value-approach">Critical Value Approach</h4>
+<p>Suppose we test the null hypothesis <img src="https://latex.codecogs.com/png.latex?H_0:%20p%20=%200.8"> against the alternative hypothesis <img src="https://latex.codecogs.com/png.latex?H_1:%20p%20%5Cneq%200.8"> with a significance level of <img src="https://latex.codecogs.com/png.latex?%5Calpha%20=%200.05">. Then we can calculate the critical value as follows:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">alpha <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.05</span></span>
+<span id="cb2-2">z_star <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">qnorm</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> (alpha <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>))</span>
+<span id="cb2-3">z_star</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.959964</code></pre>
+</div>
+</div>
+<p>We collect a sample of size <img src="https://latex.codecogs.com/png.latex?n%20=%20400"> with a sample proportion of <img src="https://latex.codecogs.com/png.latex?%5Chat%7Bp%7D%20=%200.84">. Without knowing whether the population follows a normal distribution, we verify that both <img src="https://latex.codecogs.com/png.latex?np_0%20=%20(400)(0.8)%20=%20320%20%5Cgeq%2010"> and <img src="https://latex.codecogs.com/png.latex?n(1%20-%20p_0)%20=%20(400)(0.2)%20=%2080%20%5Cgeq%2010"> are satisfied. Therefore, we can proceed with calculating the test statistic:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1">n <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">400</span></span>
+<span id="cb4-2">p_hat <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.84</span></span>
+<span id="cb4-3">p_0 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.8</span></span>
+<span id="cb4-4"></span>
+<span id="cb4-5">z <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> (p_hat <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> p_0) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sqrt</span>((p_0 <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> (<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> p_0)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> n)</span>
+<span id="cb4-6">z</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+<p>If the absolute value of the test statistic <img src="https://latex.codecogs.com/png.latex?%7Cz%7C"> is greater than the critical value <img src="https://latex.codecogs.com/png.latex?z%5E*">, we reject the null hypothesis. Otherwise, we fail to reject the null hypothesis.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">abs</span>(z) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> z_star</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p>Therefore, we reject the null hypothesis.</p>
+</section>
+<section id="p-value-approach" class="level4">
+<h4 class="anchored" data-anchor-id="p-value-approach">P-Value Approach</h4>
+<p>Suppose we test the null hypothesis <img src="https://latex.codecogs.com/png.latex?H_0:%20p%20=%200.8"> against the alternative hypothesis <img src="https://latex.codecogs.com/png.latex?H_1:%20p%20%5Cneq%200.8"> with a significance level of <img src="https://latex.codecogs.com/png.latex?%5Calpha%20=%200.05">.</p>
+<p>We collect a sample of size <img src="https://latex.codecogs.com/png.latex?n%20=%20400"> with a sample proportion of <img src="https://latex.codecogs.com/png.latex?%5Chat%7Bp%7D%20=%200.84">. Without knowing whether the population follows a normal distribution, we verify that both <img src="https://latex.codecogs.com/png.latex?np_0%20=%20(400)(0.8)%20=%20320%20%5Cgeq%2010"> and <img src="https://latex.codecogs.com/png.latex?n(1%20-%20p_0)%20=%20(400)(0.2)%20=%2080%20%5Cgeq%2010"> are satisfied. Therefore, we can proceed with calculating the test statistic:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">n <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">400</span></span>
+<span id="cb8-2">p_hat <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.84</span></span>
+<span id="cb8-3">p_0 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.8</span></span>
+<span id="cb8-4"></span>
+<span id="cb8-5">z <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> (p_hat <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> p_0) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sqrt</span>((p_0 <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> (<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> p_0)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> n)</span>
+<span id="cb8-6">z</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+<p>The p-value is the probability of observing a test statistic as extreme as the one calculated from the collected sample, assuming that the null hypothesis is true. The p-value can be calculated as follows:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">p_value <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">pnorm</span>(<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">abs</span>(z))</span>
+<span id="cb10-2">p_value</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.04550026</code></pre>
+</div>
+</div>
+<p>If the p-value is less than <img src="https://latex.codecogs.com/png.latex?%5Calpha">, we reject the null hypothesis. Otherwise, we fail to reject the null hypothesis.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1">alpha <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.05</span></span>
+<span id="cb12-2">p_value <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span> alpha</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p>Therefore, we reject the null hypothesis.</p>
+</section>
+</section>
+</section>
+<section id="difference-in-proportions" class="level2">
+<h2 class="anchored" data-anchor-id="difference-in-proportions">Difference in Proportions</h2>
+<section id="confidence-interval-1" class="level3">
+<h3 class="anchored" data-anchor-id="confidence-interval-1">Confidence Interval</h3>
+<p>If the population follows a normal distribution or if the sample sizes <img src="https://latex.codecogs.com/png.latex?n_1"> and <img src="https://latex.codecogs.com/png.latex?n_2"> are sufficiently large so that <img src="https://latex.codecogs.com/png.latex?n_1%20%5Chat%7Bp%7D_1%20%5Cgeq%2010"> and <img src="https://latex.codecogs.com/png.latex?n_1%20(1%20-%20%5Chat%7Bp%7D_1)%20%5Cgeq%2010"> and that <img src="https://latex.codecogs.com/png.latex?n_2%20%5Chat%7Bp%7D_2%20%5Cgeq%2010"> and <img src="https://latex.codecogs.com/png.latex?n_2%20(1%20-%20%5Chat%7Bp%7D_2)%20%5Cgeq%2010"> for the sample proportions <img src="https://latex.codecogs.com/png.latex?%5Chat%7Bp%7D_1"> and <img src="https://latex.codecogs.com/png.latex?%5Chat%7Bp%7D_2">, then a confidence interval for the difference in population proportions <img src="https://latex.codecogs.com/png.latex?p_1%20-%20p_2"> can be calculated as: <img src="https://latex.codecogs.com/png.latex?(%5Chat%7Bp%7D_1%20-%20%5Chat%7Bp%7D_2)%20%5Cpm%20z%5E*%20%5Csqrt%7B%5Cdfrac%7B%5Chat%7Bp%7D_1%20(1%20-%20%5Chat%7Bp%7D_1)%7D%7Bn_1%7D%20+%20%5Cdfrac%7B%5Chat%7Bp%7D_2%20(1%20-%20%5Chat%7Bp%7D_2)%7D%7Bn_2%7D%7D"> where <img src="https://latex.codecogs.com/png.latex?z%5E*"> is chosen such that <img src="https://latex.codecogs.com/png.latex?P(-z%5E*%20%3C%20Z%20%3C%20z%5E*)%20=%201%20-%20%5Calpha"> for a given significance level <img src="https://latex.codecogs.com/png.latex?%5Calpha">.</p>
+<section id="example-1" class="level4">
+<h4 class="anchored" data-anchor-id="example-1">Example</h4>
+<p>Suppose we are given sample sizes of <img src="https://latex.codecogs.com/png.latex?n_1%20=%20400"> and <img src="https://latex.codecogs.com/png.latex?n_2%20=%20600">, sample proportions of <img src="https://latex.codecogs.com/png.latex?%5Chat%7Bp%7D_1%20=%200.84"> and <img src="https://latex.codecogs.com/png.latex?%5Chat%7Bp%7D_2%20=%200.78">, and a significance level of <img src="https://latex.codecogs.com/png.latex?%5Calpha%20=%200.05"> (or a <img src="https://latex.codecogs.com/png.latex?1%20-%20%5Calpha%20=%200.95"> confidence level).</p>
+<p>Without knowing whether the populations follow a normal distribution, we verify that <img src="https://latex.codecogs.com/png.latex?n_1%20%5Chat%7Bp%7D_1%20=%20(400)(0.84)%20=%20336%20%5Cgeq%2010">, <img src="https://latex.codecogs.com/png.latex?n_1%20(1%20-%20%5Chat%7Bp%7D_1)%20=%20(400)(0.16)%20=%2064%20%5Cgeq%2010">, <img src="https://latex.codecogs.com/png.latex?n_2%20%5Chat%7Bp%7D_2%20=%20(600)(0.78)%20=%20468%20%5Cgeq%2010">, and <img src="https://latex.codecogs.com/png.latex?n_2%20(1%20-%20%5Chat%7Bp%7D_2)%20=%20(600)(0.22)%20=%20132%20%5Cgeq%2010"> are satisfied. Therefore, we can proceed with calculating the confidence interval:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-8" style="background: #f1f3f5;"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-8-1">n1 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">400</span></span>
+<span id="annotated-cell-8-2">n2 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">600</span></span>
+<span id="annotated-cell-8-3">p1_hat <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.84</span></span>
+<span id="annotated-cell-8-4">p2_hat <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.78</span></span>
+<span id="annotated-cell-8-5">alpha <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.05</span></span>
+<span id="annotated-cell-8-6"></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-8" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-8-7" class="code-annotation-target">z_star <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">qnorm</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> (alpha <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>))</span>
+<span id="annotated-cell-8-8">standard_error <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sqrt</span>(</span>
+<span id="annotated-cell-8-9">    ((p1_hat <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> (<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> p1_hat)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> n1) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> ((p2_hat <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> (<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> p2_hat)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> n2)</span>
+<span id="annotated-cell-8-10">)</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-8" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-8-11" class="code-annotation-target">interval <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> (p1_hat <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> p2_hat) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> z_star <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> standard_error</span>
+<span id="annotated-cell-8-12"></span>
+<span id="annotated-cell-8-13"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cat</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"("</span>, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">round</span>(interval[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>], <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>), <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">", "</span>, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">round</span>(interval[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>], <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>), <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">")"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sep =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">""</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-8" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-8" data-code-lines="7" data-code-annotation="1">Divide alpha by 2 to determine the area for one tail, then subtract it from 1 to obtain the area up to the right tail. Then find the z-score that corresponds to this area using the <code>qnorm</code> function.</span>
+</dd>
+<dt data-target-cell="annotated-cell-8" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-8" data-code-lines="11" data-code-annotation="2">Multiplying the critical value by <code>c(-1, 1)</code> is just a lazy yet convenient way to calculate the lower and upper bounds of the confidence interval simultaneously.</span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(0.0111, 0.1089)</code></pre>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="chi-square-goodness-of-fit" class="level2">
+<h2 class="anchored" data-anchor-id="chi-square-goodness-of-fit">Chi-Square Goodness of Fit</h2>
+</section>
+<section id="chi-square-test-for-association" class="level2">
+<h2 class="anchored" data-anchor-id="chi-square-test-for-association">Chi-Square Test for Association</h2>
+</section>
+<section id="single-mean" class="level2">
+<h2 class="anchored" data-anchor-id="single-mean">Single Mean</h2>
+</section>
+<section id="difference-in-means" class="level2">
+<h2 class="anchored" data-anchor-id="difference-in-means">Difference in Means</h2>
+</section>
+<section id="paired-difference-in-means" class="level2">
+<h2 class="anchored" data-anchor-id="paired-difference-in-means">Paired Difference in Means</h2>
+</section>
+<section id="analysis-of-variance-anova" class="level2">
+<h2 class="anchored" data-anchor-id="analysis-of-variance-anova">Analysis of Variance (ANOVA)</h2>
+</section>
+<section id="correlation-simple-regression" class="level2">
+<h2 class="anchored" data-anchor-id="correlation-simple-regression">Correlation, Simple Regression</h2>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>Statistics</category>
+  <guid>https://jihokim.dev/blog/statistical-inference/</guid>
+  <pubDate>Fri, 03 May 2024 04:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Transformer in a Nutshell</title>
   <dc:creator>Jiho Kim</dc:creator>

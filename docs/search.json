@@ -14,39 +14,74 @@
     "text": "Abstract\nLarge language models (LLMs) are shaping a new user interface (UI) paradigm in writing tools by enabling users to generate text through prompts. This paradigm shifts some creative control from the user to the system, thereby diminishing the user’s authorship and autonomy in the writing process. To restore autonomy, we introduce Textfocals, a UI prototype designed to investigate a human-centered approach that emphasizes the user’s role in writing. Textfocals supports the writing process by providing LLM-generated summaries, questions, and advice (i.e., LLM views) in a sidebar of a text editor, encouraging reflection and self-driven revision in writing without direct text generation. Textfocals’ UI affordances, including contextually adaptive views and scaffolding for prompt selection and customization, offer a novel way to interact with LLMs where users maintain full authorship of their writing. A formative user study with Textfocals showed promising evidence that this approach might help users develop underdeveloped ideas, cater to the rhetorical audience, and clarify their writing. However, the study also showed interaction design challenges related to document navigation and scoping, prompt engineering, and context management. Our work highlights the breadth of the design space of writing support interfaces powered by generative AI that maintain authorship integrity."
   },
   {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog",
+    "objectID": "blog/statistical-inference/index.html",
+    "href": "blog/statistical-inference/index.html",
+    "title": "Statistical Inference in Nutshell",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nTransformer in a Nutshell\n\n\n\n\n\n\nNLP\n\n\n\nVisualizing the transformer architecture with shapes\n\n\n\n\n\nApr 11, 2024\n\n\nJiho Kim\n\n\n\n\n\n\n\n\n\n\n\n\nInspirative Text Prediction\n\n\n\n\n\n\n\n\n\n\n\nDec 12, 2023\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "If the population follows a normal distribution or if the sample size n is sufficiently large so that n \\hat{p} \\geq 10 and n (1 - \\hat{p}) \\geq 10 for the sample proportion \\hat{p}, then a confidence interval for the population proportion p can be calculated as: \\hat{p} \\pm z^* \\sqrt{\\dfrac{\\hat{p} (1 - \\hat{p})}{n}} where z^* is chosen such that P(-z^* &lt; Z &lt; z^*) = 1 - \\alpha for a given significance level \\alpha.\n\n\nSuppose we are given a sample size of n = 400, a sample proportion of \\hat{p} = 0.84, and a significance level of \\alpha = 0.05 (or a 1 - \\alpha = 0.95 confidence level).\nWithout knowing whether the population follows a normal distribution, we verify that both n \\hat{p} = (400)(0.84) = 336 \\geq 10 and n (1 - \\hat{p}) = (400)(0.16) = 64 \\geq 10 are satisfied. Therefore, we can proceed with calculating the confidence interval:\n\nn &lt;- 400\np_hat &lt;- 0.84\nalpha &lt;- 0.05\n\n1z_star &lt;- qnorm(1 - (alpha / 2))\nstandard_error &lt;- sqrt((p_hat * (1 - p_hat)) / n)\n2interval &lt;- p_hat + c(-1, 1) * z_star * standard_error\n\ncat(\"(\", round(interval[1], 4), \", \", round(interval[2], 4), \")\", sep = \"\")\n\n\n1\n\nDivide alpha by 2 to determine the area for one tail, then subtract it from 1 to obtain the area up to the right tail. Then find the z-score that corresponds to this area using the qnorm function.\n\n2\n\nMultiplying the critical value by c(-1, 1) is just a lazy yet convenient way to calculate the lower and upper bounds of the confidence interval simultaneously.\n\n\n\n\n(0.8041, 0.8759)\n\n\n\n\n\n\n\n\nTo determine the sample size n required to estimate the population proportion p with a desired margin of error ME and a significance level \\alpha, we can use the following formula: n = \\lceil\\bigg(\\dfrac{z^*}{ME}\\bigg)^2 \\tilde{p} (1 - \\tilde{p})\\rceil where z^* is chosen such that P(-z^* &lt; Z &lt; z^*) = 1 - \\alpha for a given significance level \\alpha and \\tilde{p} is an estimate of the population proportion p (use \\tilde{p} = 0.5 if no estimate is available).\n\n\n\nTo test the null hypothesis H_0: p = p_0 against the alternative hypothesis H_1: p \\neq p_0 (or a one-tailed alternative), we use the following test statistic: z = \\dfrac{\\hat{p} - p_0}{\\sqrt{\\dfrac{p_0 (1 - p_0)}{n}}} where n is the sample size and \\hat{p} is the sample proportion, provided that the population follows a normal distribution or that the sample size n is sufficiently large so that n p_0 \\geq 10 and n (1 - p_0) \\geq 10.\nThere are two approaches to hypothesis testing: critical value approach and p-value approach.\n\n\nSuppose we test the null hypothesis H_0: p = 0.8 against the alternative hypothesis H_1: p \\neq 0.8 with a significance level of \\alpha = 0.05. Then we can calculate the critical value as follows:\n\nalpha &lt;- 0.05\nz_star &lt;- qnorm(1 - (alpha / 2))\nz_star\n\n[1] 1.959964\n\n\nWe collect a sample of size n = 400 with a sample proportion of \\hat{p} = 0.84. Without knowing whether the population follows a normal distribution, we verify that both np_0 = (400)(0.8) = 320 \\geq 10 and n(1 - p_0) = (400)(0.2) = 80 \\geq 10 are satisfied. Therefore, we can proceed with calculating the test statistic:\n\nn &lt;- 400\np_hat &lt;- 0.84\np_0 &lt;- 0.8\n\nz &lt;- (p_hat - p_0) / sqrt((p_0 * (1 - p_0)) / n)\nz\n\n[1] 2\n\n\nIf the absolute value of the test statistic |z| is greater than the critical value z^*, we reject the null hypothesis. Otherwise, we fail to reject the null hypothesis.\n\nabs(z) &gt; z_star\n\n[1] TRUE\n\n\nTherefore, we reject the null hypothesis.\n\n\n\nSuppose we test the null hypothesis H_0: p = 0.8 against the alternative hypothesis H_1: p \\neq 0.8 with a significance level of \\alpha = 0.05.\nWe collect a sample of size n = 400 with a sample proportion of \\hat{p} = 0.84. Without knowing whether the population follows a normal distribution, we verify that both np_0 = (400)(0.8) = 320 \\geq 10 and n(1 - p_0) = (400)(0.2) = 80 \\geq 10 are satisfied. Therefore, we can proceed with calculating the test statistic:\n\nn &lt;- 400\np_hat &lt;- 0.84\np_0 &lt;- 0.8\n\nz &lt;- (p_hat - p_0) / sqrt((p_0 * (1 - p_0)) / n)\nz\n\n[1] 2\n\n\nThe p-value is the probability of observing a test statistic as extreme as the one calculated from the collected sample, assuming that the null hypothesis is true. The p-value can be calculated as follows:\n\np_value &lt;- 2 * pnorm(-abs(z))\np_value\n\n[1] 0.04550026\n\n\nIf the p-value is less than \\alpha, we reject the null hypothesis. Otherwise, we fail to reject the null hypothesis.\n\nalpha &lt;- 0.05\np_value &lt; alpha\n\n[1] TRUE\n\n\nTherefore, we reject the null hypothesis."
   },
   {
-    "objectID": "blog/transformer-visualized/index.html",
-    "href": "blog/transformer-visualized/index.html",
-    "title": "Transformer in a Nutshell",
+    "objectID": "blog/statistical-inference/index.html#single-proportion",
+    "href": "blog/statistical-inference/index.html#single-proportion",
+    "title": "Statistical Inference in Nutshell",
     "section": "",
-    "text": "🚧 Under Construction 🚧"
+    "text": "If the population follows a normal distribution or if the sample size n is sufficiently large so that n \\hat{p} \\geq 10 and n (1 - \\hat{p}) \\geq 10 for the sample proportion \\hat{p}, then a confidence interval for the population proportion p can be calculated as: \\hat{p} \\pm z^* \\sqrt{\\dfrac{\\hat{p} (1 - \\hat{p})}{n}} where z^* is chosen such that P(-z^* &lt; Z &lt; z^*) = 1 - \\alpha for a given significance level \\alpha.\n\n\nSuppose we are given a sample size of n = 400, a sample proportion of \\hat{p} = 0.84, and a significance level of \\alpha = 0.05 (or a 1 - \\alpha = 0.95 confidence level).\nWithout knowing whether the population follows a normal distribution, we verify that both n \\hat{p} = (400)(0.84) = 336 \\geq 10 and n (1 - \\hat{p}) = (400)(0.16) = 64 \\geq 10 are satisfied. Therefore, we can proceed with calculating the confidence interval:\n\nn &lt;- 400\np_hat &lt;- 0.84\nalpha &lt;- 0.05\n\n1z_star &lt;- qnorm(1 - (alpha / 2))\nstandard_error &lt;- sqrt((p_hat * (1 - p_hat)) / n)\n2interval &lt;- p_hat + c(-1, 1) * z_star * standard_error\n\ncat(\"(\", round(interval[1], 4), \", \", round(interval[2], 4), \")\", sep = \"\")\n\n\n1\n\nDivide alpha by 2 to determine the area for one tail, then subtract it from 1 to obtain the area up to the right tail. Then find the z-score that corresponds to this area using the qnorm function.\n\n2\n\nMultiplying the critical value by c(-1, 1) is just a lazy yet convenient way to calculate the lower and upper bounds of the confidence interval simultaneously.\n\n\n\n\n(0.8041, 0.8759)\n\n\n\n\n\n\n\n\nTo determine the sample size n required to estimate the population proportion p with a desired margin of error ME and a significance level \\alpha, we can use the following formula: n = \\lceil\\bigg(\\dfrac{z^*}{ME}\\bigg)^2 \\tilde{p} (1 - \\tilde{p})\\rceil where z^* is chosen such that P(-z^* &lt; Z &lt; z^*) = 1 - \\alpha for a given significance level \\alpha and \\tilde{p} is an estimate of the population proportion p (use \\tilde{p} = 0.5 if no estimate is available).\n\n\n\nTo test the null hypothesis H_0: p = p_0 against the alternative hypothesis H_1: p \\neq p_0 (or a one-tailed alternative), we use the following test statistic: z = \\dfrac{\\hat{p} - p_0}{\\sqrt{\\dfrac{p_0 (1 - p_0)}{n}}} where n is the sample size and \\hat{p} is the sample proportion, provided that the population follows a normal distribution or that the sample size n is sufficiently large so that n p_0 \\geq 10 and n (1 - p_0) \\geq 10.\nThere are two approaches to hypothesis testing: critical value approach and p-value approach.\n\n\nSuppose we test the null hypothesis H_0: p = 0.8 against the alternative hypothesis H_1: p \\neq 0.8 with a significance level of \\alpha = 0.05. Then we can calculate the critical value as follows:\n\nalpha &lt;- 0.05\nz_star &lt;- qnorm(1 - (alpha / 2))\nz_star\n\n[1] 1.959964\n\n\nWe collect a sample of size n = 400 with a sample proportion of \\hat{p} = 0.84. Without knowing whether the population follows a normal distribution, we verify that both np_0 = (400)(0.8) = 320 \\geq 10 and n(1 - p_0) = (400)(0.2) = 80 \\geq 10 are satisfied. Therefore, we can proceed with calculating the test statistic:\n\nn &lt;- 400\np_hat &lt;- 0.84\np_0 &lt;- 0.8\n\nz &lt;- (p_hat - p_0) / sqrt((p_0 * (1 - p_0)) / n)\nz\n\n[1] 2\n\n\nIf the absolute value of the test statistic |z| is greater than the critical value z^*, we reject the null hypothesis. Otherwise, we fail to reject the null hypothesis.\n\nabs(z) &gt; z_star\n\n[1] TRUE\n\n\nTherefore, we reject the null hypothesis.\n\n\n\nSuppose we test the null hypothesis H_0: p = 0.8 against the alternative hypothesis H_1: p \\neq 0.8 with a significance level of \\alpha = 0.05.\nWe collect a sample of size n = 400 with a sample proportion of \\hat{p} = 0.84. Without knowing whether the population follows a normal distribution, we verify that both np_0 = (400)(0.8) = 320 \\geq 10 and n(1 - p_0) = (400)(0.2) = 80 \\geq 10 are satisfied. Therefore, we can proceed with calculating the test statistic:\n\nn &lt;- 400\np_hat &lt;- 0.84\np_0 &lt;- 0.8\n\nz &lt;- (p_hat - p_0) / sqrt((p_0 * (1 - p_0)) / n)\nz\n\n[1] 2\n\n\nThe p-value is the probability of observing a test statistic as extreme as the one calculated from the collected sample, assuming that the null hypothesis is true. The p-value can be calculated as follows:\n\np_value &lt;- 2 * pnorm(-abs(z))\np_value\n\n[1] 0.04550026\n\n\nIf the p-value is less than \\alpha, we reject the null hypothesis. Otherwise, we fail to reject the null hypothesis.\n\nalpha &lt;- 0.05\np_value &lt; alpha\n\n[1] TRUE\n\n\nTherefore, we reject the null hypothesis."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Jiho Kim",
-    "section": "",
-    "text": "Hi there! I am an undergraduate junior studying Computer Science at Calvin University. I am currently working as a research assistant with Kenneth C. Arnold.\nMy research interests lie at the intersection of HCI and AI. I design, implement, and evaluate AI-powered systems that augment and empower human capabilities. I am currently researching UI affordances that facilitate human-AI collaboration without allowing AI to overstep human ingenuity and autonomy.\n[Email]   [Current CV]   [Google Scholar]   [Mastodon]   [LinkedIn]"
+    "objectID": "blog/statistical-inference/index.html#difference-in-proportions",
+    "href": "blog/statistical-inference/index.html#difference-in-proportions",
+    "title": "Statistical Inference in Nutshell",
+    "section": "Difference in Proportions",
+    "text": "Difference in Proportions\n\nConfidence Interval\nIf the population follows a normal distribution or if the sample sizes n_1 and n_2 are sufficiently large so that n_1 \\hat{p}_1 \\geq 10 and n_1 (1 - \\hat{p}_1) \\geq 10 and that n_2 \\hat{p}_2 \\geq 10 and n_2 (1 - \\hat{p}_2) \\geq 10 for the sample proportions \\hat{p}_1 and \\hat{p}_2, then a confidence interval for the difference in population proportions p_1 - p_2 can be calculated as: (\\hat{p}_1 - \\hat{p}_2) \\pm z^* \\sqrt{\\dfrac{\\hat{p}_1 (1 - \\hat{p}_1)}{n_1} + \\dfrac{\\hat{p}_2 (1 - \\hat{p}_2)}{n_2}} where z^* is chosen such that P(-z^* &lt; Z &lt; z^*) = 1 - \\alpha for a given significance level \\alpha.\n\nExample\nSuppose we are given sample sizes of n_1 = 400 and n_2 = 600, sample proportions of \\hat{p}_1 = 0.84 and \\hat{p}_2 = 0.78, and a significance level of \\alpha = 0.05 (or a 1 - \\alpha = 0.95 confidence level).\nWithout knowing whether the populations follow a normal distribution, we verify that n_1 \\hat{p}_1 = (400)(0.84) = 336 \\geq 10, n_1 (1 - \\hat{p}_1) = (400)(0.16) = 64 \\geq 10, n_2 \\hat{p}_2 = (600)(0.78) = 468 \\geq 10, and n_2 (1 - \\hat{p}_2) = (600)(0.22) = 132 \\geq 10 are satisfied. Therefore, we can proceed with calculating the confidence interval:\n\nn1 &lt;- 400\nn2 &lt;- 600\np1_hat &lt;- 0.84\np2_hat &lt;- 0.78\nalpha &lt;- 0.05\n\n1z_star &lt;- qnorm(1 - (alpha / 2))\nstandard_error &lt;- sqrt(\n    ((p1_hat * (1 - p1_hat)) / n1) + ((p2_hat * (1 - p2_hat)) / n2)\n)\n2interval &lt;- (p1_hat - p2_hat) + c(-1, 1) * z_star * standard_error\n\ncat(\"(\", round(interval[1], 4), \", \", round(interval[2], 4), \")\", sep = \"\")\n\n\n1\n\nDivide alpha by 2 to determine the area for one tail, then subtract it from 1 to obtain the area up to the right tail. Then find the z-score that corresponds to this area using the qnorm function.\n\n2\n\nMultiplying the critical value by c(-1, 1) is just a lazy yet convenient way to calculate the lower and upper bounds of the confidence interval simultaneously.\n\n\n\n\n(0.0111, 0.1089)"
   },
   {
-    "objectID": "index.html#publications",
-    "href": "index.html#publications",
-    "title": "Jiho Kim",
-    "section": "Publications",
-    "text": "Publications\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthors\n\n\n\n\n\n\n3/2/24\n\n\nTowards Full Authorship with AI: Supporting Revision with AI-Generated Views\n\n\nJiho Kim, Ray C. Flanagan, Noelle E. Haviland, ZeAi Sun, Souad N. Yakubu, Edom A. Maru, Kenneth C. Arnold\n\n\n\n\n\nNo matching items"
+    "objectID": "blog/statistical-inference/index.html#chi-square-goodness-of-fit",
+    "href": "blog/statistical-inference/index.html#chi-square-goodness-of-fit",
+    "title": "Statistical Inference in Nutshell",
+    "section": "Chi-Square Goodness of Fit",
+    "text": "Chi-Square Goodness of Fit"
   },
   {
-    "objectID": "index.html#updates",
-    "href": "index.html#updates",
-    "title": "Jiho Kim",
-    "section": "Updates",
-    "text": "Updates\n\nMarch 18, 2024: I presented our workshop paper from summer research at HAI-GEN at ACM IUI ’24 in Greenville, SC.\nFebruary 9, 2024: I was awarded a $1290 travel grant from the NSF to attend ACM IUI ’24 as a student volunteer.\nNovember 4, 2023: I presented our poster from summer research at 2023 WMRUGS at Van Andel Institute in Grand Rapids, MI.\nJune 1, 2023: I started working as an undergraduate summer researcher with Kenneth C. Arnold."
+    "objectID": "blog/statistical-inference/index.html#chi-square-test-for-association",
+    "href": "blog/statistical-inference/index.html#chi-square-test-for-association",
+    "title": "Statistical Inference in Nutshell",
+    "section": "Chi-Square Test for Association",
+    "text": "Chi-Square Test for Association"
+  },
+  {
+    "objectID": "blog/statistical-inference/index.html#single-mean",
+    "href": "blog/statistical-inference/index.html#single-mean",
+    "title": "Statistical Inference in Nutshell",
+    "section": "Single Mean",
+    "text": "Single Mean"
+  },
+  {
+    "objectID": "blog/statistical-inference/index.html#difference-in-means",
+    "href": "blog/statistical-inference/index.html#difference-in-means",
+    "title": "Statistical Inference in Nutshell",
+    "section": "Difference in Means",
+    "text": "Difference in Means"
+  },
+  {
+    "objectID": "blog/statistical-inference/index.html#paired-difference-in-means",
+    "href": "blog/statistical-inference/index.html#paired-difference-in-means",
+    "title": "Statistical Inference in Nutshell",
+    "section": "Paired Difference in Means",
+    "text": "Paired Difference in Means"
+  },
+  {
+    "objectID": "blog/statistical-inference/index.html#analysis-of-variance-anova",
+    "href": "blog/statistical-inference/index.html#analysis-of-variance-anova",
+    "title": "Statistical Inference in Nutshell",
+    "section": "Analysis of Variance (ANOVA)",
+    "text": "Analysis of Variance (ANOVA)"
+  },
+  {
+    "objectID": "blog/statistical-inference/index.html#correlation-simple-regression",
+    "href": "blog/statistical-inference/index.html#correlation-simple-regression",
+    "title": "Statistical Inference in Nutshell",
+    "section": "Correlation, Simple Regression",
+    "text": "Correlation, Simple Regression"
   },
   {
     "objectID": "blog/inspirative-text-prediction/index.html",
@@ -117,6 +152,41 @@
     "title": "Inspirative Text Prediction",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nhttps://www.merriam-webster.com/dictionary/inspire↩︎\nChosen for its simplicity, however, other quantization methods, such as llama.cpp, will also likely work.↩︎"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Jiho Kim",
+    "section": "",
+    "text": "Hi there! I am an undergraduate junior studying Computer Science at Calvin University. I am currently working as a research assistant with Kenneth C. Arnold.\nMy research interests lie at the intersection of HCI and AI. I design, implement, and evaluate AI-powered systems that augment and empower human capabilities. I am currently researching UI affordances that facilitate human-AI collaboration without allowing AI to overstep human ingenuity and autonomy.\n[Email]   [Current CV]   [Google Scholar]   [Mastodon]   [LinkedIn]"
+  },
+  {
+    "objectID": "index.html#publications",
+    "href": "index.html#publications",
+    "title": "Jiho Kim",
+    "section": "Publications",
+    "text": "Publications\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthors\n\n\n\n\n\n\n3/2/24\n\n\nTowards Full Authorship with AI: Supporting Revision with AI-Generated Views\n\n\nJiho Kim, Ray C. Flanagan, Noelle E. Haviland, ZeAi Sun, Souad N. Yakubu, Edom A. Maru, Kenneth C. Arnold\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#updates",
+    "href": "index.html#updates",
+    "title": "Jiho Kim",
+    "section": "Updates",
+    "text": "Updates\n\nMarch 18, 2024: I presented our workshop paper from summer research at HAI-GEN at ACM IUI ’24 in Greenville, SC.\nFebruary 9, 2024: I was awarded a $1290 travel grant from the NSF to attend ACM IUI ’24 as a student volunteer.\nNovember 4, 2023: I presented our poster from summer research at 2023 WMRUGS at Van Andel Institute in Grand Rapids, MI.\nJune 1, 2023: I started working as an undergraduate summer researcher with Kenneth C. Arnold."
+  },
+  {
+    "objectID": "blog/transformer-visualized/index.html",
+    "href": "blog/transformer-visualized/index.html",
+    "title": "Transformer in a Nutshell",
+    "section": "",
+    "text": "🚧 Under Construction 🚧"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nStatistical Inference in Nutshell\n\n\n\n\n\n\nStatistics\n\n\n\nVisual and intuitive explanation of statistical inference.\n\n\n\n\n\nMay 3, 2024\n\n\nJiho Kim\n\n\n\n\n\n\n\n\n\n\n\n\nTransformer in a Nutshell\n\n\n\n\n\n\nNLP\n\n\n\nVisualizing the transformer architecture with shapes\n\n\n\n\n\nApr 11, 2024\n\n\nJiho Kim\n\n\n\n\n\n\n\n\n\n\n\n\nInspirative Text Prediction\n\n\n\n\n\n\n\n\n\n\n\nDec 12, 2023\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "pubs/index.html",
