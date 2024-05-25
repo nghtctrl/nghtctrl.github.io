@@ -4,6 +4,7 @@ listing:
     contents:
         - "transformer-visualized"
         - "inspirative-text-prediction"
+        - "statistical-inference"
     type: default
     sort: "date desc"
     sort-ui: true
