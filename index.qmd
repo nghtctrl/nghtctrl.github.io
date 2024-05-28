@@ -55,6 +55,8 @@ My research interests lie at the intersection of HCI and AI. I design, implement
 
 ## Updates
 
+- **May 24, 2024:** I have accepted an offer to intern at the <a class="link" href="https://kixlab.org">KAIST Interaction Lab</a> in Daejeon, South Korea. I will be working with <a class="link" href="https://juhokim.com">Juho Kim</a> and his students <a class="link" href="https://taesookim.com">Tae Soo Kim</a> and <a class="link" href="https://yoonjoolee.com/">Yoonjoo Lee</a>.
+
 - **March 18, 2024:** I presented our workshop paper from summer research at <a class="link" href="https://hai-gen.github.io/2024/program/">HAI-GEN</a> at ACM IUI '24 in Greenville, SC.
 
 - **February 9, 2024:** I was awarded a $1290 travel grant from the NSF to attend ACM IUI '24 as a <a class="link" href="https://iui.acm.org/2024/call_for_student_volunteers.html">student volunteer</a>.
