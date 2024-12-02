@@ -24,7 +24,8 @@ website:
   page-navigation: true
   back-to-top-navigation: true
   bread-crumbs: true
-  page-footer: "Unless otherwise noted, all content is licensed under <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>"
+  # page-footer: "Unless otherwise noted, all content is licensed under <a href='https://creativecommons.org/licenses/by/4.0/'>CC BY 4.0</a>"
+  page-footer: "<a href='privacy-policy'>Privacy Policy</a>"
   
 format:
   html:

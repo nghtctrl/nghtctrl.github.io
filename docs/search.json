@@ -158,7 +158,7 @@
     "href": "index.html",
     "title": "Jiho Kim",
     "section": "",
-    "text": "Hi there! I am an undergraduate junior studying Computer Science at Calvin University. I am currently working as a research assistant with Kenneth C. Arnold.\nMy research interests lie at the intersection of HCI and AI. I design, implement, and evaluate AI-powered systems that augment and empower human capabilities. I am currently researching UI affordances that facilitate human-AI collaboration without allowing AI to overstep human ingenuity and autonomy.\n[Email]   [Current CV]   [Google Scholar]   [Mastodon]   [LinkedIn]"
+    "text": "Hi there! I am a senior undergraduate student studying Computer Science at Calvin University. I am advised by Ken Arnold.\nMy research interest is in human-AI interaction. I design, build, and study intelligent and interactive systems that think with people rather than for them, augmenting human intelligence and creativity with AI."
   },
   {
     "objectID": "index.html#publications",
@@ -172,7 +172,21 @@
     "href": "index.html#updates",
     "title": "Jiho Kim",
     "section": "Updates",
-    "text": "Updates\n\nMay 24, 2024: I have accepted an offer to intern at the KAIST Interaction Lab in Daejeon, South Korea. I will be working with Juho Kim and his students Tae Soo Kim and Yoonjoo Lee.\nMarch 18, 2024: I presented our workshop paper from summer research at HAI-GEN at ACM IUI ’24 in Greenville, SC.\nFebruary 9, 2024: I was awarded a $1290 travel grant from the NSF to attend ACM IUI ’24 as a student volunteer.\nNovember 4, 2023: I presented our poster from summer research at 2023 WMRUGS at Van Andel Institute in Grand Rapids, MI.\nJune 1, 2023: I started working as an undergraduate summer researcher with Kenneth C. Arnold."
+    "text": "Updates\n\n\nNovember 2, 2024: I was invited to give a talk about my undergraduate research at WMRUGS ’24 in Grand Rapids, MI.\nSeptember 6, 2024: I started working as a research intern with Xiang “Anthony” Chen at UCLA HCI Research.\nJune 20, 2024: I started working as a summer research intern with Juho Kim at KIXLAB.\nMarch 18, 2024: I presented our workshop paper from my summer research at the HAI-GEN workshop at ACM IUI ’24 in Greenville, SC.\nFebruary 9, 2024: I was awarded a $1,290 travel grant from the NSF to attend ACM IUI ’24 as a student volunteer.\nNovember 4, 2023: I presented our poster from my summer research at WMRUGS ’23 at the Van Andel Institute in Grand Rapids, MI.\nJune 1, 2023: I started working as an undergraduate research assistant with Ken Arnold at Calvin University."
+  },
+  {
+    "objectID": "privacy-policy/index.html",
+    "href": "privacy-policy/index.html",
+    "title": "Privacy Policy",
+    "section": "",
+    "text": "My website uses Google Analytics1 to collect data about your interactions with the site to better understand visitor behavior and improve content. Google Analytics collects data such as your IP address, browser type, device information, and pages visited on the site.\n\n\n\nAnalytics: I use the information to analyze website traffic and enhance user experience.\nCustomization: To personalize content and features based on user preferences.\nPerformance: To monitor and improve website functionality.\n\n\n\n\nI do not sell or share personal data collected through Google Analytics with third parties except as required by law. Google may process data as described in their Privacy Policy.\n\n\n\n\nOpt-Out: You can prevent data collection by Google Analytics by installing the Google Analytics Opt-out Browser Add-on.\nCookies: You can manage cookie preferences through your browser settings.\n\n\n\n\nTo learn more about how Google handles data, visit their Data Protection Policies. By using my website, you consent to the use of Google Analytics as outlined in this policy."
+  },
+  {
+    "objectID": "privacy-policy/index.html#footnotes",
+    "href": "privacy-policy/index.html#footnotes",
+    "title": "Privacy Policy",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nI do plan on migrating to a more privacy-respecting analytics tool, such as WP Statistics in the future.↩︎"
   },
   {
     "objectID": "blog/transformer-visualized/index.html",

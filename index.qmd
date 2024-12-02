@@ -4,20 +4,18 @@ description: he/him
 about:
   template: solana
   image: profile.jpeg
-  image-alt: "Profile picture of Jiho Kim"
-  # links:
-  #   - text: "{{< iconify academicons google-scholar >}} Google Scholar"
-  #     url: https://scholar.google.com/citations?hl=en&user=aWisTO4AAAAJ&view_op=list_works&sortby=pubdate
-  #   - text: "{{< iconify academicons semantic-scholar >}} Semantic Scholar"
-  #     url: https://www.semanticscholar.org/author/Jiho-Kim/2289885996?sort=pub-date
-  #   - text: "{{< iconify academicons orcid >}} ORCID 0000-0002-1434-4440"
-  #     url: https://orcid.org/0000-0002-1434-4440
-  #   - text: "{{< iconify fa6-brands mastodon >}} Mastodon"
-  #     url: https://hci.social/@jihokim
-  #   - text: "{{< iconify fa6-brands x-twitter >}} Twitter"
-  #     url: https://twitter.com/nghtctrl
-  #   - text: "{{< iconify fa6-brands linkedin >}} LinkedIn"
-  #     url: https://www.linkedin.com/in/nghtctrl
+  image-alt: "Jiho Kim"
+  links:
+    - text: "CV"
+      url: cv.pdf
+    - text: "{{< iconify fa6-brands linkedin >}} LinkedIn"
+      url: https://www.linkedin.com/in/imjihokim
+    - text: "{{< iconify fa6-brands mastodon >}} Mastodon"
+      url: https://hci.social/@jihokim
+    - text: "{{< iconify academicons google-scholar >}} Google Scholar"
+      url: https://scholar.google.com/citations?hl=en&user=aWisTO4AAAAJ&view_op=list_works&sortby=pubdate
+    - text: "{{< iconify academicons semantic-scholar >}} Semantic Scholar"
+      url: https://www.semanticscholar.org/author/Jiho-Kim/2289885996?sort=pub-date
 listing:
   # List of selected publications
   - id: pubs
@@ -34,19 +32,9 @@ toc: false
 back-to-top-navigation: false
 ---
 
-Hi there! I am an undergraduate junior studying Computer Science at <a class="link" href="https://computing.calvin.edu/academics/bcs">Calvin University</a>. I am currently working as a research assistant with <a class="link" href="https://kenarnold.org">Kenneth C. Arnold</a>.
+Hi there! I am a senior undergraduate student studying Computer Science at <a class="link" href="https://calvin.edu">Calvin University</a>. I am advised by <a class="link" href="https://kenarnold.org">Ken Arnold</a>.
 
-My research interests lie at the intersection of HCI and AI. I design, implement, and evaluate AI-powered systems that augment and empower human capabilities. I am currently researching UI affordances that facilitate human-AI collaboration without allowing AI to overstep human ingenuity and autonomy.
-
-**[<a class="link" href="mailto:jihokim8@acm.org">Email</a>]**
-&nbsp;
-**[<a class="link" href="cv.pdf">Current CV</a>]**
-&nbsp;
-**[<a class="link" href="https://scholar.google.com/citations?hl=en&user=aWisTO4AAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>]**
-&nbsp;
-**[<a class="link" href="https://hci.social/@jihokim">Mastodon</a>]**
-&nbsp;
-**[<a class="link" href="https://www.linkedin.com/in/nghtctrl/">LinkedIn</a>]**
+My research interest is in human-AI interaction. I design, build, and study intelligent and interactive systems that think _with_ people rather than for them, augmenting human intelligence and creativity with AI.
 
 ## Publications
 
@@ -55,12 +43,20 @@ My research interests lie at the intersection of HCI and AI. I design, implement
 
 ## Updates
 
-- **May 24, 2024:** I have accepted an offer to intern at the <a class="link" href="https://kixlab.org">KAIST Interaction Lab</a> in Daejeon, South Korea. I will be working with <a class="link" href="https://juhokim.com">Juho Kim</a> and his students <a class="link" href="https://taesookim.com">Tae Soo Kim</a> and <a class="link" href="https://yoonjoolee.com/">Yoonjoo Lee</a>.
+<div
+  style="height: 300px; overflow-y: scroll"
+>
+- **November 2, 2024:** I was invited to give a talk about my undergraduate research at <a class="link" href="https://www.vai.org/event/2024-west-michigan-regional-undergraduate-science-research-conference/?tabUrl=tab-3">WMRUGS '24</a> in Grand Rapids, MI.
 
-- **March 18, 2024:** I presented our workshop paper from summer research at <a class="link" href="https://hai-gen.github.io/2024/program/">HAI-GEN</a> at ACM IUI '24 in Greenville, SC.
+- **September 6, 2024:** I started working as a research intern with <a class="link" href="https://hci.prof/">Xiang "Anthony" Chen</a> at UCLA HCI Research.
 
-- **February 9, 2024:** I was awarded a $1290 travel grant from the NSF to attend ACM IUI '24 as a <a class="link" href="https://iui.acm.org/2024/call_for_student_volunteers.html">student volunteer</a>.
+- **June 20, 2024:** I started working as a summer research intern with <a class="link" href="https://juhokim.com/">Juho Kim</a> at KIXLAB.
 
-- **November 4, 2023:** I presented our poster from summer research at <a class="link" href="https://www.vai.org/event/2023-west-michigan-regional-undergraduate-science-research-conference/">2023 WMRUGS</a> at Van Andel Institute in Grand Rapids, MI.
+- **March 18, 2024:** I presented our workshop paper from my summer research at the <a class="link" href="https://hai-gen.github.io/2024/program/">HAI-GEN workshop</a> at ACM IUI '24 in Greenville, SC.
 
-- **June 1, 2023:** I started working as an undergraduate summer researcher with <a class="link" href="https://kenarnold.org">Kenneth C. Arnold</a>.
+- **February 9, 2024:** I was awarded a $1,290 travel grant from the NSF to attend ACM IUI '24 as a <a class="link" href="https://iui.acm.org/2024/call_for_student_volunteers.html">student volunteer</a>.
+
+- **November 4, 2023:** I presented our poster from my summer research at <a class="link" href="https://www.vai.org/event/2023-west-michigan-regional-undergraduate-science-research-conference/">WMRUGS '23</a> at the Van Andel Institute in Grand Rapids, MI.
+
+- **June 1, 2023:** I started working as an undergraduate research assistant with <a class="link" href="https://kenarnold.org/">Ken Arnold</a> at Calvin University.
+</div>
