@@ -9,7 +9,7 @@ about:
     - text: "{{< iconify mi document >}} CV"
       url: cv.pdf
     - text: "{{< iconify material-symbols alternate-email-rounded >}} Email"
-      url: "mailto:jihokim8@acm.org"
+      url: "mailto:jk249@calvin.edu"
     - text: "{{< iconify mdi github >}} GitHub"
       url: https://github.com/nghtctrl
     - text: "{{< iconify academicons google-scholar >}} Scholar"
