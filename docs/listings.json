@@ -9,7 +9,6 @@
     "listing": "/blog/index.html",
     "items": [
       "/blog/statistical-inference/index.html",
-      "/blog/transformer-visualized/index.html",
       "/blog/inspirative-text-prediction/index.html"
     ]
   },
