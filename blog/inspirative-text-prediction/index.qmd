@@ -1,5 +1,7 @@
 ---
 title: Inspirative Text Prediction
+categories: ["NLP"]
+author: "Jiho Kim"
 date: "2023-12-12"
 # date-modified: "2023-12-14"
 bibliography: references.bib
@@ -15,6 +17,8 @@ format:
 ---
 
 ## Introduction
+
+![GitHub Copilot text completion system.](./copilot_demo.gif){fig-alt="A predictive text demo."}
 
 Machine learning, and more specifically, deep learning, is shaping how we write. From academic papers to class materials, emails to text messages, we are constantly using technologies powered by deep learning to compose our texts. Moreover, studies have shown that predictive text influences what we write [@Arnold_Chauncey_Gajos_2020; @Arnold_Chauncey_Gajos_2018; @Jakesch_Bhat_Buschek_Zalmanson_Naaman_2023]. Currently, most text prediction technology uses a model that looks at the previously typed words and the surrounding text to generate a list of likely next words or phrases. It ranks each of them based on their probabilities and presents the most likely ones to users as suggestions. However, not only may those suggestions be biased, but they may also affect how users write and what they write, thereby taking away their authorship and autonomy. **Could text prediction models instead serve as a source of _inspiration_ for users, encouraging their writing process instead of suggesting what to write?**
 
