@@ -1,15 +1,15 @@
 [
   {
-    "listing": "/index.html",
-    "items": [
-      "/pubs/towards-full-authorship-with-ai/index.html"
-    ]
-  },
-  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/statistical-inference/index.html",
       "/blog/inspirative-text-prediction/index.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/pubs/towards-full-authorship-with-ai/index.html"
     ]
   },
   {
