@@ -1,0 +1,46 @@
+---
+title: "AI for Revision"
+description: ""
+author: [<a class="link" href="https://jihokim.dev">Jiho Kim</a>, <a class="link" href="https://tingofurro.github.io">Philippe Laban</a>, <a class="link" href="https://hci.prof">Xiang 'Anthony' Chen</a>, <a class="link" href="https://kenarnold.org">Kenneth C. Arnold</a>]
+categories: ""
+date: 2024-12-11
+format:
+  html:
+    default-image-extension: svg
+toc: false
+back-to-top-navigation: false
+---
+
+## Vision
+
+We're reimagining how AI can support the writing process while preserving the authenticity of human authorship. Building on our previous work with Textfocals[^1]—an AI writing assistant that offers adaptive feedback through customizable prompts—we're exploring new frontiers in human-AI writing collaboration.
+
+Our research investigates two critical questions at the intersection of AI and writing:
+
+- We're examining the relationship between AI-assisted reflection and direct revision, seeking to understand which approaches best serve writers while maintaining their creative autonomy.
+- We're exploring how different interaction modes—particularly speech versus text—affect the depth and quality of the writing reflection process.
+
+This work aims to advance our understanding of how AI can enhance the writing experience while preserving what matters most: the writer's sense of ownership, agency, and authentic creative expression. Our findings will contribute to the broader conversation about designing AI systems that truly serve human needs and creativity.
+
+## Team
+
+**Jiho Kim** is a senior computer science student who is spearheading this project to be submitted to the <a class="link" href="https://calvin.edu/academics/school-stem/computer-science">Department of Computer Science</a> at <a class="link" href="https://calvin.edu">Calvin University</a> as a partial fulfillment of his BCS in Computer Science.
+
+**Philippe Laban** is a senior research scientist at Microsoft Research, and **Xiang 'Anthony' Chen** is an associate professor of electrical and computer engineering and computer science at the University of California, Los Angeles. They are both outside collaborators co-advising Jiho on this project. 
+
+**Kenneth C. Arnold** is an assistant professor of computer science and data science at Calvin University who is serving as the primary advisor on this project.
+
+## Code
+
+*Not yet public.*
+
+## Report
+
+- <a class="link" href="https://docs.google.com/presentation/d/1_X7ShR9-sAjp3iCwTXlhJwdzZIWWUiwC1bRvu1d6KXY/edit?usp=sharing">Senior Project Proposal</a>.
+- <a class="link" href="https://docs.google.com/presentation/d/1xDokaXnleU_KlKTi5nq0f-B-TlA88nVqTeqYms0I0Z8/edit?usp=sharing">Senior Project Status Report</a>.
+
+## Misc
+
+This research is supported by <a class="link" href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2246145">NSF CRII award 2246145</a>.
+
+[^1]: <a class="link" href="https://jihokim.dev/pubs/towards-full-authorship-with-ai/">Towards Full Authorship with AI: Supporting Revision with AI-Generated Views</a>
