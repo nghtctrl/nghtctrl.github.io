@@ -1,0 +1,110 @@
+---
+title: "Jiho Kim's Portfolio"
+description: "For PhD Admission Consideration in the Computational Media Department at UC Santa Cruz"
+toc: true
+back-to-top-navigation: true
+---
+
+# Interpretive
+
+## Towards Full Authorship with AI: Supporting Revision with AI-Generated Views
+
+**Authors:** Jiho Kim, Ray C. Flanagan, Noelle E. Haviland, ZeAi Sun, Souad N. Yakubu, Edom A. Maru, and Kenneth C. Arnold
+
+**Published:** March 2, 2024
+
+::: {#fig-screenshot}
+
+![](Textfocals.svg){fig-alt="UI of the writing assistant implemented as Microsoft Word add-in."}
+
+UI of the writing assistant implemented as Microsoft Word add-in.
+
+:::
+
+The current interaction paradigm of writing with AI is dominated by humans delegating some or all creative control to AI, instead of maintaining that control themselves. We observed that this was because the current UI design of chatbots was not designed to allow writers to engage in meaningful creative processes and instead encouraged overreliance on automatic adjustments. We identified an opportunity to support writers during revision--specifically, the crucial process of transforming writer-focused drafts into audience-focused prose. In our collaborative project, I led the development of an interactive system where writers could choose and modify predefined prompts to access targeted AI insights (including descriptive summaries, reflective questions, and suggestions), which we called _AI views_, specific to their selected paragraphs (see @fig-screenshot). These novel UI affordances preserved writers' creative agency and ownership while providing revision support.
+
+::: {#fig-paper}
+
+{{< pdf paper17.pdf width=100% height=800 >}}
+
+Published workshop paper. Please visit <a href="https://ceur-ws.org/Vol-3660/paper17.pdf" target="_blank">this link</a> to see it in a new tab.
+
+:::
+
+::: {#fig-presentation}
+
+{{< video https://www.youtube.com/watch?v=-s6IvkGqj2Q >}}
+
+Recorded workshop presentation.
+
+:::
+
+Our results, which I qualitatively coded from user studies, showed that participants using our system were better able to consider their audience's needs, enhance clarity, and uncover previously overlooked ideas during the revision process. Our findings motivate a design principle: rather than defaulting to automated solutions, these human-AI co-creative systems should augment human creative capabilities by encouraging active participation in the creative process. I published (see @fig-paper) and presented (see @fig-presentation) our work as the first author at the HAI-GEN workshop at ACM IUI 2024.
+
+## Calvent: Year-Long Cokes & Clubs
+
+**Authors:** Jiho Kim, Jooha Yoo, Jaden L. Brookens
+
+**Published:** October 15, 2024
+
+At Calvin University, where I am currently finishing my senior year, we have an annual event called "Cokes & Clubs" where students and student club organizers meet to learn about new student clubs and recruit new members. However, this event only happens once a year, and through needfinding, we realized that many students want opportunities to discover and find new student clubs to participate in throughout the school year. Furthermore, club organizers wanted a platform where they could easily advertise and recruit new members to their clubs in a sustainable manner (e.g., without needing to print hundreds of flyers for their events or clubs). 
+
+So, in a collaborative effort (as an HCI class project), I led the design of a centralized platform for students and club leaders to manage and promote club events, enable event discovery, and increase participation and engagement across campus throughout the year.
+
+::: {#fig-first}
+
+![](Iteration1.png)
+
+First iteration of our prototype (parallel prototyping).
+
+:::
+
+::: {#fig-second}
+
+![](Iteration2.png)
+
+Second iteration of our prototype before user studies.
+
+:::
+
+::: {#fig-third}
+
+![](Iteration3.png)
+
+Final iteration of our prototype after user studies.
+
+:::
+
+We started by prototyping (in parallel) what the users might want (see @fig-first) and sketched a possible UI using Canva (see @fig-second), which we later simulated using Figma. We ran user studies to check our assumptions, through which we discovered many incorrect assumptions but also identified correct ones that we were able to reinforce in our final iteration (see @fig-third).
+
+::: {#fig-walkthrough}
+
+{{< video walkthrough.mp4 >}}
+
+UI walkthrough of our final prototype.
+
+:::
+
+Although we did not actually implement our design as a functioning app, we demonstrated a walkthrough of our UI in the final class presentation (see @fig-walkthrough).
+
+This class project has deepened my understanding of HCI beyond my previous research experience (i.e., "Towards Full Authorship with AI: Supporting Revision with AI-Generated Views"), particularly emphasizing the value of thorough needfinding through contextual inquiry and storyboarding. It has transformed my approach from researcher-centered to user-centered design, while teaching me to thoughtfully synthesize user feedback to uncover fundamental design challenges rather than simply implementing every suggestion.
+
+# Technical
+
+## Inspirative Text Prediction
+
+**Author:** Jiho Kim
+
+**Published:** December 12, 2023
+
+This work (see @fig-blog) is a technical blog post exploring an inspirative text prediction system aimed at augmenting human creativity in using predictive text by encouraging reflective and original thought. Unlike traditional predictive models that suggest the most probable next words, this system leverages linguistic constructs, such as subordinating conjunctions (e.g., "because"), to prompt deeper engagement with the text. Using datasets from Project Gutenberg, the project analyzed sentence structures and linguistic patterns with tools like spaCy and evaluated the latest Llama model (at the time of the publication). The findings highlighted subordinating conjunctions as effective prompts for provocative thinking. The blog post includes a scalable pipeline for data collection and processing, visualizations of linguistic features, and recommendations for extending the approach to diverse datasets and linguistic phenomena.
+
+::: {#fig-blog}
+
+```{=html}
+<iframe width="100%" height="400" src="https://jihokim.dev/blog/inspirative-text-prediction/" title="Webpage example"></iframe>
+```
+
+Blog post on inspirative text prediction system. Please visit <a href="https://jihokim.dev/blog/inspirative-text-prediction/" target="_blank">this link</a> to see it in a new tab.
+
+:::
