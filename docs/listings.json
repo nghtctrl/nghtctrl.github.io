@@ -1,9 +1,8 @@
 [
   {
-    "listing": "/blog/index.html",
+    "listing": "/pubs/index.html",
     "items": [
-      "/blog/statistical-inference/index.html",
-      "/blog/inspirative-text-prediction/index.html"
+      "/pubs/towards-full-authorship-with-ai/index.html"
     ]
   },
   {
@@ -13,9 +12,10 @@
     ]
   },
   {
-    "listing": "/pubs/index.html",
+    "listing": "/blog/index.html",
     "items": [
-      "/pubs/towards-full-authorship-with-ai/index.html"
+      "/blog/statistical-inference/index.html",
+      "/blog/inspirative-text-prediction/index.html"
     ]
   }
 ]
