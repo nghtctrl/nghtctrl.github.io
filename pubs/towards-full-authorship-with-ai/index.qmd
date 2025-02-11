@@ -13,13 +13,13 @@ back-to-top-navigation: false
 
 ![Textfocals user interface prototype implemented as Microsoft Word add-in](Textfocals.svg){fig-alt="Textfocals user interface prototype implemented as Microsoft Word add-in"}
 
-<!-- **[<a class="link" href="https://arxiv.org/abs/2403.01055">arXiv</a>]**
-&nbsp; -->
-**[<a class="link" href="https://ceur-ws.org/Vol-3660/paper17.pdf">PDF</a>]**
+**[<a class="link" href="https://arxiv.org/abs/2403.01055">Author's Version</a>]**
 &nbsp;
-**[<a class="link" href="https://docs.google.com/drawings/d/1VoC5iZqSQemHDAV23cCFmxoq3AMkmeOdXeF3ZD-JxN4/edit?usp=sharing">Poster</a>]**
+**[<a class="link" href="https://ceur-ws.org/Vol-3660/paper17.pdf">Publisher's Version</a>]**
 &nbsp;
-**[<a class="link" href="https://docs.google.com/presentation/d/1dvL24PknqS6zdHVZx2q2jr6MqLBHij8XGuj1E-2hAXs/edit?usp=sharing">Slides</a>]**
+**[<a class="link" href="poster.pdf">Poster</a>]**
+&nbsp;
+**[<a class="link" href="slides.pdf">Slides</a>]**
 &nbsp;
 **[<a class="link" href="https://youtu.be/-s6IvkGqj2Q?si=dkQRflvj25j3P4Z7">Presentation</a>]**
 
