@@ -1,0 +1,22 @@
+---
+title: "Transformer in a Nutshell"
+description: "Visualizing the transformer architecture with shapes"
+categories: ["NLP"]
+author: "Jiho Kim"
+date: 2024-04-11
+format:
+  html:
+    default-image-extension: svg
+toc: false
+back-to-top-navigation: false
+---
+
+# 🚧 Under Construction 🚧
+
+![](tokenization.svg)
+
+![](input_embedding.svg)
+
+![](position_embedding.svg)
+
+![](input_and_position_embedding.svg)

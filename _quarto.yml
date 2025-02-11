@@ -14,8 +14,10 @@ website:
     left:
       - text: "Publications"
         href: pubs
+      - text: "Projects"
+        href: proj
       - text: "Blog"
-        href: blog
+        href: https://medium.com/@jiho-kim
   open-graph: true
   twitter-card: true
   google-analytics: G-HWSQBSH4R7
