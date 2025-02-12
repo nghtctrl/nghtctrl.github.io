@@ -13,11 +13,27 @@ website:
     search: true
     left:
       - text: "Publications"
+        aria-label: "Publications"
         href: pubs
       - text: "Projects"
+        aria-label: "Projects"
         href: proj
       - text: "Blog"
+        aria-label: "Blog"
         href: https://medium.com/@jiho-kim
+    right:
+      - icon: linkedin
+        text: LinkedIn
+        aria-label: "LinkedIn"
+        href: https://www.linkedin.com/in/jiho-kim-128aa0199
+      - icon: mastodon
+        text: Mastodon
+        aria-label: "Mastodon"
+        href: https://hci.social/@jihokim
+      - text: "{{< iconify simple-icons bluesky>}} Bluesky"
+        aria-label: "Bluesky"
+        href: https://bsky.app/profile/jihokim.dev
+
   open-graph: true
   twitter-card: true
   google-analytics: G-HWSQBSH4R7

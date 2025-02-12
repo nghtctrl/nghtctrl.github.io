@@ -12,14 +12,14 @@ about:
       url: "mailto:jk249@calvin.edu"
     - text: "{{< iconify mdi github >}} GitHub"
       url: https://github.com/nghtctrl
-    - text: "{{< iconify academicons google-scholar >}} Scholar"
+    - text: "{{< iconify academicons google-scholar >}} Google Scholar"
       url: https://scholar.google.com/citations?hl=en&user=aWisTO4AAAAJ&view_op=list_works&sortby=pubdate
-    - text: "{{< iconify fa6-brands linkedin >}} LinkedIn"
-      url: https://www.linkedin.com/in/imjihokim
-    - text: "{{< iconify fa6-brands mastodon >}} Mastodon"
-      url: https://hci.social/@jihokim
-    # - text: "{{< iconify academicons semantic-scholar >}} Semantic Scholar"
-    #   url: https://www.semanticscholar.org/author/Jiho-Kim/2289885996?sort=pub-date
+    # - text: "{{< iconify fa6-brands linkedin >}} LinkedIn"
+    #   url: https://www.linkedin.com/in/imjihokim
+    # - text: "{{< iconify fa6-brands mastodon >}} Mastodon"
+    #   url: https://hci.social/@jihokim
+    - text: "{{< iconify academicons semantic-scholar >}} Semantic Scholar"
+      url: https://www.semanticscholar.org/author/Jiho-Kim/2289885996?sort=pub-date
 listing:
   # List of selected publications
   - id: pubs
