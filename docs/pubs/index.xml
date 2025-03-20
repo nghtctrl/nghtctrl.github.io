@@ -9,7 +9,7 @@
 <link>https://jihokim.dev/pubs/</link>
 <atom:link href="https://jihokim.dev/pubs/index.xml" rel="self" type="application/rss+xml"/>
 <description>This page lists all my peer-reviewed publications. For less formal writings, please see my &lt;a href=&#39;https://medium.com/@jiho-kim&#39;&gt;blog&lt;/a&gt;.</description>
-<generator>quarto-1.6.40</generator>
+<generator>quarto-1.6.42</generator>
 <lastBuildDate>Sat, 02 Mar 2024 05:00:00 GMT</lastBuildDate>
 <item>
   <title>Towards Full Authorship with AI: Supporting Revision with AI-Generated Views</title>
