@@ -52,8 +52,6 @@ My research interest is in human-AI interaction. I design, build, and study inte
 >
 - **November 2, 2024:** I was invited to give a talk about my undergraduate research at <a class="link" href="https://www.vai.org/event/2024-west-michigan-regional-undergraduate-science-research-conference/?tabUrl=tab-3">WMRUGS '24</a> in Grand Rapids, MI.
 
-- **September 6, 2024:** I started working as a research intern with <a class="link" href="https://hci.prof/">Xiang "Anthony" Chen</a> at UCLA HCI Research.
-
 - **June 20, 2024:** I started working as a summer research intern with <a class="link" href="https://juhokim.com/">Juho Kim</a> at KIXLAB.
 
 - **March 18, 2024:** I presented our workshop paper from my summer research at the <a class="link" href="https://hai-gen.github.io/2024/program/">HAI-GEN workshop</a> at ACM IUI '24 in Greenville, SC.
