@@ -2,12 +2,16 @@
   {
     "listing": "/pubs/index.html",
     "items": [
+      "/pubs/voice-interaction-with-conv-ai/index.html",
+      "/pubs/interaction-required-suggestions/index.html",
       "/pubs/towards-full-authorship-with-ai/index.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
+      "/pubs/voice-interaction-with-conv-ai/index.html",
+      "/pubs/interaction-required-suggestions/index.html",
       "/pubs/towards-full-authorship-with-ai/index.html"
     ]
   },

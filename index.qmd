@@ -25,6 +25,8 @@ listing:
   - id: pubs
     contents:
       - pubs/towards-full-authorship-with-ai
+      - pubs/voice-interaction-with-conv-ai
+      - pubs/interaction-required-suggestions
     type: table
     sort-ui: false
     filter-ui: false

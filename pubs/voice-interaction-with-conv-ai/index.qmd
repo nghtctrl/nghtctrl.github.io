@@ -1,0 +1,26 @@
+---
+title: "Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing"
+description: "Accepted to [4th Workshop on Intelligent and Interactive Writing Assistants (In2Writing)](https://in2writing.glitch.me/) at NAACL 2025"
+author: [<a class="link" href="https://jihokim.dev">Jiho Kim</a>, <a class="link" href="https://tingofurro.github.io">Philippe Laban</a>, <a class="link" href="https://hci.prof">Xiang 'Anthony' Chen</a>, <a class="link" href="https://kenarnold.org">Kenneth C. Arnold</a>]
+categories: "Workshop paper"
+date: 2025-04-11
+format:
+  html:
+    default-image-extension: svg
+toc: false
+back-to-top-navigation: false
+---
+
+**[<a class="link" href="https://arxiv.org/abs/2504.08687">Author's Version</a>]**
+<!-- &nbsp;
+[Publisher's Version]
+&nbsp;
+[Poster]
+&nbsp;
+[Slides]
+&nbsp;
+[Presentation] -->
+
+## Abstract
+
+Writing well requires not only expressing ideas but also refining them through revision, a process facilitated by reflection. Prior research suggests that feedback delivered through dialogues, such as those in writing center tutoring sessions, can help writers reflect more thoughtfully on their work compared to static feedback. Recent advancements in multi-modal large language models (LLMs) now offer new possibilities for supporting interactive and expressive voice-based reflection in writing. In particular, we propose that LLM-generated static feedback can be repurposed as conversation starters, allowing writers to seek clarification, request examples, and ask follow-up questions, thereby fostering deeper reflection on their writing. We argue that voice-based interaction can naturally facilitate this conversational exchange, encouraging writers' engagement with higher-order concerns, facilitating iterative refinement of their reflections, and reduce cognitive load compared to text-based interactions. To investigate these effects, we propose a formative study exploring how text vs. voice input influence writers' reflection and subsequent revisions. Findings from this study will inform the design of intelligent and interactive writing tools, offering insights into how voice-based interactions with LLM-powered conversational agents can support reflection and revision.

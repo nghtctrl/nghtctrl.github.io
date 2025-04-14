@@ -28,11 +28,25 @@
     "text": "Inspirative Text Prediction\nAuthor: Jiho Kim\nPublished: December 12, 2023\nThis work (see Figure 8) is a technical blog post exploring an inspirative text prediction system aimed at augmenting human creativity in using predictive text by encouraging reflective and original thought. Unlike traditional predictive models that suggest the most probable next words, this system leverages linguistic constructs, such as subordinating conjunctions (e.g., “because”), to prompt deeper engagement with the text. Using datasets from Project Gutenberg, the project analyzed sentence structures and linguistic patterns with tools like spaCy and evaluated the latest Llama model (at the time of the publication). The findings highlighted subordinating conjunctions as effective prompts for provocative thinking. The blog post includes a scalable pipeline for data collection and processing, visualizations of linguistic features, and recommendations for extending the approach to diverse datasets and linguistic phenomena.\n\n\n\n\n\n\nFigure 8: Blog post on inspirative text prediction system. Please visit this link to see it in a new tab."
   },
   {
+    "objectID": "pubs/towards-full-authorship-with-ai/index.html",
+    "href": "pubs/towards-full-authorship-with-ai/index.html",
+    "title": "Towards Full Authorship with AI: Supporting Revision with AI-Generated Views",
+    "section": "",
+    "text": "Textfocals user interface prototype implemented as Microsoft Word add-in\n[Author’s Version]   [Publisher’s Version]   [Poster]   [Slides]   [Presentation]"
+  },
+  {
+    "objectID": "pubs/towards-full-authorship-with-ai/index.html#abstract",
+    "href": "pubs/towards-full-authorship-with-ai/index.html#abstract",
+    "title": "Towards Full Authorship with AI: Supporting Revision with AI-Generated Views",
+    "section": "Abstract",
+    "text": "Abstract\nLarge language models (LLMs) are shaping a new user interface (UI) paradigm in writing tools by enabling users to generate text through prompts. This paradigm shifts some creative control from the user to the system, thereby diminishing the user’s authorship and autonomy in the writing process. To restore autonomy, we introduce Textfocals, a UI prototype designed to investigate a human-centered approach that emphasizes the user’s role in writing. Textfocals supports the writing process by providing LLM-generated summaries, questions, and advice (i.e., LLM views) in a sidebar of a text editor, encouraging reflection and self-driven revision in writing without direct text generation. Textfocals’ UI affordances, including contextually adaptive views and scaffolding for prompt selection and customization, offer a novel way to interact with LLMs where users maintain full authorship of their writing. A formative user study with Textfocals showed promising evidence that this approach might help users develop underdeveloped ideas, cater to the rhetorical audience, and clarify their writing. However, the study also showed interaction design challenges related to document navigation and scoping, prompt engineering, and context management. Our work highlights the breadth of the design space of writing support interfaces powered by generative AI that maintain authorship integrity."
+  },
+  {
     "objectID": "pubs/index.html",
     "href": "pubs/index.html",
     "title": "Publications",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nTowards Full Authorship with AI: Supporting Revision with AI-Generated Views\n\n\n\n\n\n\nWorkshop paper\n\n\n\nAccepted to 5th Workshop on Human-AI Co-Creation with Generative Models (HAI-GEN) at ACM IUI 2024\n\n\n\n\n\nMar 2, 2024\n\n\nJiho Kim, Ray C. Flanagan, Noelle E. Haviland, ZeAi Sun, Souad N. Yakubu, Edom A. Maru, Kenneth C. Arnold\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nVoice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing\n\n\n\n\n\n\nWorkshop paper\n\n\n\nAccepted to 4th Workshop on Intelligent and Interactive Writing Assistants (In2Writing) at NAACL 2025\n\n\n\n\n\nApr 11, 2025\n\n\nJiho Kim, Philippe Laban, Xiang ‘Anthony’ Chen, Kenneth C. Arnold\n\n\n\n\n\n\n\n\n\n\n\n\nInteraction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing\n\n\n\n\n\n\nWorkshop paper\n\n\n\nAccepted to 4th Workshop on Intelligent and Interactive Writing Assistants (In2Writing) at NAACL 2025\n\n\n\n\n\nApr 11, 2025\n\n\nKenneth C. Arnold, Jiho Kim\n\n\n\n\n\n\n\n\n\n\n\n\nTowards Full Authorship with AI: Supporting Revision with AI-Generated Views\n\n\n\n\n\n\nWorkshop paper\n\n\n\nAccepted to 5th Workshop on Human-AI Co-Creation with Generative Models (HAI-GEN) at ACM IUI 2024\n\n\n\n\n\nMar 2, 2024\n\n\nJiho Kim, Ray C. Flanagan, Noelle E. Haviland, ZeAi Sun, Souad N. Yakubu, Edom A. Maru, Kenneth C. Arnold\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "index.html",
@@ -46,7 +60,7 @@
     "href": "index.html#publications",
     "title": "Jiho Kim",
     "section": "Publications",
-    "text": "Publications\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthors\n\n\n\n\n\n\n3/2/24\n\n\nTowards Full Authorship with AI: Supporting Revision with AI-Generated Views\n\n\nJiho Kim, Ray C. Flanagan, Noelle E. Haviland, ZeAi Sun, Souad N. Yakubu, Edom A. Maru, Kenneth C. Arnold\n\n\n\n\n\nNo matching items"
+    "text": "Publications\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthors\n\n\n\n\n\n\n4/11/25\n\n\nVoice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing\n\n\nJiho Kim, Philippe Laban, Xiang ‘Anthony’ Chen, Kenneth C. Arnold\n\n\n\n\n4/11/25\n\n\nInteraction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing\n\n\nKenneth C. Arnold, Jiho Kim\n\n\n\n\n3/2/24\n\n\nTowards Full Authorship with AI: Supporting Revision with AI-Generated Views\n\n\nJiho Kim, Ray C. Flanagan, Noelle E. Haviland, ZeAi Sun, Souad N. Yakubu, Edom A. Maru, Kenneth C. Arnold\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#updates",
@@ -273,17 +287,31 @@
     "text": "Footnotes\n\n\nTowards Full Authorship with AI: Supporting Revision with AI-Generated Views↩︎"
   },
   {
-    "objectID": "pubs/towards-full-authorship-with-ai/index.html",
-    "href": "pubs/towards-full-authorship-with-ai/index.html",
-    "title": "Towards Full Authorship with AI: Supporting Revision with AI-Generated Views",
+    "objectID": "pubs/interaction-required-suggestions/index.html",
+    "href": "pubs/interaction-required-suggestions/index.html",
+    "title": "Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing",
     "section": "",
-    "text": "Textfocals user interface prototype implemented as Microsoft Word add-in\n[Author’s Version]   [Publisher’s Version]   [Poster]   [Slides]   [Presentation]"
+    "text": "Predictive text interaction repurposed to type the assistant’s response\n[Author’s Version]   [Demo]"
   },
   {
-    "objectID": "pubs/towards-full-authorship-with-ai/index.html#abstract",
-    "href": "pubs/towards-full-authorship-with-ai/index.html#abstract",
-    "title": "Towards Full Authorship with AI: Supporting Revision with AI-Generated Views",
+    "objectID": "pubs/interaction-required-suggestions/index.html#abstract",
+    "href": "pubs/interaction-required-suggestions/index.html#abstract",
+    "title": "Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing",
     "section": "Abstract",
-    "text": "Abstract\nLarge language models (LLMs) are shaping a new user interface (UI) paradigm in writing tools by enabling users to generate text through prompts. This paradigm shifts some creative control from the user to the system, thereby diminishing the user’s authorship and autonomy in the writing process. To restore autonomy, we introduce Textfocals, a UI prototype designed to investigate a human-centered approach that emphasizes the user’s role in writing. Textfocals supports the writing process by providing LLM-generated summaries, questions, and advice (i.e., LLM views) in a sidebar of a text editor, encouraging reflection and self-driven revision in writing without direct text generation. Textfocals’ UI affordances, including contextually adaptive views and scaffolding for prompt selection and customization, offer a novel way to interact with LLMs where users maintain full authorship of their writing. A formative user study with Textfocals showed promising evidence that this approach might help users develop underdeveloped ideas, cater to the rhetorical audience, and clarify their writing. However, the study also showed interaction design challenges related to document navigation and scoping, prompt engineering, and context management. Our work highlights the breadth of the design space of writing support interfaces powered by generative AI that maintain authorship integrity."
+    "text": "Abstract\nThis paper explores interaction designs for generative AI interfaces that necessitate human involvement throughout the generation process. We argue that such interfaces can promote cognitive engagement, agency, and thoughtful decision-making. Through a case study in text revision, we present and analyze two interaction techniques: (1) using a predictive-text interaction to type the assistant’s response to a revision request, and (2) highlighting potential edit opportunities in a document. Our implementations demonstrate how these approaches reveal the landscape of writing possibilities and enable fine-grained control. We discuss implications for human-AI writing partnerships and future interaction design directions."
+  },
+  {
+    "objectID": "pubs/voice-interaction-with-conv-ai/index.html",
+    "href": "pubs/voice-interaction-with-conv-ai/index.html",
+    "title": "Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing",
+    "section": "",
+    "text": "[Author’s Version]"
+  },
+  {
+    "objectID": "pubs/voice-interaction-with-conv-ai/index.html#abstract",
+    "href": "pubs/voice-interaction-with-conv-ai/index.html#abstract",
+    "title": "Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing",
+    "section": "Abstract",
+    "text": "Abstract\nWriting well requires not only expressing ideas but also refining them through revision, a process facilitated by reflection. Prior research suggests that feedback delivered through dialogues, such as those in writing center tutoring sessions, can help writers reflect more thoughtfully on their work compared to static feedback. Recent advancements in multi-modal large language models (LLMs) now offer new possibilities for supporting interactive and expressive voice-based reflection in writing. In particular, we propose that LLM-generated static feedback can be repurposed as conversation starters, allowing writers to seek clarification, request examples, and ask follow-up questions, thereby fostering deeper reflection on their writing. We argue that voice-based interaction can naturally facilitate this conversational exchange, encouraging writers’ engagement with higher-order concerns, facilitating iterative refinement of their reflections, and reduce cognitive load compared to text-based interactions. To investigate these effects, we propose a formative study exploring how text vs. voice input influence writers’ reflection and subsequent revisions. Findings from this study will inform the design of intelligent and interactive writing tools, offering insights into how voice-based interactions with LLM-powered conversational agents can support reflection and revision."
   }
 ]
