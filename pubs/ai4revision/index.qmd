@@ -34,10 +34,14 @@ This work aims to advance our understanding of how AI can enhance the writing ex
 
 *Not yet public.*
 
-## Report
+## Resources
 
-- <a class="link" href="https://docs.google.com/presentation/d/1_X7ShR9-sAjp3iCwTXlhJwdzZIWWUiwC1bRvu1d6KXY/edit?usp=sharing">Senior Project Proposal</a>.
-- <a class="link" href="https://docs.google.com/presentation/d/1xDokaXnleU_KlKTi5nq0f-B-TlA88nVqTeqYms0I0Z8/edit?usp=sharing">Senior Project Status Report</a>.
+- <a class="link" href="proposal.pdf">Project Proposal</a>.
+- <a class="link" href="status_report.pdf">Project Status Report</a>.
+- <a class="link" href="poster.pdf">Project Poster</a>.
+- <a class="link" href="presentation.pdf">Project Final Presentation</a>.
+- <a class="link" href="https://arxiv.org/abs/2504.08687">Project Final Report (Author's Version)</a>.
+- <a class="link" href="https://aclanthology.org/2025.in2writing-1.7">Project Final Report (Publisher's Version)</a>.
 
 ## Misc
 

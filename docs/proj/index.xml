@@ -9,13 +9,14 @@
 <link>https://jihokim.dev/proj/</link>
 <atom:link href="https://jihokim.dev/proj/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.6.43</generator>
+<generator>quarto-1.7.29</generator>
 <lastBuildDate>Tue, 12 Dec 2023 05:00:00 GMT</lastBuildDate>
 <item>
   <title>Inspirative Text Prediction</title>
   <dc:creator>Jiho Kim</dc:creator>
   <link>https://jihokim.dev/proj/inspirative-text-prediction/</link>
   <description><![CDATA[ 
+
 
 
 
