@@ -36,12 +36,12 @@ This work aims to advance our understanding of how AI can enhance the writing ex
 
 ## Project Deliverables
 
-- <a class="link" href="proposal.pdf">Proposal</a>.
-- <a class="link" href="status_report.pdf">Status Report Presentation</a>.
-- <a class="link" href="poster.pdf">Poster</a>.
-- <a class="link" href="presentation.pdf">Final Presentation</a>.
-- <a class="link" href="https://arxiv.org/abs/2504.08687">Final Report (Author's Version)</a>.
-- <a class="link" href="https://aclanthology.org/2025.in2writing-1.7">Final Report (Publisher's Version)</a>.
+- <a class="link" href="proposal.pdf">Proposal</a>
+- <a class="link" href="status_report.pdf">Status Report Presentation</a>
+- <a class="link" href="poster.pdf">Poster</a>
+- <a class="link" href="presentation.pdf">Final Presentation</a>
+- <a class="link" href="https://arxiv.org/abs/2504.08687">Final Report (Author's Version)</a>
+- <a class="link" href="https://aclanthology.org/2025.in2writing-1.7">Final Report (Publisher's Version)</a>
 
 ## Misc
 
