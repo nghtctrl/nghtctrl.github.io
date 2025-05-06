@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.29">
+<meta name="generator" content="quarto-1.7.30">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="author" content="Philippe Laban">
 <meta name="author" content="Xiang ‘Anthony’ Chen">
 <meta name="author" content="Kenneth C. Arnold">
-<meta name="dcterms.date" content="2024-12-11">
+<meta name="dcterms.date" content="2024-05-08">
 
 <title>AI for Revision – Jiho Kim</title>
 <style>
@@ -41,9 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-748b535e376f14d4692bf2b2e5fd6380.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-2b3e328b71be8d25427581baeb23079b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-6bdd2aebeb936dcddaa5f935a5de481c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -251,6 +251,7 @@ gtag('config', 'G-HWSQBSH4R7', { 'anonymize_ip': true});
       toggleColorMode(toAlternate);
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
     };
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
@@ -342,7 +343,7 @@ gtag('config', 'G-HWSQBSH4R7', { 'anonymize_ip': true});
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 11, 2024</p>
+      <p class="date">May 8, 2024</p>
     </div>
   </div>
   
@@ -356,26 +357,29 @@ gtag('config', 'G-HWSQBSH4R7', { 'anonymize_ip': true});
 
 <section id="vision" class="level2">
 <h2 class="anchored" data-anchor-id="vision">Vision</h2>
-<p>We’re reimagining how AI can support the writing process while preserving the authenticity of human authorship. Building on our previous work with Textfocals<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>—an AI writing assistant that offers adaptive feedback through customizable prompts—we’re exploring new frontiers in human-AI writing collaboration.</p>
-<p>Our research investigates two critical questions at the intersection of AI and writing:</p>
+<p>We are exploring how AI can support the writing process without diminishing human authorship. Building on our previous work with Textfocals<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, an AI writing assistant that offers contextualized feedback through customizable prompts, we are now investigating how voice-based conversations with AI can enable writers to engage in thoughtful reflection on feedback and make substantive revisions.</p>
+<p>Our research asks the following questions about the input modality of having a conversation with AI writing assistants:</p>
 <ul>
-<li>We’re examining the relationship between AI-assisted reflection and direct revision, seeking to understand which approaches best serve writers while maintaining their creative autonomy.</li>
-<li>We’re exploring how different interaction modes—particularly speech versus text—affect the depth and quality of the writing reflection process.</li>
+<li>How might speaking to LLM-powered conversational agents, compared to typing, influence the depth and kinds of concerns writers reflect on in their work?</li>
+<li>How does engaging in spoken conversations with LLM-powered conversational agents, as opposed to text-based interactions, shape the way writers refine and revisit their own reflections?</li>
+<li>How do writers perceive the cognitive demands of speaking to LLM-powered conversational agents, compared to typing, and what factors influence these perceptions?</li>
+<li>How does reflecting with LLM-powered conversational agents influence the extent and depth of revisions in written content?</li>
 </ul>
-<p>This work aims to advance our understanding of how AI can enhance the writing experience while preserving what matters most: the writer’s sense of ownership, agency, and authentic creative expression. Our findings will contribute to the broader conversation about designing AI systems that truly serve human needs and creativity.</p>
+<p>By answering these questions, we aim to inform the design of intelligent and interactive writing tools that support reflection through conversational exchanges with AI.</p>
 </section>
 <section id="team" class="level2">
 <h2 class="anchored" data-anchor-id="team">Team</h2>
-<p><strong>Jiho Kim</strong> is a senior computer science student who is spearheading this project to be submitted to the <a class="link" href="https://calvin.edu/academics/school-stem/computer-science">Department of Computer Science</a> at <a class="link" href="https://calvin.edu">Calvin University</a> as a partial fulfillment of his BCS in Computer Science.</p>
+<p><strong>Jiho Kim</strong> is a senior computer science student who is leading this project.</p>
 <p><strong>Philippe Laban</strong> is a senior research scientist at Microsoft Research, and <strong>Xiang ‘Anthony’ Chen</strong> is an associate professor of electrical and computer engineering and computer science at the University of California, Los Angeles. They are both outside collaborators co-advising Jiho on this project.</p>
 <p><strong>Kenneth C. Arnold</strong> is an assistant professor of computer science and data science at Calvin University who is serving as the primary advisor on this project.</p>
 </section>
 <section id="code" class="level2">
 <h2 class="anchored" data-anchor-id="code">Code</h2>
-<p><em>Not yet public.</em></p>
+<p><em>Since this project is still ongoing (beyond the senior project submission), the code is not yet public.</em></p>
 </section>
 <section id="project-deliverables" class="level2">
 <h2 class="anchored" data-anchor-id="project-deliverables">Project Deliverables</h2>
+<p>This project has been accepted to the Fourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 2025) at the 2025 Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics (NAACL 2025) in Albuquerque, New Mexico.</p>
 <ul>
 <li><a class="link" href="proposal.pdf">Proposal</a></li>
 <li><a class="link" href="status_report.pdf">Status Report Presentation</a></li>
@@ -388,6 +392,7 @@ gtag('config', 'G-HWSQBSH4R7', { 'anonymize_ip': true});
 <section id="misc" class="level2">
 <h2 class="anchored" data-anchor-id="misc">Misc</h2>
 <p>This research is supported by <a class="link" href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2246145">NSF CRII award 2246145</a>.</p>
+<p>This project has been submitted to the <a class="link" href="https://calvin.edu/academics/school-stem/computer-science">Department of Computer Science</a> at <a class="link" href="https://calvin.edu">Calvin University</a> in partial fulfillment of the requirements for the Bachelor of Computer Science degree by Jiho Kim.</p>
 
 
 </section>

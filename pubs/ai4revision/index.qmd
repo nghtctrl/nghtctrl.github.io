@@ -3,7 +3,7 @@ title: "AI for Revision"
 description: ""
 author: [<a class="link" href="https://jihokim.dev">Jiho Kim</a>, <a class="link" href="https://tingofurro.github.io">Philippe Laban</a>, <a class="link" href="https://hci.prof">Xiang 'Anthony' Chen</a>, <a class="link" href="https://kenarnold.org">Kenneth C. Arnold</a>]
 categories: ""
-date: 2024-12-11
+date: 2024-05-08
 format:
   html:
     default-image-extension: svg
@@ -13,18 +13,20 @@ back-to-top-navigation: false
 
 ## Vision
 
-We're reimagining how AI can support the writing process while preserving the authenticity of human authorship. Building on our previous work with Textfocals[^1]—an AI writing assistant that offers adaptive feedback through customizable prompts—we're exploring new frontiers in human-AI writing collaboration.
+We are exploring how AI can support the writing process without diminishing human authorship. Building on our previous work with Textfocals[^1], an AI writing assistant that offers contextualized feedback through customizable prompts, we are now investigating how voice-based conversations with AI can enable writers to engage in thoughtful reflection on feedback and make substantive revisions.
 
-Our research investigates two critical questions at the intersection of AI and writing:
+Our research asks the following questions about the input modality of having a conversation with AI writing assistants:
 
-- We're examining the relationship between AI-assisted reflection and direct revision, seeking to understand which approaches best serve writers while maintaining their creative autonomy.
-- We're exploring how different interaction modes—particularly speech versus text—affect the depth and quality of the writing reflection process.
+- How might speaking to LLM-powered conversational agents, compared to typing, influence the depth and kinds of concerns writers reflect on in their work?
+- How does engaging in spoken conversations with LLM-powered conversational agents, as opposed to text-based interactions, shape the way writers refine and revisit their own reflections?
+- How do writers perceive the cognitive demands of speaking to LLM-powered conversational agents, compared to typing, and what factors influence these perceptions?
+- How does reflecting with LLM-powered conversational agents influence the extent and depth of revisions in written content?
 
-This work aims to advance our understanding of how AI can enhance the writing experience while preserving what matters most: the writer's sense of ownership, agency, and authentic creative expression. Our findings will contribute to the broader conversation about designing AI systems that truly serve human needs and creativity.
+By answering these questions, we aim to inform the design of intelligent and interactive writing tools that support reflection through conversational exchanges with AI.
 
 ## Team
 
-**Jiho Kim** is a senior computer science student who is spearheading this project to be submitted to the <a class="link" href="https://calvin.edu/academics/school-stem/computer-science">Department of Computer Science</a> at <a class="link" href="https://calvin.edu">Calvin University</a> as a partial fulfillment of his BCS in Computer Science.
+**Jiho Kim** is a senior computer science student who is leading this project.
 
 **Philippe Laban** is a senior research scientist at Microsoft Research, and **Xiang 'Anthony' Chen** is an associate professor of electrical and computer engineering and computer science at the University of California, Los Angeles. They are both outside collaborators co-advising Jiho on this project. 
 
@@ -32,9 +34,11 @@ This work aims to advance our understanding of how AI can enhance the writing ex
 
 ## Code
 
-*Not yet public.*
+*Since this project is still ongoing (beyond the senior project submission), the code is not yet public.*
 
 ## Project Deliverables
+
+This project has been accepted to the Fourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 2025) at the 2025 Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics (NAACL 2025) in Albuquerque, New Mexico.
 
 - <a class="link" href="proposal.pdf">Proposal</a>
 - <a class="link" href="status_report.pdf">Status Report Presentation</a>
@@ -46,5 +50,7 @@ This work aims to advance our understanding of how AI can enhance the writing ex
 ## Misc
 
 This research is supported by <a class="link" href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2246145">NSF CRII award 2246145</a>.
+
+This project has been submitted to the <a class="link" href="https://calvin.edu/academics/school-stem/computer-science">Department of Computer Science</a> at <a class="link" href="https://calvin.edu">Calvin University</a> in partial fulfillment of the requirements for the Bachelor of Computer Science degree by Jiho Kim.
 
 [^1]: <a class="link" href="https://jihokim.dev/pubs/towards-full-authorship-with-ai/">Towards Full Authorship with AI: Supporting Revision with AI-Generated Views</a>
