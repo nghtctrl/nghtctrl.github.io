@@ -8,28 +8,26 @@ about:
   links:
     - text: "{{< iconify mi document >}} CV"
       url: cv.pdf
-    - text: "{{< iconify material-symbols alternate-email-rounded >}} Email"
-      url: "mailto:jiho@jihokim.dev"
     - text: "{{< iconify mdi github >}} GitHub"
       url: https://github.com/nghtctrl
     - text: "{{< iconify academicons google-scholar >}} Google Scholar"
       url: https://scholar.google.com/citations?hl=en&user=aWisTO4AAAAJ&view_op=list_works&sortby=pubdate
     - text: "{{< iconify academicons semantic-scholar >}} Semantic Scholar"
       url: https://www.semanticscholar.org/author/Jiho-Kim/2289885996?sort=pub-date
-listing:
-  # List of selected publications
-  - id: pubs
-    contents:
-      - pubs/towards-full-authorship-with-ai
-      - pubs/voice-interaction-with-conv-ai
-      - pubs/interaction-required-suggestions
-    type: table
-    sort-ui: false
-    filter-ui: false
-    sort: "date desc"
-    field-display-names:
-      author: "Authors"
-    date-format: short
+# listing:
+#   # List of selected publications
+#   - id: pubs
+#     contents:
+#       - pubs/towards-full-authorship-with-ai
+#       - pubs/voice-interaction-with-conv-ai
+#       - pubs/interaction-required-suggestions
+#     type: table
+#     sort-ui: false
+#     filter-ui: false
+#     sort: "date desc"
+#     field-display-names:
+#       author: "Authors"
+#     date-format: short
 toc: false
 back-to-top-navigation: false
 ---
@@ -40,10 +38,12 @@ I recently graduated with a B.C.S. in Computer Science from <a class="link" href
 
 My research interest is in human-computer interaction. I design, build, and study AI systems that think _with_ people rather than for them, augmenting human intelligence and creativity.
 
+You can reach me at _myfirstname_\@jihokim.dev
+
 ## Publications
 
-::: {#pubs}
-:::
+<!-- ::: {#pubs}
+::: -->
 
 ## Updates
 
