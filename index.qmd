@@ -10,6 +10,8 @@ about:
       url: cv.pdf
     - text: "{{< iconify mdi github >}} GitHub"
       url: https://github.com/nghtctrl
+    - text: "{{< iconify academicons orcid >}} ORCID"
+      url: https://orcid.org/0000-0002-1434-4440
     - text: "{{< iconify academicons google-scholar >}} Google Scholar"
       url: https://scholar.google.com/citations?hl=en&user=aWisTO4AAAAJ&view_op=list_works&sortby=pubdate
     - text: "{{< iconify academicons semantic-scholar >}} Semantic Scholar"
