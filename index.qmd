@@ -14,38 +14,93 @@ about:
       url: https://scholar.google.com/citations?hl=en&user=aWisTO4AAAAJ&view_op=list_works&sortby=pubdate
     - text: "{{< iconify academicons semantic-scholar >}} Semantic Scholar"
       url: https://www.semanticscholar.org/author/Jiho-Kim/2289885996?sort=pub-date
-# listing:
-#   # List of selected publications
-#   - id: pubs
-#     contents:
-#       - pubs/towards-full-authorship-with-ai
-#       - pubs/voice-interaction-with-conv-ai
-#       - pubs/interaction-required-suggestions
-#     type: table
-#     sort-ui: false
-#     filter-ui: false
-#     sort: "date desc"
-#     field-display-names:
-#       author: "Authors"
-#     date-format: short
 toc: false
 back-to-top-navigation: false
 ---
 
-Hi there! I am a Software Engineer at <a class="link" href="https://software.sil.org/">SIL Language Technology</a>. 
+Hi there! I am a Software Engineer at <a class="link" href="https://software.sil.org/" target="_blank">SIL Language Technology</a>. 
 
-I recently graduated with a B.C.S. in Computer Science from <a class="link" href="https://calvin.edu">Calvin University</a>, where I worked with <a class="link" href="https://kenarnold.org">Ken Arnold</a> on intelligent and interactive writing tools.
+I recently graduated with a B.C.S. in Computer Science from <a class="link" href="https://calvin.edu/" target="_blank">Calvin University</a>, where I worked with <a class="link" href="https://kenarnold.org/" target="_blank">Ken Arnold</a> on intelligent and interactive writing tools.
 
 My research interest is in human-computer interaction. I design, build, and study AI systems that think _with_ people rather than for them, augmenting human intelligence and creativity.
 
 You can reach me at _myfirstname_\@jihokim.dev
 
-## Publications
+### Publications
 
-<!-- ::: {#pubs}
-::: -->
+#### Conference Papers
 
-## Updates
+::: {.paper-container}
+::: {.paper-thumbnail}
+![](assets/paper_thumbnails/Kim_2025_CUPID.png){.rounded .shadow alt="First page of CUPID: Evaluating Personalized and Contextualized Alignment of LLMs from Interactions, COLM 2025."}
+:::
+::: {.paper-metadata}
+::: {}
+<a href="" target="_blank">**CUPID: Evaluating Personalized and Contextualized Alignment of LLMs from Interactions**</a>
+:::
+::: {}
+<a href="https://taesookim.com/" target="_blank">Tae Soo Kim</a>, <a href="https://yoonjoolee.com/" target="_blank">Yoonjoo Lee</a>, <a href="https://www.linkedin.com/in/yoonah-park-50ba57249/" target="_blank">Yoonah Park</a>, <b>Jiho Kim</b>, <a href="https://younghokim.net/" target="_blank">Young-Ho Kim</a>, and <a href="https://juhokim.com/" target="_blank">Juho Kim</a>
+:::
+::: {}
+Proceedings of the Second Conference on Language Modeling (COLM 2025)
+:::
+:::
+:::
+
+#### Workshop Papers, Posters, and Technical Reports
+
+::: {.paper-container}
+::: {.paper-thumbnail}
+![](assets/paper_thumbnails/Kim_2025_Voice_Interaction.png){.rounded .shadow alt="First page of Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing, In2Writing 2025."}
+:::
+::: {.paper-metadata}
+::: {}
+<a href="" target="_blank">**Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing**</a>
+:::
+::: {}
+<b>Jiho Kim</b>, <a href="https://tingofurro.github.io/" target="_blank">Philippe Laban</a>, <a href="https://hci.prof/" target="_blank">Xiang 'Anthony' Chen</a>, and <a href="https://kenarnold.org/" target="_blank">Kenneth C. Arnold</a>
+:::
+::: {}
+Fourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 2025)
+:::
+:::
+:::
+
+::: {.paper-container}
+::: {.paper-thumbnail}
+![](assets/paper_thumbnails/Arnold_2025_Interaction-Required_Suggestions.png){.rounded .shadow alt="First page of Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing, In2Writing 2025."}
+:::
+::: {.paper-metadata}
+::: {}
+<a href="" target="_blank">**Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing**</a>
+:::
+::: {}
+<a href="https://kenarnold.org/" target="_blank">Kenneth C. Arnold</a> and <b>Jiho Kim</b>
+:::
+::: {}
+Fourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 2025)
+:::
+:::
+:::
+
+::: {.paper-container}
+::: {.paper-thumbnail}
+![](assets/paper_thumbnails/Kim_2024_Towards_Full_Authorship_with_AI.png){.rounded .shadow alt="First page of Towards Full Authorship with AI: Supporting Revision with AI-Generated Views, HAI-GEN 2025."}
+:::
+::: {.paper-metadata}
+::: {}
+<a href="" target="_blank">**Towards Full Authorship with AI: Supporting Revision with AI-Generated Views**</a>
+:::
+::: {}
+<b>Jiho Kim</b>, <a href="https://www.linkedin.com/in/ray-flanagan-5803021b6/" target="_blank">Ray C. Flanagan</a>, Noelle E. Haviland, <a href="https://www.linkedin.com/in/zeai-sun-029b3524a/" target="_blank">ZeAi Sun</a>, <a href="https://www.linkedin.com/in/souad-yakubu/" target="_blank">Souad N. Yakubu</a>, <a href="https://www.linkedin.com/in/edom-maru-1969ba24b/" target="_blank">Edom A. Maru</a>, and <a href="https://kenarnold.org/" target="_blank">Kenneth C. Arnold</a>
+:::
+::: {}
+Fifth Workshop on Human-AI Co-Creation with Generative Models (HAI-GEN 2024)
+:::
+:::
+:::
+
+### Updates
 
 <div
   style="height: 300px; overflow-y: scroll"
