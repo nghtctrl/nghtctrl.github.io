@@ -1,51 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jihokim.dev/portfolio/index.html</loc>
-    <lastmod>2025-03-20T22:34:56.966Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jihokim.dev/pubs/towards-full-authorship-with-ai/index.html</loc>
-    <lastmod>2025-03-20T22:34:57.044Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jihokim.dev/pubs/index.html</loc>
-    <lastmod>2025-04-14T18:31:02.276Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jihokim.dev/index.html</loc>
-    <lastmod>2025-04-14T18:37:36.558Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jihokim.dev/proj/statistical-inference/index.html</loc>
-    <lastmod>2025-03-20T22:34:57.043Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jihokim.dev/proj/inspirative-text-prediction/index.html</loc>
-    <lastmod>2025-03-20T22:34:57.043Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jihokim.dev/proj/transformer-visualized/index.html</loc>
-    <lastmod>2025-03-20T22:34:57.043Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jihokim.dev/proj/index.html</loc>
-    <lastmod>2025-03-20T22:34:57.039Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jihokim.dev/privacy-policy/index.html</loc>
-    <lastmod>2025-03-20T22:34:57.038Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jihokim.dev/pubs/ai4revision/index.html</loc>
-    <lastmod>2025-05-06T19:43:29.298Z</lastmod>
+    <loc>https://jihokim.dev/pubs/voice-interaction-with-conv-ai/index.html</loc>
+    <lastmod>2025-09-13T18:33:14.774Z</lastmod>
   </url>
   <url>
     <loc>https://jihokim.dev/pubs/interaction-required-suggestions/index.html</loc>
-    <lastmod>2025-04-14T18:30:13.256Z</lastmod>
+    <lastmod>2025-09-13T18:33:14.767Z</lastmod>
   </url>
   <url>
-    <loc>https://jihokim.dev/pubs/voice-interaction-with-conv-ai/index.html</loc>
-    <lastmod>2025-05-06T19:18:17.984Z</lastmod>
+    <loc>https://jihokim.dev/pubs/ai4revision/index.html</loc>
+    <lastmod>2025-09-13T18:33:14.758Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jihokim.dev/proj/statistical-inference/index.html</loc>
+    <lastmod>2025-09-13T18:33:14.757Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jihokim.dev/proj/inspirative-text-prediction/index.html</loc>
+    <lastmod>2025-09-13T18:33:14.757Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jihokim.dev/proj/transformer-visualized/index.html</loc>
+    <lastmod>2025-09-13T18:33:14.757Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jihokim.dev/proj/index.html</loc>
+    <lastmod>2025-09-13T18:33:14.753Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jihokim.dev/index.html</loc>
+    <lastmod>2025-09-14T01:51:10.869Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jihokim.dev/pubs/index.html</loc>
+    <lastmod>2025-09-13T18:33:14.767Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jihokim.dev/pubs/towards-full-authorship-with-ai/index.html</loc>
+    <lastmod>2025-09-13T18:33:14.768Z</lastmod>
   </url>
 </urlset>

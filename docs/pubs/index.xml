@@ -9,8 +9,8 @@
 <link>https://jihokim.dev/pubs/</link>
 <atom:link href="https://jihokim.dev/pubs/index.xml" rel="self" type="application/rss+xml"/>
 <description>This page lists all my peer-reviewed publications. For less formal writings, please see my &lt;a href=&#39;https://medium.com/@jiho-kim&#39;&gt;blog&lt;/a&gt;.</description>
-<generator>quarto-1.7.30</generator>
-<lastBuildDate>Fri, 11 Apr 2025 04:00:00 GMT</lastBuildDate>
+<generator>quarto-1.7.34</generator>
+<lastBuildDate>Fri, 11 Apr 2025 05:00:00 GMT</lastBuildDate>
 <item>
   <title>Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing</title>
   <dc:creator>&lt;a class=&quot;link&quot; href=&quot;https://jihokim.dev&quot;&gt;Jiho Kim&lt;/a&gt;</dc:creator>
@@ -42,7 +42,7 @@
  ]]></description>
   <category>Workshop paper</category>
   <guid>https://jihokim.dev/pubs/voice-interaction-with-conv-ai/</guid>
-  <pubDate>Fri, 11 Apr 2025 04:00:00 GMT</pubDate>
+  <pubDate>Fri, 11 Apr 2025 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing</title>
@@ -85,7 +85,7 @@
  ]]></description>
   <category>Workshop paper</category>
   <guid>https://jihokim.dev/pubs/interaction-required-suggestions/</guid>
-  <pubDate>Fri, 11 Apr 2025 04:00:00 GMT</pubDate>
+  <pubDate>Fri, 11 Apr 2025 05:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Towards Full Authorship with AI: Supporting Revision with AI-Generated Views</title>
@@ -120,7 +120,7 @@
  ]]></description>
   <category>Workshop paper</category>
   <guid>https://jihokim.dev/pubs/towards-full-authorship-with-ai/</guid>
-  <pubDate>Sat, 02 Mar 2024 05:00:00 GMT</pubDate>
+  <pubDate>Sat, 02 Mar 2024 06:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

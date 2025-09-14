@@ -1,73 +1,80 @@
 [
   {
-    "objectID": "portfolio/index.html",
-    "href": "portfolio/index.html",
-    "title": "Jiho Kim’s Portfolio",
+    "objectID": "pubs/voice-interaction-with-conv-ai/index.html",
+    "href": "pubs/voice-interaction-with-conv-ai/index.html",
+    "title": "Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing",
     "section": "",
-    "text": "Authors: Jiho Kim, Ray C. Flanagan, Noelle E. Haviland, ZeAi Sun, Souad N. Yakubu, Edom A. Maru, and Kenneth C. Arnold\nPublished: March 2, 2024\n\n\n\n\n\n\nFigure 1: UI of the writing assistant implemented as Microsoft Word add-in.\n\n\n\nThe current interaction paradigm of writing with AI is dominated by humans delegating some or all creative control to AI, instead of maintaining that control themselves. We observed that this was because the current UI design of chatbots was not designed to allow writers to engage in meaningful creative processes and instead encouraged overreliance on automatic adjustments. We identified an opportunity to support writers during revision–specifically, the crucial process of transforming writer-focused drafts into audience-focused prose. In our collaborative project, I led the development of an interactive system where writers could choose and modify predefined prompts to access targeted AI insights (including descriptive summaries, reflective questions, and suggestions), which we called AI views, specific to their selected paragraphs (see Figure 1). These novel UI affordances preserved writers’ creative agency and ownership while providing revision support.\n\n\n\nDownload PDF file.\n\n\nFigure 2: Published workshop paper. Please visit this link to see it in a new tab.\n\n\n\n\n\n\n\n\n\nFigure 3: Recorded workshop presentation.\n\n\n\nOur results, which I qualitatively coded from user studies, showed that participants using our system were better able to consider their audience’s needs, enhance clarity, and uncover previously overlooked ideas during the revision process. Our findings motivate a design principle: rather than defaulting to automated solutions, these human-AI co-creative systems should augment human creative capabilities by encouraging active participation in the creative process. I published (see Figure 2) and presented (see Figure 3) our work as the first author at the HAI-GEN workshop at ACM IUI 2024.\n\n\n\nAuthors: Jiho Kim, Jooha Yoo, Jaden L. Brookens\nPublished: October 15, 2024\nAt Calvin University, where I am currently finishing my senior year, we have an annual event called “Cokes & Clubs” where students and student club organizers meet to learn about new student clubs and recruit new members. However, this event only happens once a year, and through needfinding, we realized that many students want opportunities to discover and find new student clubs to participate in throughout the school year. Furthermore, club organizers wanted a platform where they could easily advertise and recruit new members to their clubs in a sustainable manner (e.g., without needing to print hundreds of flyers for their events or clubs).\nSo, in a collaborative effort (as an HCI class project), I led the design of a centralized platform for students and club leaders to manage and promote club events, enable event discovery, and increase participation and engagement across campus throughout the year.\n\n\n\n\n\n\nFigure 4: First iteration of our prototype (parallel prototyping).\n\n\n\n\n\n\n\n\n\nFigure 5: Second iteration of our prototype before user studies.\n\n\n\n\n\n\n\n\n\nFigure 6: Final iteration of our prototype after user studies.\n\n\n\nWe started by prototyping (in parallel) what the users might want (see Figure 4) and sketched a possible UI using Canva (see Figure 5), which we later simulated using Figma. We ran user studies to check our assumptions, through which we discovered many incorrect assumptions but also identified correct ones that we were able to reinforce in our final iteration (see Figure 6).\n\n\n\n\n\n\nFigure 7: UI walkthrough of our final prototype.\n\n\n\nAlthough we did not actually implement our design as a functioning app, we demonstrated a walkthrough of our UI in the final class presentation (see Figure 7).\nThis class project has deepened my understanding of HCI beyond my previous research experience (i.e., “Towards Full Authorship with AI: Supporting Revision with AI-Generated Views”), particularly emphasizing the value of thorough needfinding through contextual inquiry and storyboarding. It has transformed my approach from researcher-centered to user-centered design, while teaching me to thoughtfully synthesize user feedback to uncover fundamental design challenges rather than simply implementing every suggestion."
+    "text": "[Author’s Version]   [Publisher’s Version]   [Poster]"
   },
   {
-    "objectID": "portfolio/index.html#towards-full-authorship-with-ai-supporting-revision-with-ai-generated-views",
-    "href": "portfolio/index.html#towards-full-authorship-with-ai-supporting-revision-with-ai-generated-views",
-    "title": "Jiho Kim’s Portfolio",
-    "section": "",
-    "text": "Authors: Jiho Kim, Ray C. Flanagan, Noelle E. Haviland, ZeAi Sun, Souad N. Yakubu, Edom A. Maru, and Kenneth C. Arnold\nPublished: March 2, 2024\n\n\n\n\n\n\nFigure 1: UI of the writing assistant implemented as Microsoft Word add-in.\n\n\n\nThe current interaction paradigm of writing with AI is dominated by humans delegating some or all creative control to AI, instead of maintaining that control themselves. We observed that this was because the current UI design of chatbots was not designed to allow writers to engage in meaningful creative processes and instead encouraged overreliance on automatic adjustments. We identified an opportunity to support writers during revision–specifically, the crucial process of transforming writer-focused drafts into audience-focused prose. In our collaborative project, I led the development of an interactive system where writers could choose and modify predefined prompts to access targeted AI insights (including descriptive summaries, reflective questions, and suggestions), which we called AI views, specific to their selected paragraphs (see Figure 1). These novel UI affordances preserved writers’ creative agency and ownership while providing revision support.\n\n\n\nDownload PDF file.\n\n\nFigure 2: Published workshop paper. Please visit this link to see it in a new tab.\n\n\n\n\n\n\n\n\n\nFigure 3: Recorded workshop presentation.\n\n\n\nOur results, which I qualitatively coded from user studies, showed that participants using our system were better able to consider their audience’s needs, enhance clarity, and uncover previously overlooked ideas during the revision process. Our findings motivate a design principle: rather than defaulting to automated solutions, these human-AI co-creative systems should augment human creative capabilities by encouraging active participation in the creative process. I published (see Figure 2) and presented (see Figure 3) our work as the first author at the HAI-GEN workshop at ACM IUI 2024."
-  },
-  {
-    "objectID": "portfolio/index.html#calvent-year-long-cokes-clubs",
-    "href": "portfolio/index.html#calvent-year-long-cokes-clubs",
-    "title": "Jiho Kim’s Portfolio",
-    "section": "",
-    "text": "Authors: Jiho Kim, Jooha Yoo, Jaden L. Brookens\nPublished: October 15, 2024\nAt Calvin University, where I am currently finishing my senior year, we have an annual event called “Cokes & Clubs” where students and student club organizers meet to learn about new student clubs and recruit new members. However, this event only happens once a year, and through needfinding, we realized that many students want opportunities to discover and find new student clubs to participate in throughout the school year. Furthermore, club organizers wanted a platform where they could easily advertise and recruit new members to their clubs in a sustainable manner (e.g., without needing to print hundreds of flyers for their events or clubs).\nSo, in a collaborative effort (as an HCI class project), I led the design of a centralized platform for students and club leaders to manage and promote club events, enable event discovery, and increase participation and engagement across campus throughout the year.\n\n\n\n\n\n\nFigure 4: First iteration of our prototype (parallel prototyping).\n\n\n\n\n\n\n\n\n\nFigure 5: Second iteration of our prototype before user studies.\n\n\n\n\n\n\n\n\n\nFigure 6: Final iteration of our prototype after user studies.\n\n\n\nWe started by prototyping (in parallel) what the users might want (see Figure 4) and sketched a possible UI using Canva (see Figure 5), which we later simulated using Figma. We ran user studies to check our assumptions, through which we discovered many incorrect assumptions but also identified correct ones that we were able to reinforce in our final iteration (see Figure 6).\n\n\n\n\n\n\nFigure 7: UI walkthrough of our final prototype.\n\n\n\nAlthough we did not actually implement our design as a functioning app, we demonstrated a walkthrough of our UI in the final class presentation (see Figure 7).\nThis class project has deepened my understanding of HCI beyond my previous research experience (i.e., “Towards Full Authorship with AI: Supporting Revision with AI-Generated Views”), particularly emphasizing the value of thorough needfinding through contextual inquiry and storyboarding. It has transformed my approach from researcher-centered to user-centered design, while teaching me to thoughtfully synthesize user feedback to uncover fundamental design challenges rather than simply implementing every suggestion."
-  },
-  {
-    "objectID": "portfolio/index.html#inspirative-text-prediction",
-    "href": "portfolio/index.html#inspirative-text-prediction",
-    "title": "Jiho Kim’s Portfolio",
-    "section": "Inspirative Text Prediction",
-    "text": "Inspirative Text Prediction\nAuthor: Jiho Kim\nPublished: December 12, 2023\nThis work (see Figure 8) is a technical blog post exploring an inspirative text prediction system aimed at augmenting human creativity in using predictive text by encouraging reflective and original thought. Unlike traditional predictive models that suggest the most probable next words, this system leverages linguistic constructs, such as subordinating conjunctions (e.g., “because”), to prompt deeper engagement with the text. Using datasets from Project Gutenberg, the project analyzed sentence structures and linguistic patterns with tools like spaCy and evaluated the latest Llama model (at the time of the publication). The findings highlighted subordinating conjunctions as effective prompts for provocative thinking. The blog post includes a scalable pipeline for data collection and processing, visualizations of linguistic features, and recommendations for extending the approach to diverse datasets and linguistic phenomena.\n\n\n\n\n\n\nFigure 8: Blog post on inspirative text prediction system. Please visit this link to see it in a new tab."
-  },
-  {
-    "objectID": "pubs/towards-full-authorship-with-ai/index.html",
-    "href": "pubs/towards-full-authorship-with-ai/index.html",
-    "title": "Towards Full Authorship with AI: Supporting Revision with AI-Generated Views",
-    "section": "",
-    "text": "Textfocals user interface prototype implemented as Microsoft Word add-in\n[Author’s Version]   [Publisher’s Version]   [Poster]   [Slides]   [Presentation]"
-  },
-  {
-    "objectID": "pubs/towards-full-authorship-with-ai/index.html#abstract",
-    "href": "pubs/towards-full-authorship-with-ai/index.html#abstract",
-    "title": "Towards Full Authorship with AI: Supporting Revision with AI-Generated Views",
+    "objectID": "pubs/voice-interaction-with-conv-ai/index.html#abstract",
+    "href": "pubs/voice-interaction-with-conv-ai/index.html#abstract",
+    "title": "Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing",
     "section": "Abstract",
-    "text": "Abstract\nLarge language models (LLMs) are shaping a new user interface (UI) paradigm in writing tools by enabling users to generate text through prompts. This paradigm shifts some creative control from the user to the system, thereby diminishing the user’s authorship and autonomy in the writing process. To restore autonomy, we introduce Textfocals, a UI prototype designed to investigate a human-centered approach that emphasizes the user’s role in writing. Textfocals supports the writing process by providing LLM-generated summaries, questions, and advice (i.e., LLM views) in a sidebar of a text editor, encouraging reflection and self-driven revision in writing without direct text generation. Textfocals’ UI affordances, including contextually adaptive views and scaffolding for prompt selection and customization, offer a novel way to interact with LLMs where users maintain full authorship of their writing. A formative user study with Textfocals showed promising evidence that this approach might help users develop underdeveloped ideas, cater to the rhetorical audience, and clarify their writing. However, the study also showed interaction design challenges related to document navigation and scoping, prompt engineering, and context management. Our work highlights the breadth of the design space of writing support interfaces powered by generative AI that maintain authorship integrity."
+    "text": "Abstract\nWriting well requires not only expressing ideas but also refining them through revision, a process facilitated by reflection. Prior research suggests that feedback delivered through dialogues, such as those in writing center tutoring sessions, can help writers reflect more thoughtfully on their work compared to static feedback. Recent advancements in multi-modal large language models (LLMs) now offer new possibilities for supporting interactive and expressive voice-based reflection in writing. In particular, we propose that LLM-generated static feedback can be repurposed as conversation starters, allowing writers to seek clarification, request examples, and ask follow-up questions, thereby fostering deeper reflection on their writing. We argue that voice-based interaction can naturally facilitate this conversational exchange, encouraging writers’ engagement with higher-order concerns, facilitating iterative refinement of their reflections, and reduce cognitive load compared to text-based interactions. To investigate these effects, we propose a formative study exploring how text vs. voice input influence writers’ reflection and subsequent revisions. Findings from this study will inform the design of intelligent and interactive writing tools, offering insights into how voice-based interactions with LLM-powered conversational agents can support reflection and revision."
   },
   {
-    "objectID": "pubs/index.html",
-    "href": "pubs/index.html",
-    "title": "Publications",
+    "objectID": "pubs/interaction-required-suggestions/index.html",
+    "href": "pubs/interaction-required-suggestions/index.html",
+    "title": "Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nVoice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing\n\n\n\nWorkshop paper\n\n\n\nAccepted to 4th Workshop on Intelligent and Interactive Writing Assistants (In2Writing) at NAACL 2025\n\n\n\n\n\nApr 11, 2025\n\n\nJiho Kim, Philippe Laban, Xiang ‘Anthony’ Chen, Kenneth C. Arnold\n\n\n\n\n\n\n\n\n\n\n\n\nInteraction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing\n\n\n\nWorkshop paper\n\n\n\nAccepted to 4th Workshop on Intelligent and Interactive Writing Assistants (In2Writing) at NAACL 2025\n\n\n\n\n\nApr 11, 2025\n\n\nKenneth C. Arnold, Jiho Kim\n\n\n\n\n\n\n\n\n\n\n\n\nTowards Full Authorship with AI: Supporting Revision with AI-Generated Views\n\n\n\nWorkshop paper\n\n\n\nAccepted to 5th Workshop on Human-AI Co-Creation with Generative Models (HAI-GEN) at ACM IUI 2024\n\n\n\n\n\nMar 2, 2024\n\n\nJiho Kim, Ray C. Flanagan, Noelle E. Haviland, ZeAi Sun, Souad N. Yakubu, Edom A. Maru, Kenneth C. Arnold\n\n\n\n\n\nNo matching items\n Back to top"
+    "text": "Predictive text interaction repurposed to type the assistant’s response\n[Author’s Version]   [Demo]"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Jiho Kim",
+    "objectID": "pubs/interaction-required-suggestions/index.html#abstract",
+    "href": "pubs/interaction-required-suggestions/index.html#abstract",
+    "title": "Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing",
+    "section": "Abstract",
+    "text": "Abstract\nThis paper explores interaction designs for generative AI interfaces that necessitate human involvement throughout the generation process. We argue that such interfaces can promote cognitive engagement, agency, and thoughtful decision-making. Through a case study in text revision, we present and analyze two interaction techniques: (1) using a predictive-text interaction to type the assistant’s response to a revision request, and (2) highlighting potential edit opportunities in a document. Our implementations demonstrate how these approaches reveal the landscape of writing possibilities and enable fine-grained control. We discuss implications for human-AI writing partnerships and future interaction design directions."
+  },
+  {
+    "objectID": "pubs/ai4revision/index.html",
+    "href": "pubs/ai4revision/index.html",
+    "title": "AI for Revision",
     "section": "",
-    "text": "Hi there! I am a senior undergraduate student studying Computer Science at Calvin University. I am advised by Ken Arnold.\nMy research interest is in human-AI interaction. I design, build, and study intelligent and interactive systems that think with people rather than for them, augmenting human intelligence and creativity with AI."
+    "text": "We are exploring how AI can support the writing process without diminishing human authorship. Building on our previous work with Textfocals1, an AI writing assistant that offers contextualized feedback through customizable prompts, we are now investigating how voice-based conversations with AI can enable writers to engage in thoughtful reflection on feedback and make substantive revisions.\nOur research asks the following questions about the input modality of having a conversation with AI writing assistants:\n\nHow might speaking to LLM-powered conversational agents, compared to typing, influence the depth and kinds of concerns writers reflect on in their work?\nHow does engaging in spoken conversations with LLM-powered conversational agents, as opposed to text-based interactions, shape the way writers refine and revisit their own reflections?\nHow do writers perceive the cognitive demands of speaking to LLM-powered conversational agents, compared to typing, and what factors influence these perceptions?\nHow does reflecting with LLM-powered conversational agents influence the extent and depth of revisions in written content?\n\nBy answering these questions, we aim to inform the design of intelligent and interactive writing tools that support reflection through conversational exchanges with AI."
   },
   {
-    "objectID": "index.html#publications",
-    "href": "index.html#publications",
-    "title": "Jiho Kim",
-    "section": "Publications",
-    "text": "Publications\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthors\n\n\n\n\n\n\n4/11/25\n\n\nVoice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing\n\n\nJiho Kim, Philippe Laban, Xiang ‘Anthony’ Chen, Kenneth C. Arnold\n\n\n\n\n4/11/25\n\n\nInteraction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing\n\n\nKenneth C. Arnold, Jiho Kim\n\n\n\n\n3/2/24\n\n\nTowards Full Authorship with AI: Supporting Revision with AI-Generated Views\n\n\nJiho Kim, Ray C. Flanagan, Noelle E. Haviland, ZeAi Sun, Souad N. Yakubu, Edom A. Maru, Kenneth C. Arnold\n\n\n\n\nNo matching items"
+    "objectID": "pubs/ai4revision/index.html#vision",
+    "href": "pubs/ai4revision/index.html#vision",
+    "title": "AI for Revision",
+    "section": "",
+    "text": "We are exploring how AI can support the writing process without diminishing human authorship. Building on our previous work with Textfocals1, an AI writing assistant that offers contextualized feedback through customizable prompts, we are now investigating how voice-based conversations with AI can enable writers to engage in thoughtful reflection on feedback and make substantive revisions.\nOur research asks the following questions about the input modality of having a conversation with AI writing assistants:\n\nHow might speaking to LLM-powered conversational agents, compared to typing, influence the depth and kinds of concerns writers reflect on in their work?\nHow does engaging in spoken conversations with LLM-powered conversational agents, as opposed to text-based interactions, shape the way writers refine and revisit their own reflections?\nHow do writers perceive the cognitive demands of speaking to LLM-powered conversational agents, compared to typing, and what factors influence these perceptions?\nHow does reflecting with LLM-powered conversational agents influence the extent and depth of revisions in written content?\n\nBy answering these questions, we aim to inform the design of intelligent and interactive writing tools that support reflection through conversational exchanges with AI."
   },
   {
-    "objectID": "index.html#updates",
-    "href": "index.html#updates",
-    "title": "Jiho Kim",
-    "section": "Updates",
-    "text": "Updates\n\n\nNovember 2, 2024: I was invited to give a talk about my undergraduate research at WMRUGS ’24 in Grand Rapids, MI.\nJune 20, 2024: I started working as a summer research intern with Juho Kim at KIXLAB.\nMarch 18, 2024: I presented our workshop paper from my summer research at the HAI-GEN workshop at ACM IUI ’24 in Greenville, SC.\nFebruary 9, 2024: I was awarded a $1,290 travel grant from the NSF to attend ACM IUI ’24 as a student volunteer.\nNovember 4, 2023: I presented our poster from my summer research at WMRUGS ’23 at the Van Andel Institute in Grand Rapids, MI.\nJune 1, 2023: I started working as an undergraduate research assistant with Ken Arnold at Calvin University."
+    "objectID": "pubs/ai4revision/index.html#team",
+    "href": "pubs/ai4revision/index.html#team",
+    "title": "AI for Revision",
+    "section": "Team",
+    "text": "Team\nJiho Kim is a senior computer science student who is leading this project.\nPhilippe Laban is a senior research scientist at Microsoft Research, and Xiang ‘Anthony’ Chen is an associate professor of electrical and computer engineering and computer science at the University of California, Los Angeles. They are both outside collaborators co-advising Jiho on this project.\nKenneth C. Arnold is an assistant professor of computer science and data science at Calvin University who is serving as the primary advisor on this project."
+  },
+  {
+    "objectID": "pubs/ai4revision/index.html#code",
+    "href": "pubs/ai4revision/index.html#code",
+    "title": "AI for Revision",
+    "section": "Code",
+    "text": "Code\nSince this project is still ongoing (beyond the senior project submission), the code is not yet public."
+  },
+  {
+    "objectID": "pubs/ai4revision/index.html#project-deliverables",
+    "href": "pubs/ai4revision/index.html#project-deliverables",
+    "title": "AI for Revision",
+    "section": "Project Deliverables",
+    "text": "Project Deliverables\nThis project has been accepted to the Fourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 2025) at the 2025 Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics (NAACL 2025) in Albuquerque, New Mexico.\n\nProposal\nStatus Report Presentation\nPoster\nFinal Presentation\nFinal Report (Author’s Version)\nFinal Report (Publisher’s Version)"
+  },
+  {
+    "objectID": "pubs/ai4revision/index.html#misc",
+    "href": "pubs/ai4revision/index.html#misc",
+    "title": "AI for Revision",
+    "section": "Misc",
+    "text": "Misc\nThis research is supported by NSF CRII award 2246145.\nThis project has been submitted to the Department of Computer Science at Calvin University in partial fulfillment of the requirements for the Bachelor of Computer Science degree by Jiho Kim."
+  },
+  {
+    "objectID": "pubs/ai4revision/index.html#footnotes",
+    "href": "pubs/ai4revision/index.html#footnotes",
+    "title": "AI for Revision",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nTowards Full Authorship with AI: Supporting Revision with AI-Generated Views↩︎"
   },
   {
     "objectID": "proj/statistical-inference/index.html",
@@ -224,94 +231,31 @@
     "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nInspirative Text Prediction\n\n\n\nNLP\n\n\n\n\n\n\n\n\n\nDec 12, 2023\n\n\nJiho Kim\n\n\n\n\n\nNo matching items\n Back to top"
   },
   {
-    "objectID": "privacy-policy/index.html",
-    "href": "privacy-policy/index.html",
-    "title": "Privacy Policy",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Jiho Kim",
     "section": "",
-    "text": "My website uses Google Analytics1 to collect data about your interactions with the site to better understand visitor behavior and improve content. Google Analytics collects data such as your IP address, browser type, device information, and pages visited on the site.\n\n\n\nAnalytics: I use the information to analyze website traffic and enhance user experience.\nCustomization: To personalize content and features based on user preferences.\nPerformance: To monitor and improve website functionality.\n\n\n\n\nI do not sell or share personal data collected through Google Analytics with third parties except as required by law. Google may process data as described in their Privacy Policy.\n\n\n\n\nOpt-Out: You can prevent data collection by Google Analytics by installing the Google Analytics Opt-out Browser Add-on.\nCookies: You can manage cookie preferences through your browser settings.\n\n\n\n\nTo learn more about how Google handles data, visit their Data Protection Policies. By using my website, you consent to the use of Google Analytics as outlined in this policy."
+    "text": "Hi there! I am a Software Engineer at SIL Language Technology.\nI recently graduated with a B.C.S. in Computer Science from Calvin University, where I worked with Ken Arnold on intelligent and interactive writing tools.\nMy research interest is in human-computer interaction. I design, build, and study AI systems that think with people rather than for them, augmenting human intelligence and creativity.\nYou can reach me at myfirstname@jihokim.dev\n\nUpdates\n\n\nNovember 2, 2024: I was invited to give a talk about my undergraduate research at WMRUGS ’24 in Grand Rapids, MI.\nJune 20, 2024: I started working as a summer research intern with Juho Kim at KIXLAB.\nMarch 18, 2024: I presented our workshop paper from my summer research at the HAI-GEN workshop at ACM IUI ’24 in Greenville, SC.\nFebruary 9, 2024: I was awarded a $1,290 travel grant from the NSF to attend ACM IUI ’24 as a student volunteer.\nNovember 4, 2023: I presented our poster from my summer research at WMRUGS ’23 at the Van Andel Institute in Grand Rapids, MI.\nJune 1, 2023: I started working as an undergraduate research assistant with Ken Arnold at Calvin University.\n\n\n\n\nPublications\n\nConference Papers\n\n\n\n\n\n\nCUPID: Evaluating Personalized and Contextualized Alignment of LLMs from Interactions\n\n\nTae Soo Kim, Yoonjoo Lee, Yoonah Park, Jiho Kim, Young-Ho Kim, and Juho Kim\n\n\nSecond Conference on Language Modeling (COLM 2025)\n\n\n\n\n\nWorkshop Papers, Posters, and Technical Reports\n\n\n\n\n\n\nVoice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing\n\n\nJiho Kim, Philippe Laban, Xiang ‘Anthony’ Chen, and Kenneth C. Arnold\n\n\nFourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 2025) at NAACL 2025\n\n\n\n\n\n\n\n\n\nInteraction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing\n\n\nKenneth C. Arnold and Jiho Kim\n\n\nFourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 2025) at NAACL 2025\n\n\n\n\n\n\n\n\n\nTowards Full Authorship with AI: Supporting Revision with AI-Generated Views\n\n\nJiho Kim, Ray C. Flanagan, Noelle E. Haviland, ZeAi Sun, Souad N. Yakubu, Edom A. Maru, and Kenneth C. Arnold\n\n\nFifth Workshop on Human-AI Co-Creation with Generative Models (HAI-GEN 2024) at IUI 2024"
   },
   {
-    "objectID": "privacy-policy/index.html#footnotes",
-    "href": "privacy-policy/index.html#footnotes",
-    "title": "Privacy Policy",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nI do plan on migrating to a more privacy-respecting analytics tool, such as WP Statistics in the future.↩︎"
-  },
-  {
-    "objectID": "pubs/ai4revision/index.html",
-    "href": "pubs/ai4revision/index.html",
-    "title": "AI for Revision",
+    "objectID": "pubs/index.html",
+    "href": "pubs/index.html",
+    "title": "Publications",
     "section": "",
-    "text": "We are exploring how AI can support the writing process without diminishing human authorship. Building on our previous work with Textfocals1, an AI writing assistant that offers contextualized feedback through customizable prompts, we are now investigating how voice-based conversations with AI can enable writers to engage in thoughtful reflection on feedback and make substantive revisions.\nOur research asks the following questions about the input modality of having a conversation with AI writing assistants:\n\nHow might speaking to LLM-powered conversational agents, compared to typing, influence the depth and kinds of concerns writers reflect on in their work?\nHow does engaging in spoken conversations with LLM-powered conversational agents, as opposed to text-based interactions, shape the way writers refine and revisit their own reflections?\nHow do writers perceive the cognitive demands of speaking to LLM-powered conversational agents, compared to typing, and what factors influence these perceptions?\nHow does reflecting with LLM-powered conversational agents influence the extent and depth of revisions in written content?\n\nBy answering these questions, we aim to inform the design of intelligent and interactive writing tools that support reflection through conversational exchanges with AI."
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nVoice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing\n\n\n\nWorkshop paper\n\n\n\nAccepted to 4th Workshop on Intelligent and Interactive Writing Assistants (In2Writing) at NAACL 2025\n\n\n\n\n\nApr 11, 2025\n\n\nJiho Kim, Philippe Laban, Xiang ‘Anthony’ Chen, Kenneth C. Arnold\n\n\n\n\n\n\n\n\n\n\n\n\nInteraction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing\n\n\n\nWorkshop paper\n\n\n\nAccepted to 4th Workshop on Intelligent and Interactive Writing Assistants (In2Writing) at NAACL 2025\n\n\n\n\n\nApr 11, 2025\n\n\nKenneth C. Arnold, Jiho Kim\n\n\n\n\n\n\n\n\n\n\n\n\nTowards Full Authorship with AI: Supporting Revision with AI-Generated Views\n\n\n\nWorkshop paper\n\n\n\nAccepted to 5th Workshop on Human-AI Co-Creation with Generative Models (HAI-GEN) at ACM IUI 2024\n\n\n\n\n\nMar 2, 2024\n\n\nJiho Kim, Ray C. Flanagan, Noelle E. Haviland, ZeAi Sun, Souad N. Yakubu, Edom A. Maru, Kenneth C. Arnold\n\n\n\n\n\nNo matching items\n Back to top"
   },
   {
-    "objectID": "pubs/ai4revision/index.html#vision",
-    "href": "pubs/ai4revision/index.html#vision",
-    "title": "AI for Revision",
+    "objectID": "pubs/towards-full-authorship-with-ai/index.html",
+    "href": "pubs/towards-full-authorship-with-ai/index.html",
+    "title": "Towards Full Authorship with AI: Supporting Revision with AI-Generated Views",
     "section": "",
-    "text": "We are exploring how AI can support the writing process without diminishing human authorship. Building on our previous work with Textfocals1, an AI writing assistant that offers contextualized feedback through customizable prompts, we are now investigating how voice-based conversations with AI can enable writers to engage in thoughtful reflection on feedback and make substantive revisions.\nOur research asks the following questions about the input modality of having a conversation with AI writing assistants:\n\nHow might speaking to LLM-powered conversational agents, compared to typing, influence the depth and kinds of concerns writers reflect on in their work?\nHow does engaging in spoken conversations with LLM-powered conversational agents, as opposed to text-based interactions, shape the way writers refine and revisit their own reflections?\nHow do writers perceive the cognitive demands of speaking to LLM-powered conversational agents, compared to typing, and what factors influence these perceptions?\nHow does reflecting with LLM-powered conversational agents influence the extent and depth of revisions in written content?\n\nBy answering these questions, we aim to inform the design of intelligent and interactive writing tools that support reflection through conversational exchanges with AI."
+    "text": "Textfocals user interface prototype implemented as Microsoft Word add-in\n[Author’s Version]   [Publisher’s Version]   [Poster]   [Slides]   [Presentation]"
   },
   {
-    "objectID": "pubs/ai4revision/index.html#team",
-    "href": "pubs/ai4revision/index.html#team",
-    "title": "AI for Revision",
-    "section": "Team",
-    "text": "Team\nJiho Kim is a senior computer science student who is leading this project.\nPhilippe Laban is a senior research scientist at Microsoft Research, and Xiang ‘Anthony’ Chen is an associate professor of electrical and computer engineering and computer science at the University of California, Los Angeles. They are both outside collaborators co-advising Jiho on this project.\nKenneth C. Arnold is an assistant professor of computer science and data science at Calvin University who is serving as the primary advisor on this project."
-  },
-  {
-    "objectID": "pubs/ai4revision/index.html#code",
-    "href": "pubs/ai4revision/index.html#code",
-    "title": "AI for Revision",
-    "section": "Code",
-    "text": "Code\nSince this project is still ongoing (beyond the senior project submission), the code is not yet public."
-  },
-  {
-    "objectID": "pubs/ai4revision/index.html#project-deliverables",
-    "href": "pubs/ai4revision/index.html#project-deliverables",
-    "title": "AI for Revision",
-    "section": "Project Deliverables",
-    "text": "Project Deliverables\nThis project has been accepted to the Fourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 2025) at the 2025 Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics (NAACL 2025) in Albuquerque, New Mexico.\n\nProposal\nStatus Report Presentation\nPoster\nFinal Presentation\nFinal Report (Author’s Version)\nFinal Report (Publisher’s Version)"
-  },
-  {
-    "objectID": "pubs/ai4revision/index.html#misc",
-    "href": "pubs/ai4revision/index.html#misc",
-    "title": "AI for Revision",
-    "section": "Misc",
-    "text": "Misc\nThis research is supported by NSF CRII award 2246145.\nThis project has been submitted to the Department of Computer Science at Calvin University in partial fulfillment of the requirements for the Bachelor of Computer Science degree by Jiho Kim."
-  },
-  {
-    "objectID": "pubs/ai4revision/index.html#footnotes",
-    "href": "pubs/ai4revision/index.html#footnotes",
-    "title": "AI for Revision",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nTowards Full Authorship with AI: Supporting Revision with AI-Generated Views↩︎"
-  },
-  {
-    "objectID": "pubs/interaction-required-suggestions/index.html",
-    "href": "pubs/interaction-required-suggestions/index.html",
-    "title": "Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing",
-    "section": "",
-    "text": "Predictive text interaction repurposed to type the assistant’s response\n[Author’s Version]   [Demo]"
-  },
-  {
-    "objectID": "pubs/interaction-required-suggestions/index.html#abstract",
-    "href": "pubs/interaction-required-suggestions/index.html#abstract",
-    "title": "Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing",
+    "objectID": "pubs/towards-full-authorship-with-ai/index.html#abstract",
+    "href": "pubs/towards-full-authorship-with-ai/index.html#abstract",
+    "title": "Towards Full Authorship with AI: Supporting Revision with AI-Generated Views",
     "section": "Abstract",
-    "text": "Abstract\nThis paper explores interaction designs for generative AI interfaces that necessitate human involvement throughout the generation process. We argue that such interfaces can promote cognitive engagement, agency, and thoughtful decision-making. Through a case study in text revision, we present and analyze two interaction techniques: (1) using a predictive-text interaction to type the assistant’s response to a revision request, and (2) highlighting potential edit opportunities in a document. Our implementations demonstrate how these approaches reveal the landscape of writing possibilities and enable fine-grained control. We discuss implications for human-AI writing partnerships and future interaction design directions."
-  },
-  {
-    "objectID": "pubs/voice-interaction-with-conv-ai/index.html",
-    "href": "pubs/voice-interaction-with-conv-ai/index.html",
-    "title": "Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing",
-    "section": "",
-    "text": "[Author’s Version]   [Publisher’s Version]   [Poster]"
-  },
-  {
-    "objectID": "pubs/voice-interaction-with-conv-ai/index.html#abstract",
-    "href": "pubs/voice-interaction-with-conv-ai/index.html#abstract",
-    "title": "Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing",
-    "section": "Abstract",
-    "text": "Abstract\nWriting well requires not only expressing ideas but also refining them through revision, a process facilitated by reflection. Prior research suggests that feedback delivered through dialogues, such as those in writing center tutoring sessions, can help writers reflect more thoughtfully on their work compared to static feedback. Recent advancements in multi-modal large language models (LLMs) now offer new possibilities for supporting interactive and expressive voice-based reflection in writing. In particular, we propose that LLM-generated static feedback can be repurposed as conversation starters, allowing writers to seek clarification, request examples, and ask follow-up questions, thereby fostering deeper reflection on their writing. We argue that voice-based interaction can naturally facilitate this conversational exchange, encouraging writers’ engagement with higher-order concerns, facilitating iterative refinement of their reflections, and reduce cognitive load compared to text-based interactions. To investigate these effects, we propose a formative study exploring how text vs. voice input influence writers’ reflection and subsequent revisions. Findings from this study will inform the design of intelligent and interactive writing tools, offering insights into how voice-based interactions with LLM-powered conversational agents can support reflection and revision."
+    "text": "Abstract\nLarge language models (LLMs) are shaping a new user interface (UI) paradigm in writing tools by enabling users to generate text through prompts. This paradigm shifts some creative control from the user to the system, thereby diminishing the user’s authorship and autonomy in the writing process. To restore autonomy, we introduce Textfocals, a UI prototype designed to investigate a human-centered approach that emphasizes the user’s role in writing. Textfocals supports the writing process by providing LLM-generated summaries, questions, and advice (i.e., LLM views) in a sidebar of a text editor, encouraging reflection and self-driven revision in writing without direct text generation. Textfocals’ UI affordances, including contextually adaptive views and scaffolding for prompt selection and customization, offer a novel way to interact with LLMs where users maintain full authorship of their writing. A formative user study with Textfocals showed promising evidence that this approach might help users develop underdeveloped ideas, cater to the rhetorical audience, and clarify their writing. However, the study also showed interaction design challenges related to document navigation and scoping, prompt engineering, and context management. Our work highlights the breadth of the design space of writing support interfaces powered by generative AI that maintain authorship integrity."
   }
 ]

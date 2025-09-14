@@ -3,5 +3,42 @@
 } */
 
 .link {
-    text-decoration: none;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.link:hover {
+  text-decoration: underline dotted;
+}
+
+.paper-container {
+  display: flex;
+  margin-top: 25px;
+}
+
+.paper-container .paper-thumbnail {
+  margin-right: 25px;
+}
+
+.paper-container .paper-thumbnail img {
+  max-width: 130px;
+}
+
+.paper-container .paper-metadata {
+  font-size: 14px;
+}
+
+.paper-container .paper-metadata p {
+  margin-bottom: 0.5em;
+}
+
+.paper-container .paper-metadata a {
+  text-decoration: none;
+  transition: 0.3s;
+  color: inherit;
+}
+
+.paper-container .paper-metadata a:hover {
+  text-decoration: underline dotted;
+  color: grey;
 }

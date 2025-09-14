@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -31,16 +31,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-2b3e328b71be8d25427581baeb23079b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-6bdd2aebeb936dcddaa5f935a5de481c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -74,35 +72,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-pubs .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-pubs'] = new List('listing-pubs', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HWSQBSH4R7"></script>
 
 <script type="text/javascript">
@@ -113,43 +82,22 @@ gtag('js', new Date());
 gtag('config', 'G-HWSQBSH4R7', { 'anonymize_ip': true});
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Jiho Kim">
 <meta property="og:description" content="he/him">
+<meta property="og:image" content="https://jihokim.dev/assets/paper_thumbnails/Kim_2025_CUPID.png">
 <meta property="og:site_name" content="Jiho Kim">
+<meta property="og:image:alt" content="First page of CUPID: Evaluating Personalized and Contextualized Alignment of LLMs from Interactions, COLM 2025.">
+<meta property="og:image:height" content="1100">
+<meta property="og:image:width" content="850">
 <meta name="twitter:title" content="Jiho Kim">
 <meta name="twitter:description" content="he/him">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jihokim.dev/assets/paper_thumbnails/Kim_2025_CUPID.png">
+<meta name="twitter:image:alt" content="First page of CUPID: Evaluating Personalized and Contextualized Alignment of LLMs from Interactions, COLM 2025.">
+<meta name="twitter:image-height" content="1100">
+<meta name="twitter:image-width" content="850">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -391,9 +339,6 @@ window.Quarto = {
   <a href="/cv.pdf" class="about-link" rel="" target="">
      <span class="about-link-text"><iconify-icon inline="" icon="mi:document" aria-label="Icon document from mi Iconify.design set." title="Icon document from mi Iconify.design set."></iconify-icon> CV</span>
   </a>
-  <a href="mailto:jiho@jihokim.dev" class="about-link" rel="" target="">
-     <span class="about-link-text"><iconify-icon inline="" icon="material-symbols:alternate-email-rounded" aria-label="Icon alternate-email-rounded from material-symbols Iconify.design set." title="Icon alternate-email-rounded from material-symbols Iconify.design set."></iconify-icon> Email</span>
-  </a>
   <a href="https://github.com/nghtctrl" class="about-link" rel="" target="">
      <span class="about-link-text"><iconify-icon inline="" icon="mdi:github" aria-label="Icon github from mdi Iconify.design set." title="Icon github from mdi Iconify.design set."></iconify-icon> GitHub</span>
   </a>
@@ -406,66 +351,12 @@ window.Quarto = {
 </div>
       <div class="about-contents"><main class="content" id="quarto-document-content">
 
-<p>Hi there! I am a senior undergraduate student studying Computer Science at <a class="link" href="https://calvin.edu">Calvin University</a>. I am advised by <a class="link" href="https://kenarnold.org">Ken Arnold</a>.</p>
-<p>My research interest is in human-AI interaction. I design, build, and study intelligent and interactive systems that think <em>with</em> people rather than for them, augmenting human intelligence and creativity with AI.</p>
-<section id="publications" class="level2">
-<h2 data-anchor-id="publications">Publications</h2>
-<div id="listing-pubs" class="quarto-listing quarto-listing-container-table">
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-Date
-</th>
-<th>
-Title
-</th>
-<th>
-Authors
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="V29ya3Nob3AlMjBwYXBlcg==" data-listing-date-sort="1744344000000" data-listing-file-modified-sort="1746559097984" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="192" data-listing-title-sort="Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">4/11/25</span>
-</td>
-<td>
-<a href="./pubs/voice-interaction-with-conv-ai/index.html" class="title listing-title">Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing</a>
-</td>
-<td>
-<span class="listing-author"><a class="link" href="https://jihokim.dev">Jiho Kim</a>, <a class="link" href="https://tingofurro.github.io">Philippe Laban</a>, <a class="link" href="https://hci.prof">Xiang ‘Anthony’ Chen</a>, <a class="link" href="https://kenarnold.org">Kenneth C. Arnold</a></span>
-</td>
-</tr>
-<tr data-index="1" data-categories="V29ya3Nob3AlMjBwYXBlcg==" data-listing-date-sort="1744344000000" data-listing-file-modified-sort="1744655413256" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="127" data-listing-title-sort="Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">4/11/25</span>
-</td>
-<td>
-<a href="./pubs/interaction-required-suggestions/index.html" class="title listing-title">Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing</a>
-</td>
-<td>
-<span class="listing-author"><a class="link" href="https://kenarnold.org">Kenneth C. Arnold</a>, <a class="link" href="https://jihokim.dev">Jiho Kim</a></span>
-</td>
-</tr>
-<tr data-index="2" data-categories="V29ya3Nob3AlMjBwYXBlcg==" data-listing-date-sort="1709355600000" data-listing-file-modified-sort="1742510097044" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="226" data-listing-title-sort="Towards Full Authorship with AI: Supporting Revision with AI-Generated Views" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">3/2/24</span>
-</td>
-<td>
-<a href="./pubs/towards-full-authorship-with-ai/index.html" class="title listing-title">Towards Full Authorship with AI: Supporting Revision with AI-Generated Views</a>
-</td>
-<td>
-<span class="listing-author"><a class="link" href="https://jihokim.dev">Jiho Kim</a>, Ray C. Flanagan, Noelle E. Haviland, ZeAi Sun, Souad N. Yakubu, Edom A. Maru, <a class="link" href="https://kenarnold.org">Kenneth C. Arnold</a></span>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</section>
-<section id="updates" class="level2">
-<h2 data-anchor-id="updates">Updates</h2>
+<p>Hi there! I am a Software Engineer at <a class="link" href="https://software.sil.org/" target="_blank">SIL Language Technology</a>.</p>
+<p>I recently graduated with a B.C.S. in Computer Science from <a class="link" href="https://calvin.edu/" target="_blank">Calvin University</a>, where I worked with <a class="link" href="https://kenarnold.org/" target="_blank">Ken Arnold</a> on intelligent and interactive writing tools.</p>
+<p>My research interest is in human-computer interaction. I design, build, and study AI systems that think <em>with</em> people rather than for them, augmenting human intelligence and creativity.</p>
+<p>You can reach me at <em>myfirstname</em>@jihokim.dev</p>
+<section id="updates" class="level3">
+<h3 data-anchor-id="updates">Updates</h3>
 <div style="height: 300px; overflow-y: scroll">
 <ul>
 <li><p><strong>November 2, 2024:</strong> I was invited to give a talk about my undergraduate research at <a class="link" href="https://www.vai.org/event/2024-west-michigan-regional-undergraduate-science-research-conference/?tabUrl=tab-3">WMRUGS ’24</a> in Grand Rapids, MI.</p></li>
@@ -476,8 +367,81 @@ Authors
 <li><p><strong>June 1, 2023:</strong> I started working as an undergraduate research assistant with <a class="link" href="https://kenarnold.org/">Ken Arnold</a> at Calvin University.</p></li>
 </ul>
 </div>
+</section>
+<section id="publications" class="level3">
+<h3 data-anchor-id="publications">Publications</h3>
+<section id="conference-papers" class="level4">
+<h4 data-anchor-id="conference-papers">Conference Papers</h4>
+<div class="paper-container">
+<div class="paper-thumbnail">
+<p><img src="assets/paper_thumbnails/Kim_2025_CUPID.png" class="rounded shadow img-fluid" alt="First page of CUPID: Evaluating Personalized and Contextualized Alignment of LLMs from Interactions, COLM 2025."></p>
+</div>
+<div class="paper-metadata">
+<div>
+<p><a href="" target="_blank"><strong>CUPID: Evaluating Personalized and Contextualized Alignment of LLMs from Interactions</strong></a></p>
+</div>
+<div>
+<p><a href="https://taesookim.com/" target="_blank">Tae Soo Kim</a>, <a href="https://yoonjoolee.com/" target="_blank">Yoonjoo Lee</a>, <a href="https://www.linkedin.com/in/yoonah-park-50ba57249/" target="_blank">Yoonah Park</a>, <b>Jiho Kim</b>, <a href="https://younghokim.net/" target="_blank">Young-Ho Kim</a>, and <a href="https://juhokim.com/" target="_blank">Juho Kim</a></p>
+</div>
+<div>
+<p>Second Conference on Language Modeling (COLM 2025)</p>
+</div>
+</div>
+</div>
+</section>
+<section id="workshop-papers-posters-and-technical-reports" class="level4">
+<h4 data-anchor-id="workshop-papers-posters-and-technical-reports">Workshop Papers, Posters, and Technical Reports</h4>
+<div class="paper-container">
+<div class="paper-thumbnail">
+<p><img src="assets/paper_thumbnails/Kim_2025_Voice_Interaction.png" class="rounded shadow img-fluid" alt="First page of Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing, In2Writing 2025."></p>
+</div>
+<div class="paper-metadata">
+<div>
+<p><a href="" target="_blank"><strong>Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing</strong></a></p>
+</div>
+<div>
+<p><b>Jiho Kim</b>, <a href="https://tingofurro.github.io/" target="_blank">Philippe Laban</a>, <a href="https://hci.prof/" target="_blank">Xiang ‘Anthony’ Chen</a>, and <a href="https://kenarnold.org/" target="_blank">Kenneth C. Arnold</a></p>
+</div>
+<div>
+<p>Fourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 2025) at NAACL 2025</p>
+</div>
+</div>
+</div>
+<div class="paper-container">
+<div class="paper-thumbnail">
+<p><img src="assets/paper_thumbnails/Arnold_2025_Interaction-Required_Suggestions.png" class="rounded shadow img-fluid" alt="First page of Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing, In2Writing 2025."></p>
+</div>
+<div class="paper-metadata">
+<div>
+<p><a href="" target="_blank"><strong>Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing</strong></a></p>
+</div>
+<div>
+<p><a href="https://kenarnold.org/" target="_blank">Kenneth C. Arnold</a> and <b>Jiho Kim</b></p>
+</div>
+<div>
+<p>Fourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 2025) at NAACL 2025</p>
+</div>
+</div>
+</div>
+<div class="paper-container">
+<div class="paper-thumbnail">
+<p><img src="assets/paper_thumbnails/Kim_2024_Towards_Full_Authorship_with_AI.png" class="rounded shadow img-fluid" alt="First page of Towards Full Authorship with AI: Supporting Revision with AI-Generated Views, HAI-GEN 2025."></p>
+</div>
+<div class="paper-metadata">
+<div>
+<p><a href="" target="_blank"><strong>Towards Full Authorship with AI: Supporting Revision with AI-Generated Views</strong></a></p>
+</div>
+<div>
+<p><b>Jiho Kim</b>, <a href="https://www.linkedin.com/in/ray-flanagan-5803021b6/" target="_blank">Ray C. Flanagan</a>, Noelle E. Haviland, <a href="https://www.linkedin.com/in/zeai-sun-029b3524a/" target="_blank">ZeAi Sun</a>, <a href="https://www.linkedin.com/in/souad-yakubu/" target="_blank">Souad N. Yakubu</a>, <a href="https://www.linkedin.com/in/edom-maru-1969ba24b/" target="_blank">Edom A. Maru</a>, and <a href="https://kenarnold.org/" target="_blank">Kenneth C. Arnold</a></p>
+</div>
+<div>
+<p>Fifth Workshop on Human-AI Co-Creation with Generative Models (HAI-GEN 2024) at IUI 2024</p>
+</div>
+</div>
+</div>
 
 
+</section>
 </section>
 </main></div>
     </div>
@@ -898,7 +862,7 @@ Authors
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p><a href="https://jihokim.dev/privacy-policy/">Privacy Policy</a></p>
+<p>Last updated: September 14, 2025</p>
 <div class="toc-actions"><ul><li><a href="https://github.com/nghtctrl/nghtctrl.github.io/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/nghtctrl/nghtctrl.github.io/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
