@@ -1,0 +1,12 @@
+---
+title: "Blog"
+listing:
+    contents:
+        - research-advice
+    type: default
+    sort: "date desc"
+    sort-ui: true
+    filter-ui: true
+    categories: true
+    feed: true
+---

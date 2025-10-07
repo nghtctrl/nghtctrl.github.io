@@ -20,7 +20,7 @@ website:
         href: proj
       - text: "Blog"
         aria-label: "Blog"
-        href: https://medium.com/@jiho-kim
+        href: blog
     right:
       - icon: linkedin
         text: LinkedIn
