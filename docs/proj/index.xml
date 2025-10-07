@@ -9,7 +9,7 @@
 <link>https://jihokim.dev/proj/</link>
 <atom:link href="https://jihokim.dev/proj/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.7.34</generator>
+<generator>quarto-1.8.25</generator>
 <lastBuildDate>Tue, 12 Dec 2023 06:00:00 GMT</lastBuildDate>
 <item>
   <title>Inspirative Text Prediction</title>
@@ -45,7 +45,7 @@
 </section>
 <section id="exploratory-data-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="exploratory-data-analysis">Exploratory Data Analysis</h2>
-<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> plotly.io <span class="im" style="color: #00769E;
 background-color: null;
@@ -78,11 +78,11 @@ font-style: inherit;">"plotly_white"</span></span>
 background-color: null;
 font-style: inherit;">=</span> spacy.load(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"en_core_web_sm"</span>)</span></code></pre></div>
+font-style: inherit;">"en_core_web_sm"</span>)</span></code></pre></div></div>
 <section id="collection" class="level3">
 <h3 class="anchored" data-anchor-id="collection">Collection</h3>
 <p>Let’s start by defining a function to download a book from <a href="https://www.gutenberg.org/">Project Gutenberg</a>. To accomplish this, we will use <a href="https://gutendex.com/">Gutendex</a> to retrieve the book’s metadata and then download the book using the URL to the plain text version of the book provided in the metadata. For the purpose of this blog post, we will only download books in English.</p>
-<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| code-fold: True</span></span>
 <span id="cb2-2"></span>
@@ -256,9 +256,9 @@ background-color: null;
 font-weight: bold;
 font-style: inherit;">raise</span> <span class="pp" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">Exception</span>(err)</span></code></pre></div>
+font-style: inherit;">Exception</span>(err)</span></code></pre></div></div>
 <p>For this EDA, we will download <em>The Strange Case of Dr.&nbsp;Jekyll and Mr.&nbsp;Hyde</em> by Robert Louis Stevenson.</p>
-<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Book ID for The Strange Case of Dr. Jekyll and Mr. Hyde</span></span>
 <span id="cb3-2">book_id <span class="op" style="color: #5E5E5E;
@@ -281,12 +281,12 @@ font-style: inherit;">=</span>[<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"title"</span>, <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"text"</span>])</span></code></pre></div>
+font-style: inherit;">"text"</span>])</span></code></pre></div></div>
 </section>
 <section id="wrangling" class="level3">
 <h3 class="anchored" data-anchor-id="wrangling">Wrangling</h3>
 <p>Let’s take a look at the downloaded text:</p>
-<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| echo: false</span></span>
 <span id="cb4-2"></span>
@@ -332,7 +332,7 @@ font-style: inherit;">256</span>:].strip(), end<span class="op" style="color: #5
 background-color: null;
 font-style: inherit;">=</span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">""</span>)</span></code></pre></div>
+font-style: inherit;">""</span>)</span></code></pre></div></div>
 <p>It looks like the text contains some extra information which we do not wish to include in our analysis. Let’s remove the extra information and save the cleaned text in a new column.</p>
 <p>Specifically, we will use the markers provided by <a href="https://www.gutenberg.org/">Project Gutenberg</a> to remove the extra information. These markers appear as follows:</p>
 <blockquote class="blockquote">
@@ -341,7 +341,7 @@ font-style: inherit;">""</span>)</span></code></pre></div>
 <blockquote class="blockquote">
 <p>*** END OF THE PROJECT GUTENBERG EBOOK …</p>
 </blockquote>
-<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| code-fold: true</span></span>
 <span id="cb5-2"></span>
@@ -438,8 +438,8 @@ font-style: inherit;">len</span>(start_marker) : end_index].strip()</span>
 <span id="cb5-26">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
-font-style: inherit;">return</span> text</span></code></pre></div>
-<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
+font-style: inherit;">return</span> text</span></code></pre></div></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Sanitize the text and store it in a new column</span></span>
 <span id="cb6-2">book_data[<span class="st" style="color: #20794D;
@@ -450,9 +450,9 @@ font-style: inherit;">=</span> book_data[<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"text"</span>].<span class="bu" style="color: null;
 background-color: null;
-font-style: inherit;">apply</span>(sanitize_text)</span></code></pre></div>
+font-style: inherit;">apply</span>(sanitize_text)</span></code></pre></div></div>
 <p>Let’s take a look at the cleaned text:</p>
-<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| echo: false</span></span>
 <span id="cb7-2"></span>
@@ -494,9 +494,9 @@ font-style: inherit;">0</span>][<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">256</span>:].strip())</span></code></pre></div>
+font-style: inherit;">256</span>:].strip())</span></code></pre></div></div>
 <p>This looks much better! Our next step is to split the text into sentences to analyze it at the sentence level. We will use <a href="https://spacy.io/">spaCy</a> to do this:</p>
-<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| code-fold: true</span></span>
 <span id="cb8-2"></span>
@@ -578,8 +578,8 @@ font-weight: bold;
 font-style: inherit;">for</span> sent <span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
-font-style: inherit;">in</span> doc.sents]</span></code></pre></div>
-<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><span class="co" style="color: #5E5E5E;
+font-style: inherit;">in</span> doc.sents]</span></code></pre></div></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Split the text into sentences and store them in a DataFrame</span></span>
 <span id="cb9-2">sentences <span class="op" style="color: #5E5E5E;
@@ -597,9 +597,9 @@ font-style: inherit;">=</span>[<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"sentence"</span>])</span>
 <span id="cb9-4"></span>
-<span id="cb9-5">sentences.tail()</span></code></pre></div>
+<span id="cb9-5">sentences.tail()</span></code></pre></div></div>
 <p>How many sentences are there in the book?</p>
-<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| echo: false</span></span>
 <span id="cb10-2"></span>
@@ -615,9 +615,9 @@ font-style: inherit;">len</span>(sentences)<span class="sc" style="color: #5E5E5
 background-color: null;
 font-style: inherit;">}</span><span class="ss" style="color: #20794D;
 background-color: null;
-font-style: inherit;"> sentences in the book."</span>)</span></code></pre></div>
+font-style: inherit;"> sentences in the book."</span>)</span></code></pre></div></div>
 <p>How many sentence use subordinating conjunctions? In order to answer this question, we will use <a href="https://spacy.io/">spaCy</a>’s part-of-speech tagger to identify sentences that contain subordinating conjunctions:</p>
-<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| code-fold: true</span></span>
 <span id="cb11-2"></span>
@@ -711,8 +711,8 @@ font-style: inherit;">return</span> pd.Series([<span class="va" style="color: #1
 background-color: null;
 font-style: inherit;">False</span>, <span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">None</span>])</span></code></pre></div>
-<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><span class="co" style="color: #5E5E5E;
+font-style: inherit;">None</span>])</span></code></pre></div></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| code-overflow: wrap</span></span>
 <span id="cb12-2"></span>
@@ -747,9 +747,9 @@ font-style: inherit;">==</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">len</span>(sentences)</span>
 <span id="cb12-8"></span>
-<span id="cb12-9">sentences.tail()</span></code></pre></div>
+<span id="cb12-9">sentences.tail()</span></code></pre></div></div>
 <p>How many of the sentences contain subordinating conjunctions? How many of the sentences do not contain subordinating conjunctions?</p>
-<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| echo: false</span></span>
 <span id="cb13-2"></span>
@@ -785,13 +785,13 @@ background-color: null;
 font-style: inherit;">}</span><span class="ss" style="color: #20794D;
 background-color: null;
 font-style: inherit;"> sentences without a subordinating conjunction."</span></span>
-<span id="cb13-5">)</span></code></pre></div>
+<span id="cb13-5">)</span></code></pre></div></div>
 </section>
 <section id="visualization" class="level3">
 <h3 class="anchored" data-anchor-id="visualization">Visualization</h3>
 <p>Let’s try visualizing one of the sentences that contains a subordinating conjunction:</p>
 <p><strong>Figure 1.</strong> Visualization of a Sentence That Contains a Subordinating Conjunction</p>
-<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| code-fold: true</span></span>
 <span id="cb14-2"></span>
@@ -826,9 +826,9 @@ font-style: inherit;">=</span>{<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"distance"</span>: <span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">110</span>})</span></code></pre></div>
+font-style: inherit;">110</span>})</span></code></pre></div></div>
 <p>What about the distribution of subordinating conjunctions in the book?</p>
-<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| code-fold: true</span></span>
 <span id="cb15-2"></span>
@@ -881,7 +881,7 @@ background-color: null;
 font-style: inherit;">=</span>px.colors.qualitative.Safe</span>
 <span id="cb15-14">)</span>
 <span id="cb15-15"></span>
-<span id="cb15-16">fig.show()</span></code></pre></div>
+<span id="cb15-16">fig.show()</span></code></pre></div></div>
 </section>
 <section id="analysis" class="level3">
 <h3 class="anchored" data-anchor-id="analysis">Analysis</h3>
@@ -890,7 +890,7 @@ font-style: inherit;">=</span>px.colors.qualitative.Safe</span>
 </section>
 <section id="preliminary-modeling" class="level2">
 <h2 class="anchored" data-anchor-id="preliminary-modeling">Preliminary Modeling</h2>
-<div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">from</span> transformers <span class="im" style="color: #00769E;
 background-color: null;
@@ -944,11 +944,11 @@ font-style: inherit;">"cpu"</span>)</span>
 background-color: null;
 font-style: inherit;">=</span> spacy.load(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"en_core_web_sm"</span>)</span></code></pre></div>
+font-style: inherit;">"en_core_web_sm"</span>)</span></code></pre></div></div>
 <section id="load-the-model" class="level3">
 <h3 class="anchored" data-anchor-id="load-the-model">Load the Model</h3>
 <p>We will use the <a href="https://huggingface.co/meta-llama/Llama-2-7b-chat-hf">Llama-2-7b-chat-hf</a> model to evaluate an LLM’s likelihood of predicting subordinating conjunctions. Unfortunately, running the model is computationally expensive on most machines. Therefore, we used <a href="https://github.com/casper-hansen/AutoAWQ">AutoAWQ</a> to quantize the model into 4-bit precision<sup>2</sup>. This reduces the amount of computational resources required to run inference on the model while still maintaining a high level of accuracy. We have provided our code for quantizing the model in the Appendix. In the meantime, you can access our quantized model here: <a href="https://huggingface.co/CalvinU/Llama-2-7b-chat-hf-awq">CalvinU/Llama-2-7b-chat-hf-awq</a>.</p>
-<div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1">model_name <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1">model_name <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
@@ -959,12 +959,12 @@ background-color: null;
 font-style: inherit;">=</span> AutoTokenizer.from_pretrained(model_name)</span>
 <span id="cb17-4">model <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span> AutoModelForCausalLM.from_pretrained(model_name).to(device)</span></code></pre></div>
+font-style: inherit;">=</span> AutoModelForCausalLM.from_pretrained(model_name).to(device)</span></code></pre></div></div>
 </section>
 <section id="load-the-data" class="level3">
 <h3 class="anchored" data-anchor-id="load-the-data">Load the Data</h3>
 <p>We have also described in the Appendix a scalable approach to collecting and processing data from <a href="https://www.gutenberg.org/">Project Gutenberg</a>. In the meantime, you can access our dataset here: <a href="https://huggingface.co/datasets/CalvinU/project-gutenberg">CalvinU/project-gutenberg</a>.</p>
-<div class="sourceCode" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1">dataset_name <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1">dataset_name <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
@@ -979,14 +979,14 @@ background-color: null;
 font-style: inherit;">"train"</span>)</span>
 <span id="cb18-4">dataset_df <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span> pd.DataFrame(dataset)</span></code></pre></div>
+font-style: inherit;">=</span> pd.DataFrame(dataset)</span></code></pre></div></div>
 <p>The dataset contains 10 random books downloaded from <a href="https://www.gutenberg.org/">Project Gutenberg</a>. These books have already been sanitized and split into sentences based on their <code>book_id</code> and <code>title</code>. Therefore, each row in the dataset represents an ordered sentence from one of the books. Let’s take a look at the dataset:</p>
-<div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1">dataset_df.tail()</span></code></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1">dataset_df.tail()</span></code></pre></div></div>
 </section>
 <section id="wrangling-1" class="level3">
 <h3 class="anchored" data-anchor-id="wrangling-1">Wrangling</h3>
 <p>Since we already have an ordered list of sentences, we can apply the same approach we used in the EDA section to identify sentences that contain subordinating conjunctions:</p>
-<div class="sourceCode" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| code-fold: true</span></span>
 <span id="cb20-2"></span>
@@ -1080,8 +1080,8 @@ font-style: inherit;">return</span> pd.Series([<span class="va" style="color: #1
 background-color: null;
 font-style: inherit;">False</span>, <span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">None</span>])</span></code></pre></div>
-<div class="sourceCode" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><span class="co" style="color: #5E5E5E;
+font-style: inherit;">None</span>])</span></code></pre></div></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Check if the sentence contains a subordinating conjunction and store the result in a new column</span></span>
 <span id="cb21-2">dataset_df[[<span class="st" style="color: #20794D;
@@ -1112,9 +1112,9 @@ font-style: inherit;">==</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">len</span>(dataset_df)</span>
 <span id="cb21-6"></span>
-<span id="cb21-7">dataset_df.tail()</span></code></pre></div>
+<span id="cb21-7">dataset_df.tail()</span></code></pre></div></div>
 <p>Number of sentences and number of sentences that contain subordinating conjunctions for each book:</p>
-<div class="sourceCode" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1">summary <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1">summary <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> dataset_df.groupby([<span class="st" style="color: #20794D;
 background-color: null;
@@ -1143,7 +1143,7 @@ font-style: inherit;">"sum"</span>),</span>
 <span id="cb22-5"></span>
 <span id="cb22-6">summary.head(<span class="dv" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">10</span>)</span></code></pre></div>
+font-style: inherit;">10</span>)</span></code></pre></div></div>
 </section>
 <section id="analysis-1" class="level3">
 <h3 class="anchored" data-anchor-id="analysis-1">Analysis</h3>
@@ -1161,7 +1161,7 @@ font-style: inherit;">10</span>)</span></code></pre></div>
 <section id="when-context-is-provided-exactly-as-it-appears-in-the-book" class="level4">
 <h4 class="anchored" data-anchor-id="when-context-is-provided-exactly-as-it-appears-in-the-book">When Context Is Provided Exactly as It Appears in the Book</h4>
 <p>To get started, let’s select one of the books from the dataset titled _ The Adventures of a Dog, and a Good Dog Too_ by Alfred Elwes:</p>
-<div class="sourceCode" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| code-fold: true</span></span>
 <span id="cb24-2"></span>
@@ -1185,9 +1185,9 @@ background-color: null;
 font-style: inherit;">=</span><span class="va" style="color: #111111;
 background-color: null;
 font-style: inherit;">True</span>)</span>
-<span id="cb24-7">selected_book.tail()</span></code></pre></div>
+<span id="cb24-7">selected_book.tail()</span></code></pre></div></div>
 <p>How many sentences are there in the book? How many of the sentences contain subordinating conjunctions?</p>
-<div class="sourceCode" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| echo: false</span></span>
 <span id="cb25-2"></span>
@@ -1215,9 +1215,9 @@ background-color: null;
 font-style: inherit;">}</span><span class="ss" style="color: #20794D;
 background-color: null;
 font-style: inherit;"> sentences with a subordinating conjunction"</span></span>
-<span id="cb25-5">)</span></code></pre></div>
+<span id="cb25-5">)</span></code></pre></div></div>
 <p>It appears that this book uses a significant number of subordinating conjunctions! Let’s choose one of the last sentences that includes a subordinating conjunction and select a maximum of 100 sentences preceding it as the context:</p>
-<div class="sourceCode" id="cb26" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1">last_sconj_index <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1">last_sconj_index <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> selected_book[selected_book[<span class="st" style="color: #20794D;
 background-color: null;
@@ -1253,9 +1253,9 @@ font-style: inherit;">" "</span>.join(context)</span>
 background-color: null;
 font-style: inherit;">=</span> selected_book.iloc[last_sconj_index][<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"sentence"</span>]</span></code></pre></div>
+font-style: inherit;">"sentence"</span>]</span></code></pre></div></div>
 <p>Let’s take a small peek at the context:</p>
-<div class="sourceCode" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| echo: false</span></span>
 <span id="cb27-2"></span>
@@ -1293,9 +1293,9 @@ font-style: inherit;">"</span><span class="ch" style="color: #20794D;
 background-color: null;
 font-style: inherit;">\n\n</span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"</span>)</span></code></pre></div>
+font-style: inherit;">"</span>)</span></code></pre></div></div>
 <p>Let’s take a look at the sentence with the subordinating conjunction:</p>
-<div class="sourceCode" id="cb28" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| echo: false</span></span>
 <span id="cb28-2"></span>
@@ -1304,9 +1304,9 @@ background-color: null;
 font-style: inherit;"># Print the sentence</span></span>
 <span id="cb28-4"><span class="bu" style="color: null;
 background-color: null;
-font-style: inherit;">print</span>(sentence)</span></code></pre></div>
+font-style: inherit;">print</span>(sentence)</span></code></pre></div></div>
 <p>Let’s tokenize the context and the sentence, and then feed them into the model to get the predicted logits:</p>
-<div class="sourceCode" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| code-fold: true</span></span>
 <span id="cb29-2"></span>
@@ -1359,8 +1359,8 @@ background-color: null;
 font-style: inherit;"># Get the predicted logits for the input sequence</span></span>
 <span id="cb29-16">model_logits <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span> model(prompt_input_ids).logits</span></code></pre></div>
-<div class="sourceCode" id="cb30" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><span class="co" style="color: #5E5E5E;
+font-style: inherit;">=</span> model(prompt_input_ids).logits</span></code></pre></div></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| code-fold: true</span></span>
 <span id="cb30-2"></span>
@@ -1503,9 +1503,9 @@ background-color: null;
 font-style: inherit;">=</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"pt"</span></span>
-<span id="cb30-44">).to(device)</span></code></pre></div>
+<span id="cb30-44">).to(device)</span></code></pre></div></div>
 <p>Given that we have fed in the context exactly as it appears in the book, let’s take a look at the top k probability spectrum at the subordinating conjunction:</p>
-<div class="sourceCode" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| code-fold: true</span></span>
 <span id="cb31-2"></span>
@@ -1856,8 +1856,8 @@ background-color: null;
 font-style: inherit;">len</span>(adjusted_matching_sequence_token) :</span>
 <span id="cb31-111">            ].tolist(),</span>
 <span id="cb31-112">        }</span>
-<span id="cb31-113">    )</span></code></pre></div>
-<div class="sourceCode" id="cb32" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><span class="co" style="color: #5E5E5E;
+<span id="cb31-113">    )</span></code></pre></div></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| code-fold: true</span></span>
 <span id="cb32-2"></span>
@@ -1867,9 +1867,9 @@ font-style: inherit;">=</span> probability_spectrum_at(</span>
 <span id="cb32-4">    model_logits, prompt_input_ids, sconj_token_index</span>
 <span id="cb32-5">)</span>
 <span id="cb32-6"></span>
-<span id="cb32-7">prob_spectrum</span></code></pre></div>
+<span id="cb32-7">prob_spectrum</span></code></pre></div></div>
 <p>Let’s also look at the cross-entropy and perplexity of the sentence with the subordinating conjunction:</p>
-<div class="sourceCode" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| code-fold: true</span></span>
 <span id="cb33-2"></span>
@@ -1966,8 +1966,8 @@ background-color: null;
 font-style: inherit;"># Perplexity of the subordinating conjunction</span></span>
 <span id="cb33-46">subordinating_conjunction_perplexity <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span> np.exp(subordinating_conjunction_cross_entropy)</span></code></pre></div>
-<div class="sourceCode" id="cb34" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><span class="co" style="color: #5E5E5E;
+font-style: inherit;">=</span> np.exp(subordinating_conjunction_cross_entropy)</span></code></pre></div></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| echo: false</span></span>
 <span id="cb34-2"></span>
@@ -2273,12 +2273,12 @@ font-style: inherit;">{</span>subordinate_clause_perplexity<span class="sc" styl
 background-color: null;
 font-style: inherit;">}</span><span class="ss" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"</span>)</span></code></pre></div>
+font-style: inherit;">"</span>)</span></code></pre></div></div>
 </section>
 <section id="when-context-is-randomly-shuffled" class="level4">
 <h4 class="anchored" data-anchor-id="when-context-is-randomly-shuffled">When Context Is Randomly Shuffled</h4>
 <p>Let’s shuffle the context and feed it into the model to get the predicted logits:</p>
-<div class="sourceCode" id="cb35" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1">last_sconj_index <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1">last_sconj_index <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> selected_book[selected_book[<span class="st" style="color: #20794D;
 background-color: null;
@@ -2318,9 +2318,9 @@ font-style: inherit;">" "</span>.join(context)</span>
 background-color: null;
 font-style: inherit;">=</span> selected_book.iloc[last_sconj_index][<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"sentence"</span>]</span></code></pre></div>
+font-style: inherit;">"sentence"</span>]</span></code></pre></div></div>
 <p>Let’s take a small peek at the context:</p>
-<div class="sourceCode" id="cb36" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| echo: false</span></span>
 <span id="cb36-2"></span>
@@ -2358,9 +2358,9 @@ font-style: inherit;">"</span><span class="ch" style="color: #20794D;
 background-color: null;
 font-style: inherit;">\n\n</span><span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"</span>)</span></code></pre></div>
+font-style: inherit;">"</span>)</span></code></pre></div></div>
 <p>Let’s take a look at the sentence with the subordinating conjunction:</p>
-<div class="sourceCode" id="cb37" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| echo: false</span></span>
 <span id="cb37-2"></span>
@@ -2369,9 +2369,9 @@ background-color: null;
 font-style: inherit;"># Print the sentence</span></span>
 <span id="cb37-4"><span class="bu" style="color: null;
 background-color: null;
-font-style: inherit;">print</span>(sentence)</span></code></pre></div>
+font-style: inherit;">print</span>(sentence)</span></code></pre></div></div>
 <p>Same steps as before:</p>
-<div class="sourceCode" id="cb38" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| code-fold: true</span></span>
 <span id="cb38-2"></span>
@@ -2424,8 +2424,8 @@ background-color: null;
 font-style: inherit;"># Get the predicted logits for the input sequence</span></span>
 <span id="cb38-16">model_logits <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span> model(prompt_input_ids).logits</span></code></pre></div>
-<div class="sourceCode" id="cb39" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><span class="co" style="color: #5E5E5E;
+font-style: inherit;">=</span> model(prompt_input_ids).logits</span></code></pre></div></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| code-fold: true</span></span>
 <span id="cb39-2"></span>
@@ -2568,17 +2568,17 @@ background-color: null;
 font-style: inherit;">=</span><span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"pt"</span></span>
-<span id="cb39-44">).to(device)</span></code></pre></div>
+<span id="cb39-44">).to(device)</span></code></pre></div></div>
 <p>Given that we have fed in a randomly shuffled context, let’s take a look at the top k probability spectrum at the subordinating conjunction:</p>
-<div class="sourceCode" id="cb40" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1">prob_spectrum <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1">prob_spectrum <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> probability_spectrum_at(</span>
 <span id="cb40-2">    model_logits, prompt_input_ids, sconj_token_index</span>
 <span id="cb40-3">)</span>
 <span id="cb40-4"></span>
-<span id="cb40-5">prob_spectrum</span></code></pre></div>
+<span id="cb40-5">prob_spectrum</span></code></pre></div></div>
 <p>Let’s also look at the cross-entropy and perplexity of the sentence with the subordinating conjunction:</p>
-<div class="sourceCode" id="cb41" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| code-fold: true</span></span>
 <span id="cb41-2"></span>
@@ -2675,8 +2675,8 @@ background-color: null;
 font-style: inherit;"># Perplexity of the subordinating conjunction</span></span>
 <span id="cb41-46">subordinating_conjunction_perplexity <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span> np.exp(subordinating_conjunction_cross_entropy)</span></code></pre></div>
-<div class="sourceCode" id="cb42" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><span class="co" style="color: #5E5E5E;
+font-style: inherit;">=</span> np.exp(subordinating_conjunction_cross_entropy)</span></code></pre></div></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">#| echo: false</span></span>
 <span id="cb42-2"></span>
@@ -2982,7 +2982,7 @@ font-style: inherit;">{</span>subordinate_clause_perplexity<span class="sc" styl
 background-color: null;
 font-style: inherit;">}</span><span class="ss" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"</span>)</span></code></pre></div>
+font-style: inherit;">"</span>)</span></code></pre></div></div>
 </section>
 </section>
 </section>
@@ -3003,7 +3003,7 @@ font-style: inherit;">"</span>)</span></code></pre></div>
 <section id="autoawq-quantization" class="level3">
 <h3 class="anchored" data-anchor-id="autoawq-quantization">AutoAWQ Quantization</h3>
 <p>In this section, we have documented our approach to quantizing the <a href="https://huggingface.co/meta-llama/Llama-2-7b-chat-hf">Llama-2-7b-chat-hf</a> model using <a href="https://github.com/casper-hansen/AutoAWQ">AutoAWQ</a> into 4-bit precision. This reduces the amount of computational resources required to run inference on the model while still maintaining a high level of accuracy.</p>
-<div class="sourceCode" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">from</span> awq <span class="im" style="color: #00769E;
 background-color: null;
@@ -3012,8 +3012,8 @@ font-style: inherit;">import</span> AutoAWQForCausalLM</span>
 background-color: null;
 font-style: inherit;">from</span> transformers <span class="im" style="color: #00769E;
 background-color: null;
-font-style: inherit;">import</span> AutoTokenizer, AwqConfig</span></code></pre></div>
-<div class="sourceCode" id="cb44" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1">model_name <span class="op" style="color: #5E5E5E;
+font-style: inherit;">import</span> AutoTokenizer, AwqConfig</span></code></pre></div></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1">model_name <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
@@ -3039,8 +3039,8 @@ font-style: inherit;">**</span>{<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"low_cpu_mem_usage"</span>: <span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">True</span>})</span></code></pre></div>
-<div class="sourceCode" id="cb45" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><span class="co" style="color: #5E5E5E;
+font-style: inherit;">True</span>})</span></code></pre></div></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb45" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Setup AutoAWQ quantization configuration</span></span>
 <span id="cb45-2">quant_config <span class="op" style="color: #5E5E5E;
@@ -3073,8 +3073,8 @@ background-color: null;
 font-style: inherit;"># Quantize the model</span></span>
 <span id="cb45-10">model.quantize(tokenizer, quant_config<span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span>quant_config)</span></code></pre></div>
-<div class="sourceCode" id="cb46" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><span class="co" style="color: #5E5E5E;
+font-style: inherit;">=</span>quant_config)</span></code></pre></div></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Setup Transformer compatible quantization configuration</span></span>
 <span id="cb46-2">quantization_config <span class="op" style="color: #5E5E5E;
@@ -3113,13 +3113,13 @@ font-style: inherit;">=</span> quantization_config</span>
 background-color: null;
 font-style: inherit;"># Save the quantized model weights</span></span>
 <span id="cb46-13">tokenizer.save_pretrained(quantized_model_path)</span>
-<span id="cb46-14">model.save_quantized(quantized_model_path)</span></code></pre></div>
+<span id="cb46-14">model.save_quantized(quantized_model_path)</span></code></pre></div></div>
 <p>To promote reproducibility of this work, we have uploaded our quantized model to Hugging Face repositories. You can access our quantized model here: <a href="https://huggingface.co/CalvinU/Llama-2-7b-chat-hf-awq">CalvinU/Llama-2-7b-chat-hf-awq</a>.</p>
 </section>
 <section id="scalable-data-collection" class="level3">
 <h3 class="anchored" data-anchor-id="scalable-data-collection">Scalable Data Collection</h3>
 <p>In the EDA, we have only looked at one book. However, in a language modeling task, we would likely need a <em>sample</em> of data that is diverse and representative of different kinds of writing. In this section, we have documented a scalable approach to collecting and processing data from <a href="https://www.gutenberg.org/">Project Gutenberg</a>.</p>
-<div class="sourceCode" id="cb47" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><span class="im" style="color: #00769E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> pandas <span class="im" style="color: #00769E;
 background-color: null;
@@ -3138,13 +3138,13 @@ font-style: inherit;">import</span> spacy</span>
 background-color: null;
 font-style: inherit;">=</span> spacy.load(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"en_core_web_sm"</span>)</span></code></pre></div>
+font-style: inherit;">"en_core_web_sm"</span>)</span></code></pre></div></div>
 <p>Here are the functions we have used. All of them were already defined in the EDA section, except for <code>download_books</code>, which is a wrapper function for <code>download_book</code> that downloads multiple books instead of just one:</p>
 <details>
 <summary>
 Code
 </summary>
-<div class="sourceCode" id="cb48" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><span class="kw" style="color: #003B4F;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> download_book(book_id: <span class="bu" style="color: null;
@@ -3597,10 +3597,10 @@ font-weight: bold;
 font-style: inherit;">for</span> sent <span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
-font-style: inherit;">in</span> doc.sents]</span></code></pre></div>
+font-style: inherit;">in</span> doc.sents]</span></code></pre></div></div>
 </details>
 <p>Download 10 random books from <a href="https://www.gutenberg.org/">Project Gutenberg</a>:</p>
-<div class="sourceCode" id="cb49" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1">n_books <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1">n_books <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
 background-color: null;
@@ -3628,9 +3628,9 @@ font-style: inherit;">assert</span> <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">len</span>(books10) <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">==</span> n_books</span></code></pre></div>
+font-style: inherit;">==</span> n_books</span></code></pre></div></div>
 <p>Clean the texts:</p>
-<div class="sourceCode" id="cb50" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1">books10[<span class="st" style="color: #20794D;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb50" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1">books10[<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"clean_text"</span>] <span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -3638,9 +3638,9 @@ font-style: inherit;">=</span> books10[<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"text"</span>].<span class="bu" style="color: null;
 background-color: null;
-font-style: inherit;">apply</span>(sanitize_text)</span></code></pre></div>
+font-style: inherit;">apply</span>(sanitize_text)</span></code></pre></div></div>
 <p>Split the texts into sentences:</p>
-<div class="sourceCode" id="cb51" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1">books10_sentences <span class="op" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1">books10_sentences <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> []</span>
 <span id="cb51-2"></span>
@@ -3672,9 +3672,9 @@ font-style: inherit;">"title"</span>].iloc[i],</span>
 background-color: null;
 font-style: inherit;">"clean_text"</span>].iloc[i]),</span>
 <span id="cb51-10">        )</span>
-<span id="cb51-11">    )</span></code></pre></div>
+<span id="cb51-11">    )</span></code></pre></div></div>
 <p>Create a new DataFrame with the sentences:</p>
-<div class="sourceCode" id="cb52" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb52" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># For each sentences in each id, create a new row</span></span>
 <span id="cb52-2">books10_sentences <span class="op" style="color: #5E5E5E;
@@ -3711,7 +3711,7 @@ background-color: null;
 font-style: inherit;">"title"</span>, <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"sentence"</span>]</span>
-<span id="cb52-8">)</span></code></pre></div>
+<span id="cb52-8">)</span></code></pre></div></div>
 <p>To promote reproducibility of this work, we have saved the data we have collected and processed using this approach as a <a href="https://parquet.apache.org/">parquet</a> file. You can view and access our dataset here: <a href="https://huggingface.co/datasets/CalvinU/project-gutenberg">CalvinU/project-gutenberg</a>.</p>
 
 

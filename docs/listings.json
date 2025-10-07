@@ -6,6 +6,12 @@
     ]
   },
   {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/research-advice/index.html"
+    ]
+  },
+  {
     "listing": "/pubs/index.html",
     "items": [
       "/pubs/voice-interaction-with-conv-ai/index.html",
