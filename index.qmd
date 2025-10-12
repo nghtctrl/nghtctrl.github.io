@@ -59,7 +59,7 @@ You can reach me at _myfirstname_\@jihokim.dev
 :::
 ::: {.paper-metadata}
 ::: {}
-<a href="" target="_blank">**CUPID: Evaluating Personalized and Contextualized Alignment of LLMs from Interactions**</a>
+<a href="https://openreview.net/pdf?id=JMxRn7orEk" target="_blank">**CUPID: Evaluating Personalized and Contextualized Alignment of LLMs from Interactions**</a>
 :::
 ::: {}
 <a href="https://taesookim.com/" target="_blank">Tae Soo Kim</a>, <a href="https://yoonjoolee.com/" target="_blank">Yoonjoo Lee</a>, <a href="https://www.linkedin.com/in/yoonah-park-50ba57249/" target="_blank">Yoonah Park</a>, <b>Jiho Kim</b>, <a href="https://younghokim.net/" target="_blank">Young-Ho Kim</a>, and <a href="https://juhokim.com/" target="_blank">Juho Kim</a>
@@ -78,7 +78,7 @@ Second Conference on Language Modeling (COLM 2025)
 :::
 ::: {.paper-metadata}
 ::: {}
-<a href="" target="_blank">**Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing**</a>
+<a href="https://aclanthology.org/2025.in2writing-1.7.pdf" target="_blank">**Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing**</a>
 :::
 ::: {}
 <b>Jiho Kim</b>, <a href="https://tingofurro.github.io/" target="_blank">Philippe Laban</a>, <a href="https://hci.prof/" target="_blank">Xiang 'Anthony' Chen</a>, and <a href="https://kenarnold.org/" target="_blank">Kenneth C. Arnold</a>
@@ -95,7 +95,7 @@ Fourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 20
 :::
 ::: {.paper-metadata}
 ::: {}
-<a href="" target="_blank">**Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing**</a>
+<a href="https://aclanthology.org/2025.in2writing-1.6.pdf" target="_blank">**Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing**</a>
 :::
 ::: {}
 <a href="https://kenarnold.org/" target="_blank">Kenneth C. Arnold</a> and <b>Jiho Kim</b>
@@ -112,7 +112,7 @@ Fourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 20
 :::
 ::: {.paper-metadata}
 ::: {}
-<a href="" target="_blank">**Towards Full Authorship with AI: Supporting Revision with AI-Generated Views**</a>
+<a href="https://ceur-ws.org/Vol-3660/paper17.pdf" target="_blank">**Towards Full Authorship with AI: Supporting Revision with AI-Generated Views**</a>
 :::
 ::: {}
 <b>Jiho Kim</b>, <a href="https://www.linkedin.com/in/ray-flanagan-5803021b6/" target="_blank">Ray C. Flanagan</a>, Noelle E. Haviland, <a href="https://www.linkedin.com/in/zeai-sun-029b3524a/" target="_blank">ZeAi Sun</a>, <a href="https://www.linkedin.com/in/souad-yakubu/" target="_blank">Souad N. Yakubu</a>, <a href="https://www.linkedin.com/in/edom-maru-1969ba24b/" target="_blank">Edom A. Maru</a>, and <a href="https://kenarnold.org/" target="_blank">Kenneth C. Arnold</a>
