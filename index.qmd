@@ -3,7 +3,7 @@ title: "Jiho Kim"
 description: he/him
 about:
   template: solana
-  image: profile.png
+  image: profile.webp
   image-alt: "Jiho Kim"
   links:
     - text: "{{< iconify mi document >}} CV"
