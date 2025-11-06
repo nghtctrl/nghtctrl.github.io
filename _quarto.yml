@@ -10,6 +10,16 @@ resources:
 website:
   title: "Jiho Kim"
   favicon: favicon.ico
+  google-analytics: G-HWSQBSH4R7
+  open-graph: true
+  twitter-card: true
+  site-url: https://jihokim.dev
+  repo-url: https://github.com/nghtctrl/nghtctrl.github.io
+  issue-url: https://github.com/nghtctrl/nghtctrl.github.io/issues/new/choose
+  repo-actions: [source, issue]
+  page-navigation: true
+  back-to-top-navigation: true
+  bread-crumbs: true
   navbar:
     search: true
     left:
@@ -34,17 +44,6 @@ website:
       - text: "{{< iconify simple-icons bluesky>}} Bluesky"
         aria-label: "Bluesky"
         href: https://bsky.app/profile/jihokim.dev
-
-  open-graph: true
-  twitter-card: true
-  google-analytics: G-HWSQBSH4R7
-  site-url: https://jihokim.dev
-  repo-url: https://github.com/nghtctrl/nghtctrl.github.io
-  issue-url: https://github.com/nghtctrl/nghtctrl.github.io/issues/new/choose
-  repo-actions: [source, issue]
-  page-navigation: true
-  back-to-top-navigation: true
-  bread-crumbs: true
   
 format:
   html:
