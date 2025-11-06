@@ -48,8 +48,8 @@ website:
 format:
   html:
     theme:
-      light: flatly
-      dark: darkly
+      light: [cosmo, theme.scss]
+      dark: [cosmo, theme-dark.scss]
     css: styles.css
     toc: true
 
