@@ -9,6 +9,7 @@ resources:
 
 website:
   title: "Jiho Kim"
+  favicon: favicon.ico
   navbar:
     search: true
     left:
