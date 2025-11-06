@@ -55,7 +55,7 @@ You can reach me at _myfirstname_\@jihokim.dev
 
 ::: {.paper-container}
 ::: {.paper-thumbnail}
-![](assets/paper_thumbnails/Kim_2025_CUPID.png){.rounded .shadow alt="First page of CUPID: Evaluating Personalized and Contextualized Alignment of LLMs from Interactions, COLM 2025."}
+![](assets/paper_thumbnails/Kim_2025_CUPID.webp){.rounded .shadow alt="First page of CUPID: Evaluating Personalized and Contextualized Alignment of LLMs from Interactions, COLM 2025."}
 :::
 ::: {.paper-metadata}
 ::: {}
@@ -74,7 +74,7 @@ Second Conference on Language Modeling (COLM 2025)
 
 ::: {.paper-container}
 ::: {.paper-thumbnail}
-![](assets/paper_thumbnails/Kim_2025_Voice_Interaction.png){.rounded .shadow alt="First page of Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing, In2Writing 2025."}
+![](assets/paper_thumbnails/Kim_2025_Voice_Interaction.webp){.rounded .shadow alt="First page of Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing, In2Writing 2025."}
 :::
 ::: {.paper-metadata}
 ::: {}
@@ -91,7 +91,7 @@ Fourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 20
 
 ::: {.paper-container}
 ::: {.paper-thumbnail}
-![](assets/paper_thumbnails/Arnold_2025_Interaction-Required_Suggestions.png){.rounded .shadow alt="First page of Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing, In2Writing 2025."}
+![](assets/paper_thumbnails/Arnold_2025_Interaction-Required_Suggestions.webp){.rounded .shadow alt="First page of Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing, In2Writing 2025."}
 :::
 ::: {.paper-metadata}
 ::: {}
@@ -108,7 +108,7 @@ Fourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 20
 
 ::: {.paper-container}
 ::: {.paper-thumbnail}
-![](assets/paper_thumbnails/Kim_2024_Towards_Full_Authorship_with_AI.png){.rounded .shadow alt="First page of Towards Full Authorship with AI: Supporting Revision with AI-Generated Views, HAI-GEN 2025."}
+![](assets/paper_thumbnails/Kim_2024_Towards_Full_Authorship_with_AI.webp){.rounded .shadow alt="First page of Towards Full Authorship with AI: Supporting Revision with AI-Generated Views, HAI-GEN 2025."}
 :::
 ::: {.paper-metadata}
 ::: {}
