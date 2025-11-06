@@ -1,51 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jihokim.dev/pubs/voice-interaction-with-conv-ai/index.html</loc>
-    <lastmod>2025-11-05T18:08:54.248Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jihokim.dev/pubs/interaction-required-suggestions/index.html</loc>
-    <lastmod>2025-11-05T18:08:54.240Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jihokim.dev/pubs/ai4revision/index.html</loc>
-    <lastmod>2025-11-05T18:08:54.230Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jihokim.dev/blog/research-advice/index.html</loc>
-    <lastmod>2025-11-05T18:08:54.163Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jihokim.dev/proj/statistical-inference/index.html</loc>
-    <lastmod>2025-11-05T18:08:54.229Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jihokim.dev/proj/inspirative-text-prediction/index.html</loc>
-    <lastmod>2025-11-05T18:08:54.229Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jihokim.dev/proj/transformer-visualized/index.html</loc>
-    <lastmod>2025-11-05T18:08:54.229Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jihokim.dev/proj/index.html</loc>
-    <lastmod>2025-11-05T18:08:54.225Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jihokim.dev/index.html</loc>
-    <lastmod>2025-11-05T18:56:35.350Z</lastmod>
-  </url>
-  <url>
     <loc>https://jihokim.dev/blog/index.html</loc>
     <lastmod>2025-11-05T18:08:54.163Z</lastmod>
   </url>
   <url>
-    <loc>https://jihokim.dev/pubs/index.html</loc>
-    <lastmod>2025-11-05T18:08:54.239Z</lastmod>
+    <loc>https://jihokim.dev/index.html</loc>
+    <lastmod>2025-11-06T04:19:20.376Z</lastmod>
   </url>
   <url>
-    <loc>https://jihokim.dev/pubs/towards-full-authorship-with-ai/index.html</loc>
-    <lastmod>2025-11-05T18:08:54.240Z</lastmod>
+    <loc>https://jihokim.dev/blog/research-advice/index.html</loc>
+    <lastmod>2025-11-05T18:08:54.163Z</lastmod>
   </url>
 </urlset>

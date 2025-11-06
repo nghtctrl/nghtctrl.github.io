@@ -1,22 +1,8 @@
 [
   {
-    "listing": "/proj/index.html",
-    "items": [
-      "/proj/inspirative-text-prediction/index.html"
-    ]
-  },
-  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/research-advice/index.html"
-    ]
-  },
-  {
-    "listing": "/pubs/index.html",
-    "items": [
-      "/pubs/voice-interaction-with-conv-ai/index.html",
-      "/pubs/interaction-required-suggestions/index.html",
-      "/pubs/towards-full-authorship-with-ai/index.html"
     ]
   }
 ]

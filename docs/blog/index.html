@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../favicon.ico" rel="icon">
 <script src="../site_libs/quarto-listing/list.min.js"></script>
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -294,7 +295,8 @@ window.Quarto = {
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -307,6 +309,14 @@ window.Quarto = {
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -332,14 +342,6 @@ window.Quarto = {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../pubs"> 
-<span class="menu-text">Publications</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../proj"> 
-<span class="menu-text">Projects</span></a>
-  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../blog"> 
 <span class="menu-text">Blog</span></a>
@@ -873,8 +875,21 @@ Jiho Kim
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Last updated: November 5, 2025</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/nghtctrl/nghtctrl.github.io/blob/main/blog/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/nghtctrl/nghtctrl.github.io/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+</body></html>

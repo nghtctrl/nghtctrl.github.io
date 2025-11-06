@@ -31,6 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./favicon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -87,17 +88,13 @@ gtag('config', 'G-HWSQBSH4R7', { 'anonymize_ip': true});
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Jiho Kim">
 <meta property="og:description" content="he/him">
-<meta property="og:image" content="https://jihokim.dev/assets/paper_thumbnails/Kim_2025_CUPID.png">
+<meta property="og:image" content="https://jihokim.dev/assets/paper_thumbnails/Kim_2025_CUPID.webp">
 <meta property="og:site_name" content="Jiho Kim">
 <meta property="og:image:alt" content="First page of CUPID: Evaluating Personalized and Contextualized Alignment of LLMs from Interactions, COLM 2025.">
-<meta property="og:image:height" content="1100">
-<meta property="og:image:width" content="850">
 <meta name="twitter:title" content="Jiho Kim">
 <meta name="twitter:description" content="he/him">
-<meta name="twitter:image" content="https://jihokim.dev/assets/paper_thumbnails/Kim_2025_CUPID.png">
+<meta name="twitter:image" content="https://jihokim.dev/assets/paper_thumbnails/Kim_2025_CUPID.webp">
 <meta name="twitter:image:alt" content="First page of CUPID: Evaluating Personalized and Contextualized Alignment of LLMs from Interactions, COLM 2025.">
-<meta name="twitter:image-height" content="1100">
-<meta name="twitter:image-width" content="850">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -244,7 +241,8 @@ gtag('config', 'G-HWSQBSH4R7', { 'anonymize_ip': true});
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -257,6 +255,14 @@ gtag('config', 'G-HWSQBSH4R7', { 'anonymize_ip': true});
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -282,14 +288,6 @@ gtag('config', 'G-HWSQBSH4R7', { 'anonymize_ip': true});
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./pubs"> 
-<span class="menu-text">Publications</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./proj"> 
-<span class="menu-text">Projects</span></a>
-  </li>  
   <li class="nav-item">
     <a class="nav-link" href="./blog"> 
 <span class="menu-text">Blog</span></a>
@@ -381,7 +379,7 @@ gtag('config', 'G-HWSQBSH4R7', { 'anonymize_ip': true});
 <h4 data-anchor-id="conference-papers">Conference Papers</h4>
 <div class="paper-container">
 <div class="paper-thumbnail">
-<p><img src="assets/paper_thumbnails/Kim_2025_CUPID.png" class="rounded shadow img-fluid" alt="First page of CUPID: Evaluating Personalized and Contextualized Alignment of LLMs from Interactions, COLM 2025."></p>
+<p><img src="assets/paper_thumbnails/Kim_2025_CUPID.webp" class="rounded shadow img-fluid" alt="First page of CUPID: Evaluating Personalized and Contextualized Alignment of LLMs from Interactions, COLM 2025."></p>
 </div>
 <div class="paper-metadata">
 <div>
@@ -400,7 +398,7 @@ gtag('config', 'G-HWSQBSH4R7', { 'anonymize_ip': true});
 <h4 data-anchor-id="workshop-papers-posters-and-technical-reports">Workshop Papers, Posters, and Technical Reports</h4>
 <div class="paper-container">
 <div class="paper-thumbnail">
-<p><img src="assets/paper_thumbnails/Kim_2025_Voice_Interaction.png" class="rounded shadow img-fluid" alt="First page of Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing, In2Writing 2025."></p>
+<p><img src="assets/paper_thumbnails/Kim_2025_Voice_Interaction.webp" class="rounded shadow img-fluid" alt="First page of Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing, In2Writing 2025."></p>
 </div>
 <div class="paper-metadata">
 <div>
@@ -416,7 +414,7 @@ gtag('config', 'G-HWSQBSH4R7', { 'anonymize_ip': true});
 </div>
 <div class="paper-container">
 <div class="paper-thumbnail">
-<p><img src="assets/paper_thumbnails/Arnold_2025_Interaction-Required_Suggestions.png" class="rounded shadow img-fluid" alt="First page of Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing, In2Writing 2025."></p>
+<p><img src="assets/paper_thumbnails/Arnold_2025_Interaction-Required_Suggestions.webp" class="rounded shadow img-fluid" alt="First page of Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing, In2Writing 2025."></p>
 </div>
 <div class="paper-metadata">
 <div>
@@ -432,7 +430,7 @@ gtag('config', 'G-HWSQBSH4R7', { 'anonymize_ip': true});
 </div>
 <div class="paper-container">
 <div class="paper-thumbnail">
-<p><img src="assets/paper_thumbnails/Kim_2024_Towards_Full_Authorship_with_AI.png" class="rounded shadow img-fluid" alt="First page of Towards Full Authorship with AI: Supporting Revision with AI-Generated Views, HAI-GEN 2025."></p>
+<p><img src="assets/paper_thumbnails/Kim_2024_Towards_Full_Authorship_with_AI.webp" class="rounded shadow img-fluid" alt="First page of Towards Full Authorship with AI: Supporting Revision with AI-Generated Views, HAI-GEN 2025."></p>
 </div>
 <div class="paper-metadata">
 <div>
@@ -864,8 +862,21 @@ gtag('config', 'G-HWSQBSH4R7', { 'anonymize_ip': true});
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Last updated: November 5, 2025</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/nghtctrl/nghtctrl.github.io/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/nghtctrl/nghtctrl.github.io/issues/new/choose" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+</body></html>
