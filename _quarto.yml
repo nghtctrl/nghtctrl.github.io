@@ -53,6 +53,3 @@ format:
       dark: [cosmo, theme-dark.scss]
     css: styles.css
     toc: true
-
-execute:
-  freeze: auto
