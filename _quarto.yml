@@ -23,9 +23,6 @@ website:
   navbar:
     search: true
     left:
-      - text: "Projects"
-        aria-label: "Projects"
-        href: proj
       - text: "Blog"
         aria-label: "Blog"
         href: blog
