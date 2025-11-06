@@ -14,9 +14,9 @@ website:
   open-graph: true
   twitter-card: true
   site-url: https://jihokim.dev
-  repo-url: https://github.com/nghtctrl/nghtctrl.github.io
-  issue-url: https://github.com/nghtctrl/nghtctrl.github.io/issues/new/choose
-  repo-actions: [source, issue]
+  # repo-url: https://github.com/nghtctrl/nghtctrl.github.io
+  # issue-url: https://github.com/nghtctrl/nghtctrl.github.io/issues/new/choose
+  # repo-actions: [source, issue]
   page-navigation: true
   back-to-top-navigation: true
   bread-crumbs: true
