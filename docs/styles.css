@@ -7,8 +7,14 @@
   transition: 0.3s;
 }
 
-.link:hover {
-  text-decoration: underline dotted;
+.paper-metadata-link {
+  text-decoration: none;
+  transition: 0.3s;
+  color: inherit;
+}
+
+.paper-metadata-link:hover {
+  color: grey;
 }
 
 .paper-container {
@@ -30,15 +36,4 @@
 
 .paper-container .paper-metadata p {
   margin-bottom: 0.5em;
-}
-
-.paper-container .paper-metadata a {
-  text-decoration: none;
-  transition: 0.3s;
-  color: inherit;
-}
-
-.paper-container .paper-metadata a:hover {
-  text-decoration: underline dotted;
-  color: grey;
 }
