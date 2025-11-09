@@ -35,7 +35,7 @@ website:
       - text: "{{< iconify simple-icons bluesky>}} Bluesky"
         aria-label: "Bluesky"
         href: https://bsky.app/profile/jihokim.dev
-  page-footer: "Last updated: November 5, 2025"
+  page-footer: "Last updated: November 8, 2025"
   
 format:
   html:
