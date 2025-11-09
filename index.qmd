@@ -52,13 +52,16 @@ You can reach me at _myfirstname_\@jihokim.dev
 :::
 ::: {.paper-metadata}
 ::: {}
-<a href="" target="_blank">**CUPID: Evaluating Personalized and Contextualized Alignment of LLMs from Interactions**</a>
+**CUPID: Evaluating Personalized and Contextualized Alignment of LLMs from Interactions**
 :::
 ::: {}
-<a href="https://taesookim.com/" target="_blank">Tae Soo Kim</a>, <a href="https://yoonjoolee.com/" target="_blank">Yoonjoo Lee</a>, <a href="https://www.linkedin.com/in/yoonah-park-50ba57249/" target="_blank">Yoonah Park</a>, <b>Jiho Kim</b>, <a href="https://younghokim.net/" target="_blank">Young-Ho Kim</a>, and <a href="https://juhokim.com/" target="_blank">Juho Kim</a>
+<a class="paper-metadata-link" href="https://taesookim.com/" target="_blank">Tae Soo Kim</a>, <a class="paper-metadata-link" href="https://yoonjoolee.com/" target="_blank">Yoonjoo Lee</a>, <a class="paper-metadata-link" href="https://www.linkedin.com/in/yoonah-park-50ba57249/" target="_blank">Yoonah Park</a>, <b>Jiho Kim</b>, <a class="paper-metadata-link" href="https://younghokim.net/" target="_blank">Young-Ho Kim</a>, and <a class="paper-metadata-link" href="https://juhokim.com/" target="_blank">Juho Kim</a>
 :::
 ::: {}
 Second Conference on Language Modeling (COLM 2025)
+:::
+::: {}
+[<a class="link" href="https://arxiv.org/pdf/2508.01674?" target="_blank">pdf</a>] [<a class="link" href="https://cupid.kixlab.org/" target="_blank">website</a>] [<a class="link" href="https://huggingface.co/datasets/kixlab/CUPID" target="_blank">dataset</a>]
 :::
 :::
 :::
@@ -71,13 +74,16 @@ Second Conference on Language Modeling (COLM 2025)
 :::
 ::: {.paper-metadata}
 ::: {}
-<a href="" target="_blank">**Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing**</a>
+**Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing**
 :::
 ::: {}
-<b>Jiho Kim</b>, <a href="https://tingofurro.github.io/" target="_blank">Philippe Laban</a>, <a href="https://hci.prof/" target="_blank">Xiang 'Anthony' Chen</a>, and <a href="https://kenarnold.org/" target="_blank">Kenneth C. Arnold</a>
+<b>Jiho Kim</b>, <a class="paper-metadata-link" href="https://tingofurro.github.io/" target="_blank">Philippe Laban</a>, <a class="paper-metadata-link" href="https://hci.prof/" target="_blank">Xiang 'Anthony' Chen</a>, and <a class="paper-metadata-link" href="https://kenarnold.org/" target="_blank">Kenneth C. Arnold</a>
 :::
 ::: {}
 Fourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 2025) at NAACL 2025
+:::
+::: {}
+[<a class="link" href="https://arxiv.org/pdf/2504.08687" target="_blank">pdf</a>] [<a class="link" href="/assets/posters/Kim_2025_Voice_Interaction.pdf" target="_blank">poster</a>]
 :::
 :::
 :::
@@ -88,13 +94,16 @@ Fourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 20
 :::
 ::: {.paper-metadata}
 ::: {}
-<a href="" target="_blank">**Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing**</a>
+**Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing**
 :::
 ::: {}
-<a href="https://kenarnold.org/" target="_blank">Kenneth C. Arnold</a> and <b>Jiho Kim</b>
+<a class="paper-metadata-link" href="https://kenarnold.org/" target="_blank">Kenneth C. Arnold</a> and <b>Jiho Kim</b>
 :::
 ::: {}
 Fourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 2025) at NAACL 2025
+:::
+::: {}
+[<a class="link" href="https://arxiv.org/pdf/2504.08726v1" target="_blank">pdf</a>] [<a class="link" href="https://huggingface.co/spaces/CalvinU/writing-prototypes" target="_blank">demo</a>] [<a class="link" href="/assets/posters/Arnold_2025_Interaction-Required_Suggestions.pdf" target="_blank">poster</a>]
 :::
 :::
 :::
@@ -105,13 +114,16 @@ Fourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 20
 :::
 ::: {.paper-metadata}
 ::: {}
-<a href="" target="_blank">**Towards Full Authorship with AI: Supporting Revision with AI-Generated Views**</a>
+**Towards Full Authorship with AI: Supporting Revision with AI-Generated Views**
 :::
 ::: {}
-<b>Jiho Kim</b>, <a href="https://www.linkedin.com/in/ray-flanagan-5803021b6/" target="_blank">Ray C. Flanagan</a>, Noelle E. Haviland, <a href="https://www.linkedin.com/in/zeai-sun-029b3524a/" target="_blank">ZeAi Sun</a>, <a href="https://www.linkedin.com/in/souad-yakubu/" target="_blank">Souad N. Yakubu</a>, <a href="https://www.linkedin.com/in/edom-maru-1969ba24b/" target="_blank">Edom A. Maru</a>, and <a href="https://kenarnold.org/" target="_blank">Kenneth C. Arnold</a>
+<b>Jiho Kim</b>, <a class="paper-metadata-link" href="https://www.linkedin.com/in/ray-flanagan-5803021b6/" target="_blank">Ray C. Flanagan</a>, Noelle E. Haviland, <a class="paper-metadata-link" href="https://www.linkedin.com/in/zeai-sun-029b3524a/" target="_blank">ZeAi Sun</a>, <a class="paper-metadata-link" href="https://www.linkedin.com/in/souad-yakubu/" target="_blank">Souad N. Yakubu</a>, <a class="paper-metadata-link" href="https://www.linkedin.com/in/edom-maru-1969ba24b/" target="_blank">Edom A. Maru</a>, and <a class="paper-metadata-link" href="https://kenarnold.org/" target="_blank">Kenneth C. Arnold</a>
 :::
 ::: {}
 Fifth Workshop on Human-AI Co-Creation with Generative Models (HAI-GEN 2024) at IUI 2024
+:::
+::: {}
+[<a class="link" href="https://arxiv.org/pdf/2403.01055" target="_blank">pdf</a>] [<a class="link" href="https://app.thoughtful-ai.com/" target="_blank">demo</a>] [<a class="link" href="/assets/posters/Kim_2024_Towards_Full_Authorship_with_AI.pdf" target="_blank">poster</a>] [<a class="link" href="https://www.youtube.com/watch?v=-s6IvkGqj2Q" target="_blank">presentation</a>]
 :::
 :::
 :::
