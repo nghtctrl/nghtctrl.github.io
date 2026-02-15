@@ -1,0 +1,15 @@
+---
+const { url, label } = Astro.props;
+---
+
+<p>
+  [<a
+    href={url}
+    target='_blank'
+    rel='noopener noreferrer'
+    data-text={label}
+    class='font-normal text-blue-800 hover:text-blue-600'
+  >
+    {label}
+  </a>]
+</p>

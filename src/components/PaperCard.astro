@@ -1,0 +1,62 @@
+---
+import BracketLink from './BracketLink.astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+  title: string;
+  authors: string;
+  venue: string;
+  imageSrc?: ImageMetadata;
+  pdfUrl?: string;
+  demoUrl?: string;
+  posterUrl?: string;
+  videoUrl?: string;
+  websiteUrl?: string;
+  datasetUrl?: string;
+  bibtexUrl?: string;
+}
+
+const {
+  title,
+  authors,
+  venue,
+  imageSrc,
+  pdfUrl,
+  demoUrl,
+  posterUrl,
+  videoUrl,
+  websiteUrl,
+  datasetUrl,
+  bibtexUrl,
+} = Astro.props;
+---
+
+<div class='not-prose flex flex-col md:flex-row items-start'>
+  {
+    imageSrc && (
+      <Image
+        src={imageSrc}
+        class='w-full hidden md:block md:w-32.5 h-auto aspect-17/22 rounded-md shadow-lg mb-4 md:mb-0 md:mr-6'
+        alt={title}
+        loading='eager'
+        fetchpriority='high'
+      />
+    )
+  }
+
+  <div class='text-sm flex flex-col gap-1'>
+    <p class='font-semibold'>{title}</p>
+    <p>{authors}</p>
+    <p class='font-extralight'>{venue}</p>
+
+    <nav class='flex gap-2'>
+      {pdfUrl && <BracketLink url={pdfUrl} label='pdf' />}
+      {demoUrl && <BracketLink url={demoUrl} label='demo' />}
+      {datasetUrl && <BracketLink url={datasetUrl} label='dataset' />}
+      {posterUrl && <BracketLink url={posterUrl} label='poster' />}
+      {videoUrl && <BracketLink url={videoUrl} label='video' />}
+      {websiteUrl && <BracketLink url={websiteUrl} label='website' />}
+      {bibtexUrl && <BracketLink url={bibtexUrl} label='bibtex' />}
+    </nav>
+  </div>
+</div>
