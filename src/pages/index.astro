@@ -1,7 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import profilePicture from '../assets/profile-picture.webp';
 import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import PaperCard from '../components/PaperCard.astro';
+
+import profilePicture from '../assets/profile-picture.webp';
+import kim2025Cupid from '../assets/paper_thumbnails/kim-2025-cupid.webp';
+import kim2025CupidBibtex from '../assets/paper_bibtex/kim-2025-cupid.txt';
+import kim2025VoiceInteractionPoster from '../assets/posters/kim-2025-voice-interaction.pdf';
+import kim2025VoiceInteractionBibtex from '../assets/paper_bibtex/kim-2025-voice-interaction.txt';
+import arnold2025InteractionRequiredPoster from '../assets/posters/arnold-2025-interaction-required-suggestions.pdf';
+import arnold2025InteractionRequiredBibtex from '../assets/paper_bibtex/arnold-2025-interaction-required-suggestions.txt';
+import kim2024TowardsFullAuthorshipWithAIPoster from '../assets/posters/kim-2024-towards-full-authorship-with-ai.pdf';
+import kim2024TowardsFullAuthorshipWithAIBibtex from '../assets/paper_bibtex/kim-2024-towards-full-authorship-with-ai.txt';
 ---
 
 <Layout title={'About'}>
@@ -46,9 +56,49 @@ import { Image } from 'astro:assets';
         research at WMRUGS '24 in Grand Rapids, MI.
       </li>
     </ul>
-
     <h2>Publications</h2>
     <h3>Conference Papers</h3>
+    <div class='mt-4 flex flex-col gap-8'>
+      <PaperCard
+        title='CUPID: Evaluating Personalized and Contextualized Alignment of LLMs from Interactions'
+        authors='Tae Soo Kim, Yoonjoo Lee, Yoonah Park, Jiho Kim, Young-Ho Kim, and Juho Kim'
+        venue='Second Conference on Language Modeling (COLM 2025)'
+        imageSrc={kim2025Cupid}
+        pdfUrl='https://arxiv.org/pdf/2508.01674'
+        websiteUrl='https://cupid.kixlab.org/'
+        datasetUrl='https://huggingface.co/datasets/kixlab/CUPID'
+        bibtexUrl={kim2025CupidBibtex}
+      />
+    </div>
     <h3>Workshop Papers, Posters, and Technical Reports</h3>
+    <div class='flex flex-col gap-4 mt-4'>
+      <PaperCard
+        title='Voice Interaction With Conversational AI Could Facilitate Thoughtful Reflection and Substantive Revision in Writing'
+        authors="Jiho Kim, Philippe Laban, Xiang 'Anthony' Chen, and Kenneth C. Arnold"
+        venue='Fourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 2025) at NAACL 2025'
+        pdfUrl='https://arxiv.org/pdf/2504.08687'
+        posterUrl={kim2025VoiceInteractionPoster}
+        bibtexUrl={kim2025VoiceInteractionBibtex}
+      />
+      <PaperCard
+        title='Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing'
+        authors='Kenneth C. Arnold and Jiho Kim'
+        venue='Fourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 2025) at NAACL 2025'
+        pdfUrl='https://arxiv.org/pdf/2504.08726'
+        demoUrl='https://huggingface.co/spaces/CalvinU/writing-prototypes'
+        posterUrl={arnold2025InteractionRequiredPoster}
+        bibtexUrl={arnold2025InteractionRequiredBibtex}
+      />
+      <PaperCard
+        title='Towards Full Authorship with AI: Supporting Revision with AI-Generated Views'
+        authors='Jiho Kim, Ray C. Flanagan, Noelle E. Haviland, ZeAi Sun, Souad N. Yakubu, Edom A. Maru, and Kenneth C. Arnold'
+        venue='Fifth Workshop on Human-AI Co-Creation with Generative Models (HAI-GEN 2024) at IUI 2024'
+        pdfUrl='https://arxiv.org/pdf/2403.01055'
+        demoUrl='https://app.thoughtful-ai.com/'
+        posterUrl={kim2024TowardsFullAuthorshipWithAIPoster}
+        videoUrl='https://www.youtube.com/watch?v=-s6IvkGqj2Q'
+        bibtexUrl={kim2024TowardsFullAuthorshipWithAIBibtex}
+      />
+    </div>
   </div>
 </Layout>
