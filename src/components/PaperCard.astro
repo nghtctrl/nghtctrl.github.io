@@ -29,6 +29,11 @@ const {
   datasetUrl,
   bibtexUrl,
 } = Astro.props;
+
+const formattedAuthors = authors.replace(
+  /Jiho Kim/g,
+  '<span class="italic">Jiho Kim</span>',
+);
 ---
 
 <div class='not-prose flex flex-col md:flex-row items-start'>
@@ -46,7 +51,7 @@ const {
 
   <div class='text-sm flex flex-col gap-1'>
     <p class='font-semibold'>{title}</p>
-    <p>{authors}</p>
+    <p set:html={formattedAuthors} />
     <p class='font-extralight'>{venue}</p>
 
     <nav class='flex gap-2'>
