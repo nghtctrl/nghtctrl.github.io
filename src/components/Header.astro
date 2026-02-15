@@ -1,5 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
+const { title } = Astro.props;
+const hideOnDesktop = title === 'About';
 ---
 
 <!-- The following code was adapted from https://github.com/jonnysmillie/astro-base/blob/4235669147f9ccff446d9238abc62c04aef63638/src/components/Header.astro -->
@@ -8,13 +10,14 @@ import { Icon } from 'astro-icon/components';
   role='banner'
 >
   <nav
-    class='max-w-6xl mx-auto flex items-center justify-between'
+    class='max-w-3xl mx-auto flex items-center justify-between'
     aria-label='Main navigation'
   >
     <a
       href='/'
-      class='text-2xl font-bold text-gray-900 hover:text-gray-700 transition-colors'
-      aria-label='Astro Base - Home'
+      class={`text-2xl font-bold text-gray-900 hover:text-gray-700 transition-colors
+    ${hideOnDesktop ? 'md:invisible md:pointer-events-none' : ''}`}
+      aria-label='Home'
     >
       Jiho Kim
     </a>
