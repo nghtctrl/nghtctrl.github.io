@@ -7,16 +7,7 @@ import SocialMediaButton from '../components/SocialMediaButton.astro';
 import Link from '../components/Link.astro';
 
 import profilePicture from '../assets/profile-picture.webp';
-import cv from '../public/jiho-kim-cv.pdf';
-
 import kim2025Cupid from '../assets/paper_thumbnails/kim-2025-cupid.webp';
-import kim2025CupidBibtex from '../public/paper_bibtex/kim-2025-cupid.txt';
-import kim2025VoiceInteractionPoster from '../public/posters/kim-2025-voice-interaction.pdf';
-import kim2025VoiceInteractionBibtex from '../public/paper_bibtex/kim-2025-voice-interaction.txt';
-import arnold2025InteractionRequiredPoster from '../public/posters/arnold-2025-interaction-required-suggestions.pdf';
-import arnold2025InteractionRequiredBibtex from '../public/paper_bibtex/arnold-2025-interaction-required-suggestions.txt';
-import kim2024TowardsFullAuthorshipWithAIPoster from '../public/posters/kim-2024-towards-full-authorship-with-ai.pdf';
-import kim2024TowardsFullAuthorshipWithAIBibtex from '../public/paper_bibtex/kim-2024-towards-full-authorship-with-ai.txt';
 ---
 
 <Layout pageTitle={'About'}>
@@ -55,7 +46,7 @@ import kim2024TowardsFullAuthorshipWithAIBibtex from '../public/paper_bibtex/kim
       <div
         class='flex justify-between mx-4 md:mx-auto mt-6 md:mt-4 mb-4 md:mb-0'
       >
-        <SocialMediaButton url={cv}>
+        <SocialMediaButton url='/jiho-kim-cv.pdf'>
           <Icon name='academicons:cv' class='w-8 h-8' aria-hidden='true' />
         </SocialMediaButton>
         <SocialMediaButton
@@ -93,6 +84,7 @@ import kim2024TowardsFullAuthorshipWithAIBibtex from '../public/paper_bibtex/kim
       </div>
     </div>
   </div>
+
   <div>
     <h2>What's New?</h2>
     <ul>
@@ -109,6 +101,7 @@ import kim2024TowardsFullAuthorshipWithAIBibtex from '../public/paper_bibtex/kim
         research at WMRUGS '24 in Grand Rapids, MI.
       </li>
     </ul>
+
     <h2>Publications</h2>
     <h3>Conference Papers</h3>
     <div class='mt-4 flex flex-col gap-8'>
@@ -120,9 +113,10 @@ import kim2024TowardsFullAuthorshipWithAIBibtex from '../public/paper_bibtex/kim
         pdfUrl='https://arxiv.org/pdf/2508.01674'
         websiteUrl='https://cupid.kixlab.org/'
         datasetUrl='https://huggingface.co/datasets/kixlab/CUPID'
-        bibtexUrl={kim2025CupidBibtex}
+        bibtexUrl='/paper_bibtex/kim-2025-cupid.txt'
       />
     </div>
+
     <h3>Workshop Papers, Posters, and Technical Reports</h3>
     <div class='flex flex-col gap-4 mt-4'>
       <PaperCard
@@ -130,8 +124,8 @@ import kim2024TowardsFullAuthorshipWithAIBibtex from '../public/paper_bibtex/kim
         authors="Jiho Kim, Philippe Laban, Xiang 'Anthony' Chen, and Kenneth C. Arnold"
         venue='Fourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 2025) at NAACL 2025'
         pdfUrl='https://arxiv.org/pdf/2504.08687'
-        posterUrl={kim2025VoiceInteractionPoster}
-        bibtexUrl={kim2025VoiceInteractionBibtex}
+        posterUrl='/posters/kim-2025-voice-interaction.pdf'
+        bibtexUrl='/paper_bibtex/kim-2025-voice-interaction.txt'
       />
       <PaperCard
         title='Interaction-Required Suggestions for Control, Ownership, and Awareness in Human-AI Co-Writing'
@@ -139,8 +133,8 @@ import kim2024TowardsFullAuthorshipWithAIBibtex from '../public/paper_bibtex/kim
         venue='Fourth Workshop on Intelligent and Interactive Writing Assistants (In2Writing 2025) at NAACL 2025'
         pdfUrl='https://arxiv.org/pdf/2504.08726'
         demoUrl='https://huggingface.co/spaces/CalvinU/writing-prototypes'
-        posterUrl={arnold2025InteractionRequiredPoster}
-        bibtexUrl={arnold2025InteractionRequiredBibtex}
+        posterUrl='/posters/arnold-2025-interaction-required-suggestions.pdf'
+        bibtexUrl='/paper_bibtex/arnold-2025-interaction-required-suggestions.txt'
       />
       <PaperCard
         title='Towards Full Authorship with AI: Supporting Revision with AI-Generated Views'
@@ -148,9 +142,9 @@ import kim2024TowardsFullAuthorshipWithAIBibtex from '../public/paper_bibtex/kim
         venue='Fifth Workshop on Human-AI Co-Creation with Generative Models (HAI-GEN 2024) at IUI 2024'
         pdfUrl='https://arxiv.org/pdf/2403.01055'
         demoUrl='https://app.thoughtful-ai.com/'
-        posterUrl={kim2024TowardsFullAuthorshipWithAIPoster}
+        posterUrl='/posters/kim-2024-towards-full-authorship-with-ai.pdf'
         videoUrl='https://www.youtube.com/watch?v=-s6IvkGqj2Q'
-        bibtexUrl={kim2024TowardsFullAuthorshipWithAIBibtex}
+        bibtexUrl='/paper_bibtex/kim-2024-towards-full-authorship-with-ai.txt'
       />
     </div>
   </div>
