@@ -1,15 +1,6 @@
 ---
-const { url, label } = Astro.props;
+import Link from './Link.astro';
+const { url } = Astro.props;
 ---
 
-<p>
-  [<a
-    href={url}
-    target='_blank'
-    rel='noopener noreferrer'
-    data-text={label}
-    class='font-normal text-blue-800 hover:text-blue-600'
-  >
-    {label}
-  </a>]
-</p>
+<p>[<Link url={url}><slot /></Link>]</p>
