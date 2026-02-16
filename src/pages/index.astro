@@ -1,9 +1,14 @@
 ---
 import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
 import Layout from '../layouts/Layout.astro';
 import PaperCard from '../components/PaperCard.astro';
+import SocialMediaButton from '../components/SocialMediaButton.astro';
+import Link from '../components/Link.astro';
 
 import profilePicture from '../assets/profile-picture.webp';
+import cv from '../assets/jiho-kim-cv.pdf';
+
 import kim2025Cupid from '../assets/paper_thumbnails/kim-2025-cupid.webp';
 import kim2025CupidBibtex from '../assets/paper_bibtex/kim-2025-cupid.txt';
 import kim2025VoiceInteractionPoster from '../assets/posters/kim-2025-voice-interaction.pdf';
@@ -14,31 +19,79 @@ import kim2024TowardsFullAuthorshipWithAIPoster from '../assets/posters/kim-2024
 import kim2024TowardsFullAuthorshipWithAIBibtex from '../assets/paper_bibtex/kim-2024-towards-full-authorship-with-ai.txt';
 ---
 
-<Layout title={'About'}>
+<Layout pageTitle={'About'}>
   <div class='flex flex-col-reverse md:flex-row'>
     <div class='text-center md:text-left mr-4'>
-      <div class='not-prose'>
+      <div class='not-prose hidden md:block'>
         <h1 class='text-3xl md:text-4xl font-bold text-black'>Jiho Kim</h1>
         <p>he/him</p>
       </div>
       <p>
-        Hey there! I am an Interim Software Engineer at SIL Language Technology.
+        Hey there! I am an Interim Software Engineer at <Link
+          url='https://software.sil.org/'>SIL Language Technology</Link
+        >.
       </p>
       <p>
         I recently completed a B.C.S in Computer Science from Calvin University,
-        where I was fortunate to be advised by Ken Arnold.
+        where I was fortunate to be advised by <Link
+          url='https://kenarnold.org/'>Ken Arnold</Link
+        >.
       </p>
       <p>
         My research interest is in human-AI interaction. I am interested in
         studying how we think using AI; and how AI impacts the way we reflect,
         express ourselves, communicate with others, and learn.
       </p>
+      <p>
+        You can reach me at <span class='italic'>myfirstname</span>@jihokim.dev
+      </p>
     </div>
-    <Image
-      src={profilePicture}
-      alt='Jiho Kim'
-      class='mx-auto max-w-60 rounded-lg object-cover'
-    />
+    <div>
+      <Image
+        src={profilePicture}
+        alt='Jiho Kim'
+        class='mx-auto max-w-60 rounded-lg object-cover'
+      />
+      <div
+        class='flex justify-between mx-4 md:mx-auto mt-6 md:mt-4 mb-4 md:mb-0'
+      >
+        <SocialMediaButton url={cv}>
+          <Icon name='academicons:cv' class='w-8 h-8' aria-hidden='true' />
+        </SocialMediaButton>
+        <SocialMediaButton
+          url='https://www.linkedin.com/in/jiho-kim-128aa0199'
+          hoverColor='#0077B5'
+        >
+          <Icon name='fa7-brands:linkedin' class='w-8 h-8' aria-hidden='true' />
+        </SocialMediaButton>
+        <SocialMediaButton
+          url='https://bsky.app/profile/jiho-kim.bsky.social'
+          hoverColor='#1185FE'
+        >
+          <Icon name='fa7-brands:bluesky' class='w-8 h-8' aria-hidden='true' />
+        </SocialMediaButton>
+        <SocialMediaButton
+          url='https://scholar.google.com/citations?hl=en&user=aWisTO4AAAAJ&view_op=list_works&sortby=pubdate'
+          hoverColor='#4285F4'
+        >
+          <Icon
+            name='academicons:google-scholar'
+            class='w-8 h-8'
+            aria-hidden='true'
+          />
+        </SocialMediaButton>
+        <SocialMediaButton
+          url='https://www.semanticscholar.org/author/Jiho-Kim/2289885996?sort=pub-date'
+          hoverColor='#11223C'
+        >
+          <Icon
+            name='academicons:semantic-scholar'
+            class='w-8 h-8'
+            aria-hidden='true'
+          />
+        </SocialMediaButton>
+      </div>
+    </div>
   </div>
   <div>
     <h2>What's New?</h2>
