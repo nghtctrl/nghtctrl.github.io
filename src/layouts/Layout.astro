@@ -21,6 +21,10 @@ const isAbout = pageTitle === 'About';
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
     {isAbout ? <title>Jiho Kim</title> : <title>{pageTitle} - Jiho Kim</title>}
+    <meta
+      name='description'
+      content='Jiho Kim is a human-computer interaction researcher studying how AI shapes thinking, writing, communication, and learning.'
+    />
   </head>
   <body class='flex min-h-screen flex-col pt-16 bg-gray-50'>
     <Header pageTitle={pageTitle} />
