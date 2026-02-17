@@ -1,0 +1,213 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const { pageTitle } = Astro.props;
+const hideOnDesktop = pageTitle === 'About';
+---
+
+<!-- The following code was adapted from https://github.com/jonnysmillie/astro-base/blob/4235669147f9ccff446d9238abc62c04aef63638/src/components/Header.astro -->
+<header
+  class='w-full py-4 px-4 bg-gray-50 dark:bg-lighter-dark-bg fixed top-0 z-50'
+  role='banner'
+>
+  <nav
+    class='max-w-3xl mx-auto flex items-center justify-between'
+    aria-label='Main navigation'
+  >
+    <a
+      href='/'
+      class={`text-2xl font-bold text-gray-900 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-300 transition-colors
+    ${hideOnDesktop ? 'md:invisible md:pointer-events-none' : ''}`}
+      aria-label='Home'
+    >
+      Jiho Kim
+    </a>
+
+    <!-- Mobile menu button -->
+    <button
+      type='button'
+      class='md:hidden p-2 text-gray-600 dark:text-gray-300'
+      aria-label='Toggle menu'
+      aria-expanded='false'
+      aria-controls='mobile-menu'
+      id='mobile-menu-button'
+    >
+      <Icon name='tabler:menu-2' class='w-6 h-6' aria-hidden='true' />
+    </button>
+
+    <!-- Desktop menu -->
+    <ul class='hidden md:flex items-center gap-6' role='list'>
+      <li>
+        <a
+          href='/'
+          class='text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors'
+          aria-current={Astro.url.pathname === '/features' ? 'page' : undefined}
+        >
+          About
+        </a>
+      </li>
+      <li>
+        <a
+          href='/blog'
+          class='text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors'
+          aria-current={Astro.url.pathname === '/about' ? 'page' : undefined}
+        >
+          Blog
+        </a>
+      </li>
+      <li>
+        <a
+          href='/projects'
+          class='text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors'
+          aria-current={Astro.url.pathname === '/about' ? 'page' : undefined}
+        >
+          Projects
+        </a>
+      </li>
+      <li>
+        <a
+          href='/publications'
+          class='text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors'
+          aria-current={Astro.url.pathname === '/about' ? 'page' : undefined}
+        >
+          Publications
+        </a>
+      </li>
+      <li class='flex justify-center'>
+        <button
+          type='button'
+          class='theme-toggle cursor-pointer transition-all duration-150 hover:scale-105 active:scale-95'
+          aria-label='Toggle theme'
+        >
+          <Icon
+            name='tabler:sun'
+            class='w-6 h-6 hidden dark:block text-yellow-500'
+            aria-hidden='true'
+          />
+          <Icon
+            name='tabler:moon'
+            class='w-6 h-6 dark:hidden text-purple-500'
+            aria-hidden='true'
+          />
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div
+    id='mobile-menu'
+    class='hidden md:hidden'
+    role='menu'
+    aria-labelledby='mobile-menu-button'
+  >
+    <ul class='flex flex-col items-end' role='list'>
+      <li>
+        <a
+          href='/'
+          class='block px-2 py-3 text-gray-600 dark:text-gray-400 transition-colors'
+          role='menuitem'
+          aria-current={Astro.url.pathname === '/features' ? 'page' : undefined}
+        >
+          About
+        </a>
+      </li>
+      <li>
+        <a
+          href='/blog'
+          class='block px-2 py-3 text-gray-600 dark:text-gray-400 transition-colors'
+          role='menuitem'
+          aria-current={Astro.url.pathname === '/about' ? 'page' : undefined}
+        >
+          Blog
+        </a>
+      </li>
+      <li>
+        <a
+          href='/projects'
+          class='block px-2 py-3 text-gray-600 dark:text-gray-400 transition-colors'
+          role='menuitem'
+          aria-current={Astro.url.pathname === '/about' ? 'page' : undefined}
+        >
+          Projects
+        </a>
+      </li>
+      <li>
+        <a
+          href='/publications'
+          class='block px-2 py-3 text-gray-600 dark:text-gray-400 transition-colors'
+          role='menuitem'
+          aria-current={Astro.url.pathname === '/about' ? 'page' : undefined}
+        >
+          Publications
+        </a>
+      </li>
+      <li>
+        <button
+          type='button'
+          class='theme-toggle block px-2 py-3 cursor-pointer transition-all duration-150 hover:scale-105 active:scale-95'
+          aria-label='Toggle theme'
+        >
+          <Icon
+            name='tabler:sun'
+            class='w-6 h-6 hidden dark:block text-yellow-500'
+            aria-hidden='true'
+          />
+          <Icon
+            name='tabler:moon'
+            class='w-6 h-6 dark:hidden text-purple-500'
+            aria-hidden='true'
+          />
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle functionality
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (menuButton && mobileMenu) {
+    menuButton.addEventListener('click', () => {
+      const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isExpanded));
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (
+        !menuButton.contains(e.target as Node) &&
+        !mobileMenu.contains(e.target as Node) &&
+        !mobileMenu.classList.contains('hidden')
+      ) {
+        menuButton.setAttribute('aria-expanded', 'false');
+        mobileMenu.classList.add('hidden');
+      }
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+        menuButton.setAttribute('aria-expanded', 'false');
+        mobileMenu.classList.add('hidden');
+        menuButton.focus();
+      }
+    });
+  }
+
+  // Theme toggle functionality
+  const themeToggles =
+    document.querySelectorAll<HTMLButtonElement>('.theme-toggle');
+
+  themeToggles.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+
+      const isDark = document.documentElement.classList.contains('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  });
+</script>

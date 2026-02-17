@@ -1,0 +1,58 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Prose from '../components/Prose.astro';
+
+const { pageTitle } = Astro.props;
+const isAbout = pageTitle === 'About';
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <link rel='icon' type='image/png' href='/favicon-96x96.png' sizes='96x96' />
+    <link rel='shortcut icon' href='/favicon.ico' />
+    <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
+    <meta name='apple-mobile-web-app-title' content='Jiho Kim' />
+    <link rel='manifest' href='/site.webmanifest' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    {isAbout ? <title>Jiho Kim</title> : <title>{pageTitle} - Jiho Kim</title>}
+    <meta
+      name='description'
+      content='Jiho Kim is a human-computer interaction researcher studying how AI shapes thinking, writing, communication, and learning.'
+    />
+    <script>
+      const theme = (() => {
+        if (
+          typeof localStorage !== 'undefined' &&
+          localStorage.getItem('theme')
+        ) {
+          return localStorage.getItem('theme');
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+        return 'light';
+      })();
+
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+  </head>
+  <body class='flex min-h-screen flex-col pt-16 bg-white dark:bg-dark-bg'>
+    <Header pageTitle={pageTitle} />
+    <main class='md:mx-auto mx-4 my-12 max-w-3xl grow'>
+      <Prose>
+        <slot />
+      </Prose>
+    </main>
+    <Footer />
+  </body>
+</html>

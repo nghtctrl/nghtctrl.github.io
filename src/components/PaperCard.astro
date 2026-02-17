@@ -1,0 +1,67 @@
+---
+import BracketLink from './BracketLink.astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+  title: string;
+  authors: string;
+  venue: string;
+  imageSrc?: ImageMetadata;
+  pdfUrl?: string;
+  demoUrl?: string;
+  posterUrl?: string;
+  videoUrl?: string;
+  websiteUrl?: string;
+  datasetUrl?: string;
+  bibtexUrl?: string;
+}
+
+const {
+  title,
+  authors,
+  venue,
+  imageSrc,
+  pdfUrl,
+  demoUrl,
+  posterUrl,
+  videoUrl,
+  websiteUrl,
+  datasetUrl,
+  bibtexUrl,
+} = Astro.props;
+
+const formattedAuthors = authors.replace(
+  /Jiho Kim/g,
+  '<span class="italic">Jiho Kim</span>',
+);
+---
+
+<div class='not-prose flex flex-col md:flex-row items-start'>
+  {
+    imageSrc && (
+      <Image
+        src={imageSrc}
+        class='w-full hidden md:block md:w-32.5 h-auto aspect-17/22 rounded-md shadow-lg mb-4 md:mb-0 md:mr-6'
+        alt={title}
+        loading='eager'
+        fetchpriority='high'
+      />
+    )
+  }
+
+  <div class='text-sm flex flex-col gap-1'>
+    <p class='font-semibold'>{title}</p>
+    <p set:html={formattedAuthors} />
+    <p class='font-extralight'>{venue}</p>
+
+    <nav class='flex gap-2'>
+      {pdfUrl && <BracketLink url={pdfUrl}> pdf </BracketLink>}
+      {demoUrl && <BracketLink url={demoUrl}> demo </BracketLink>}
+      {datasetUrl && <BracketLink url={datasetUrl}> dataset </BracketLink>}
+      {posterUrl && <BracketLink url={posterUrl}> poster </BracketLink>}
+      {videoUrl && <BracketLink url={videoUrl}> video </BracketLink>}
+      {websiteUrl && <BracketLink url={websiteUrl}> website </BracketLink>}
+      {bibtexUrl && <BracketLink url={bibtexUrl}> bibtex </BracketLink>}
+    </nav>
+  </div>
+</div>
