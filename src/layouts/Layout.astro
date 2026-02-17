@@ -25,8 +25,28 @@ const isAbout = pageTitle === 'About';
       name='description'
       content='Jiho Kim is a human-computer interaction researcher studying how AI shapes thinking, writing, communication, and learning.'
     />
+    <script>
+      const theme = (() => {
+        if (
+          typeof localStorage !== 'undefined' &&
+          localStorage.getItem('theme')
+        ) {
+          return localStorage.getItem('theme');
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+        return 'light';
+      })();
+
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
   </head>
-  <body class='flex min-h-screen flex-col pt-16 bg-gray-50'>
+  <body class='flex min-h-screen flex-col pt-16 bg-white dark:bg-dark-bg'>
     <Header pageTitle={pageTitle} />
     <main class='md:mx-auto mx-4 my-12 max-w-3xl grow'>
       <Prose>
