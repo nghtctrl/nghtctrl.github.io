@@ -46,9 +46,18 @@ const isAbout = pageTitle === 'About';
       }
     </script>
     <script
-      is:inline
       type='text/partytown'
-      src='../analytics/google-analytics.js'></script>
+      async
+      src='https://www.googletagmanager.com/gtag/js?id=G-LF96D9G25P'></script>
+    <script type='text/partytown'>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-LF96D9G25P');
+    </script>
   </head>
   <body class='flex min-h-screen flex-col pt-16 bg-white dark:bg-dark-bg'>
     <Header pageTitle={pageTitle} />
