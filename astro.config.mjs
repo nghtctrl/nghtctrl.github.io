@@ -4,11 +4,12 @@ import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
 import icon from 'astro-icon';
+import partytown from '@astrojs/partytown';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://nghtctrl.github.io',
-  integrations: [react(), mdx(), icon()],
+  integrations: [react(), mdx(), icon(), partytown()],
   vite: {
     plugins: [tailwindcss()],
   },

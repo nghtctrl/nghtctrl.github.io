@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
+    "@astrojs/partytown": "^2.1.4",
     "@astrojs/react": "^4.4.2",
     "@iconify-json/academicons": "^1.2.4",
     "@iconify-json/fa7-brands": "^1.2.2",
