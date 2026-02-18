@@ -45,19 +45,18 @@ const isAbout = pageTitle === 'About';
         document.documentElement.classList.remove('dark');
       }
     </script>
-    <script
-      type='text/partytown'
-      async
-      src='https://www.googletagmanager.com/gtag/js?id=G-LF96D9G25P'></script>
-    <script type='text/partytown'>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
 
-      gtag('config', 'G-LF96D9G25P');
-    </script>
+    <!-- Umami -->
+    {
+      import.meta.env.PROD && (
+        <script
+          is:inline
+          defer
+          src='https://cloud.umami.is/script.js'
+          data-website-id='83ed76ba-431f-457e-bff9-f9a30e560544'
+        />
+      )
+    }
   </head>
   <body class='flex min-h-screen flex-col pt-16 bg-white dark:bg-dark-bg'>
     <Header pageTitle={pageTitle} />
