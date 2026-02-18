@@ -9,7 +9,16 @@ import partytown from '@astrojs/partytown';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://nghtctrl.github.io',
-  integrations: [react(), mdx(), icon(), partytown()],
+  integrations: [
+    react(),
+    mdx(),
+    icon(),
+    partytown({
+      config: {
+        forward: ['dataLayer.push'],
+      },
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },
