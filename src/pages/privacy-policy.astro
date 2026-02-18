@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Link from '../components/Link.astro';
+const pageTitle = 'Privacy Policy';
+---
+
+<Layout pageTitle={pageTitle}>
+  <h1>Privacy Policy</h1>
+
+  <p>
+    Thank you for visiting my personal website. Your privacy is important to me.
+    This policy explains what information is and is not collected when you visit
+    this website.
+  </p>
+
+  <p>
+    If you have any questions, comments, or concerns about this policy, please
+    contact me.
+  </p>
+
+  <h2>Cookies</h2>
+  <p>This website does not use cookies.</p>
+
+  <h2>Analytics</h2>
+  <p>
+    This website uses a web analytics service called <Link
+      url='https://umami.is/'>Umami</Link
+    > (hosted on Umami Cloud) to understand overall website usage, such as the number
+    of people who visit different pages.
+  </p>
+  <p>
+    This service is configured not to use cookies, track visitors across
+    websites, or collect personally identifiable information. IP addresses are
+    not stored, and all data is anonymized.
+  </p>
+  <p>
+    The data is processed by Umami Cloud solely to provide analytics services
+    and is accessible only to me. It is not shared to anyone else.
+  </p>
+
+  <h2>Embedded Content</h2>
+  <p>
+    Pages on this website may include embedded content (e.g., videos, images, or
+    articles) from other websites. Embedded content behaves the same as if you
+    visited the external site directly.
+  </p>
+  <p>
+    These third-party sites may collect data about you, use cookies, and track
+    your interaction with their content according to their own privacy policies.
+  </p>
+</Layout>
