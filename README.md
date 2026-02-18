@@ -1,3 +1,3 @@
 # [jihokim.dev](https://jihokim.dev)
 
-Welcome to my website's GitHub repository. I am using [Astro](https://astro.build/) to build my website. This website was designed by me. Please feel free to clone or fork it as a template for your own website.
+Welcome to the GitHub repository for my personal website. The site is built with [Astro](https://astro.build/). The favicon (`wizard.gif`) comes from [Anthony's Icon Library](https://antofthy.gitlab.io/aicons/). Feel free to clone or fork this repository if you'd like to use it as a starting point for your own website.
