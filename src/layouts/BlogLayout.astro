@@ -1,0 +1,21 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Layout from './Layout.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, author } = Astro.props;
+
+const formattedDate = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+  timeZone: 'UTC',
+}).format(pubDate);
+---
+
+<Layout pageTitle={title}>
+  <h1>{title}</h1>
+  <p>By {author} on {formattedDate}</p>
+  <slot />
+</Layout>
