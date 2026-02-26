@@ -3,5 +3,6 @@ export const SITE_CONFIG = {
   description:
     'I am a human-computer interaction researcher studying how AI impacts the way we think, learn, express ourselves, and communicate with others.',
   siteUrl: 'https://jihokim.dev/',
-  ogImage: '/src/assets/og-image.png',
+  ogImage:
+    'https://raw.githubusercontent.com/nghtctrl/nghtctrl.github.io/refs/heads/main/src/assets/og-image.png',
 };
