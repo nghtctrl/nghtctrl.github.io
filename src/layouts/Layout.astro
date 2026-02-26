@@ -11,20 +11,20 @@ const isAbout = pageTitle === 'About';
 <!doctype html>
 <html lang='en'>
   <head>
+    <!-- Common metadata -->
     <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+
+    <!-- Favicon -->
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <link rel='icon' type='image/png' href='/favicon-96x96.png' sizes='96x96' />
     <link rel='shortcut icon' href='/favicon.ico' />
     <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
     <meta name='apple-mobile-web-app-title' content='Jiho Kim' />
     <link rel='manifest' href='/site.webmanifest' />
-    <meta name='viewport' content='width=device-width' />
-    <meta name='generator' content={Astro.generator} />
-    {isAbout ? <title>Jiho Kim</title> : <title>{pageTitle} - Jiho Kim</title>}
-    <meta
-      name='description'
-      content='Jiho Kim is a human-computer interaction researcher studying how AI shapes thinking, writing, communication, and learning.'
-    />
+
+    <!-- Dark/light mode -->
     <script>
       const theme = (() => {
         if (
@@ -57,6 +57,13 @@ const isAbout = pageTitle === 'About';
         />
       )
     }
+
+    <!-- Basic SEO -->
+    <meta
+      name='description'
+      content='Jiho Kim is a human-computer interaction researcher studying how AI shapes thinking, writing, communication, and learning.'
+    />
+    {isAbout ? <title>Jiho Kim</title> : <title>{pageTitle} - Jiho Kim</title>}
   </head>
   <body class='min-h-screen flex flex-col pt-16 bg-white dark:bg-dark-bg'>
     <Header pageTitle={pageTitle} />
