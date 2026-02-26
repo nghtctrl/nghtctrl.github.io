@@ -11,6 +11,9 @@ interface Props {
     title?: string;
     useTitleTemplate?: boolean;
     description?: string;
+    canonicalUrl?: string;
+    index?: boolean;
+    follow?: boolean;
   };
 }
 
@@ -74,6 +77,9 @@ const { metadata } = Astro.props;
         ? `%s - ${SITE_CONFIG.title}`
         : undefined}
       description={metadata?.description || SITE_CONFIG.description}
+      canonical={metadata?.canonicalUrl || Astro.url.href}
+      noindex={metadata?.index === false}
+      nofollow={metadata?.follow === false}
       openGraph={{
         basic: {
           title: SITE_CONFIG.title,
