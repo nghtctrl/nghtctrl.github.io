@@ -1,11 +1,20 @@
 ---
 import '../styles/global.css';
+import { SEO } from 'astro-seo';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Prose from '../components/Prose.astro';
+import { SITE_CONFIG } from '../config';
 
-const { pageTitle } = Astro.props;
-const isAbout = pageTitle === 'About';
+interface Props {
+  metadata?: {
+    title?: string;
+    useTitleTemplate?: boolean;
+    description?: string;
+  };
+}
+
+const { metadata } = Astro.props;
 ---
 
 <!doctype html>
@@ -58,15 +67,25 @@ const isAbout = pageTitle === 'About';
       )
     }
 
-    <!-- Basic SEO -->
-    <meta
-      name='description'
-      content='Jiho Kim is a human-computer interaction researcher studying how AI shapes thinking, writing, communication, and learning.'
+    <!-- SEO -->
+    <SEO
+      title={metadata?.title || SITE_CONFIG.title}
+      titleTemplate={metadata?.useTitleTemplate
+        ? `%s - ${SITE_CONFIG.title}`
+        : undefined}
+      description={metadata?.description || SITE_CONFIG.description}
+      openGraph={{
+        basic: {
+          title: SITE_CONFIG.title,
+          type: 'website',
+          image: SITE_CONFIG.ogImage,
+          url: SITE_CONFIG.siteUrl,
+        },
+      }}
     />
-    {isAbout ? <title>Jiho Kim</title> : <title>{pageTitle} - Jiho Kim</title>}
   </head>
   <body class='min-h-screen flex flex-col pt-16 bg-white dark:bg-dark-bg'>
-    <Header pageTitle={pageTitle} />
+    <Header title={metadata?.title} />
     <main class='flex-1 my-12'>
       <div class='max-w-3xl mx-auto px-4 md:px-0'>
         <Prose>

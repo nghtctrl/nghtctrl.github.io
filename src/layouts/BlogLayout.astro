@@ -4,7 +4,12 @@ import Layout from './Layout.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, author } = Astro.props;
+const { title, pubDate, author } = Astro.props;
+
+const metadata = {
+  title: title,
+  useTitleTemplate: true,
+};
 
 const formattedDate = new Intl.DateTimeFormat('en-US', {
   year: 'numeric',
@@ -14,7 +19,7 @@ const formattedDate = new Intl.DateTimeFormat('en-US', {
 }).format(pubDate);
 ---
 
-<Layout pageTitle={title}>
+<Layout metadata={metadata}>
   <h1>{title}</h1>
   <p>By {author} on {formattedDate}</p>
   <slot />

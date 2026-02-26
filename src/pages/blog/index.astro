@@ -15,10 +15,13 @@ const years: number[] = [
   ...new Set(posts.map((post) => post.data.pubDate.getUTCFullYear())),
 ];
 
-const pageTitle = 'Blog';
+const metadata = {
+  title: 'Blog',
+  useTitleTemplate: true,
+};
 ---
 
-<Layout pageTitle={pageTitle}>
+<Layout metadata={metadata}>
   {
     years.map((year) => (
       <section>

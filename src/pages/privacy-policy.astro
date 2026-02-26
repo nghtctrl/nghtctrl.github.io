@@ -1,10 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Link from '../components/Link.astro';
-const pageTitle = 'Privacy Policy';
+
+const metadata = {
+  title: 'Privacy Policy',
+  useTitleTemplate: true,
+};
 ---
 
-<Layout pageTitle={pageTitle}>
+<Layout metadata={metadata}>
   <h1>Privacy Policy</h1>
 
   <p>
