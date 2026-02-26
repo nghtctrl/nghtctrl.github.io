@@ -5,10 +5,11 @@ import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
 import icon from 'astro-icon';
 import partytown from '@astrojs/partytown';
+import { SITE_CONFIG } from './src/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://nghtctrl.github.io',
+  site: SITE_CONFIG.siteUrl,
   integrations: [
     react(),
     mdx(),
