@@ -5,26 +5,23 @@ import Link from '../components/Link.astro';
 const metadata = {
   title: 'Privacy Policy',
   useTitleTemplate: true,
+  index: false,
 };
 ---
 
 <Layout metadata={metadata}>
   <h1>Privacy Policy</h1>
-
   <p>
     Thank you for visiting my personal website. Your privacy is important to me.
     This policy explains what information is and is not collected when you visit
     this website.
   </p>
-
   <p>
     If you have any questions, comments, or concerns about this policy, please
     contact me.
   </p>
-
   <h2>Cookies</h2>
   <p>This website does not use cookies.</p>
-
   <h2>Analytics</h2>
   <p>
     This website uses a web analytics service called <Link
@@ -41,7 +38,6 @@ const metadata = {
     The data is processed by Umami Cloud solely to provide analytics services
     and is accessible only to me. It is not shared to anyone else.
   </p>
-
   <h2>Embedded Content</h2>
   <p>
     Pages on this website may include embedded content (e.g., videos, images, or
