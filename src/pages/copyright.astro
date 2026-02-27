@@ -1,0 +1,73 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Link from '../components/Link.astro';
+import favicon from '../../public/wizard.gif';
+
+const metadata = {
+  title: 'Copyright',
+  useTitleTemplate: true,
+  index: false,
+};
+---
+
+<Layout metadata={metadata}>
+  <h1>Copyright</h1>
+  <h2>General</h2>
+  <p>
+    Except where otherwise noted (see below), content on this site is licensed
+    under a <Link url='https://creativecommons.org/licenses/by/4.0/'
+      >Creative Commons Attribution 4.0 International license</Link
+    >.
+  </p>
+  <h2>Notes</h2>
+  <ul>
+    <li>
+      My <Link
+        url='https://github.com/nghtctrl/nghtctrl.github.io/blob/cd912915114bfbee4fc938c9a365d505834ee545/src/assets/profile-picture.webp'
+        >profile picture</Link
+      >
+      is a portrait based on my
+      <Link
+        url='https://github.com/nghtctrl/nghtctrl.github.io/blob/cd912915114bfbee4fc938c9a365d505834ee545/src/assets/profile-picture-alternative.webp'
+        >selfie</Link
+      >, illustrated by Koré Qualls, 2023.
+    </li>
+    <li>
+      The favicon
+      <Image
+        src={favicon}
+        alt='Wizard'
+        class='inline-block max-w-5 align-text-bottom'
+      />
+      is from
+      <Link url='https://antofthy.gitlab.io/aicons/'
+        >Anthony's Icon Library</Link
+      >, which is in the public domain.
+    </li>
+    <li>
+      Papers embedded in this website are licensed by their respective
+      publishers (e.g., ACM, IEEE) or repositories that provide open access
+      (e.g., arXiv, OpenReview).
+    </li>
+    <li>
+      Icons used on this website come from <Link url='https://iconify.design/'
+        >Iconify</Link
+      >, a library of open source icons. All icons on Iconify are licensed by
+      their respective open source licenses.
+    </li>
+    <li>
+      This website was designed and built by me using
+      <Link url='https://astro.build/'>Astro</Link>. The <Link
+        url='https://github.com/nghtctrl/nghtctrl.github.io'>code</Link
+      >
+      used to build this website is licensed under the
+      <Link
+        url='https://github.com/nghtctrl/nghtctrl.github.io/blob/99c6eb61645a840dcf8475ce463ce67ee3dbe6e1/LICENSE'
+        >MIT license</Link
+      >. Feel free to clone or fork the code, but please do not scrape the HTML
+      of this website, as it contains analytics tag that you do not want on your
+      own website.
+    </li>
+  </ul>
+</Layout>
