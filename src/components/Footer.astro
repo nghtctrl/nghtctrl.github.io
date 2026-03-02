@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components';
 import Link from '../components/Link.astro';
 ---
 
@@ -8,8 +9,12 @@ import Link from '../components/Link.astro';
   role='contentinfo'
 >
   <div class='max-w-3xl mx-auto'>
-    <p class='text-center text-gray-600 dark:text-gray-400'>
-      <Link url='/privacy-policy' self={true}>Privacy Policy</Link> / <Link url='/copyright' self={true}>Copyright</Link>
+    <p
+      class='flex justify-center items-center text-gray-600 dark:text-gray-400'
+    >
+      <Link url='/privacy-policy' self={true}>Privacy Policy</Link>
+      <Icon name='lucide:dot' class='w-6 h-6' aria-hidden='true' />
+      <Link url='/copyright' self={true}>Copyright</Link>
     </p>
   </div>
 </footer>
