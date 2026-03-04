@@ -12,15 +12,15 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout your repository using git
+        uses: actions/checkout@v6
 
-      - name: Update Year in LICENSE
+      - name: Update year in LICENSE
         run: |
           CURRENT_YEAR=$(date +'%Y')
           sed -i -E "s/Copyright \(c\) [0-9]{4}/Copyright (c) $CURRENT_YEAR/g" LICENSE
 
-      - name: Commit and Push changes
+      - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
