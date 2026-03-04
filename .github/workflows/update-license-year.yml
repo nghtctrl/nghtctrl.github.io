@@ -16,12 +16,12 @@ jobs:
       - name: Check out repo
         uses: actions/checkout@v4
 
-      - name: Update year in LICENSE.md (MIT header line)
+      - name: Update year in LICENSE
         shell: bash
         run: |
           set -euo pipefail
 
-          FILE=$(ls LICENSE* | head -n 1)
+          FILE="LICENSE"
           YEAR="$(date -u +%Y)"
 
           if [[ ! -f "$FILE" ]]; then
@@ -45,6 +45,6 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add LICENSE.md
+          git add LICENSE
           git commit -m "Update LICENSE year to $(date -u +%Y)"
           git push
