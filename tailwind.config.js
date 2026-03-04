@@ -9,6 +9,18 @@ export default {
         'dark-bg': '#151515',
         'lighter-dark-bg': '#202022',
       },
+      fontFamily: {
+        sans: [
+          'ui-sans-serif',
+          'system-ui',
+          'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          '"Noto Color Emoji"',
+          'CCSymbols',
+        ],
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {

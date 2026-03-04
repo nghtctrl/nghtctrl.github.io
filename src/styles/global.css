@@ -1,3 +1,16 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 @config '../../tailwind.config.js';
+
+/* The following code was adapted from https://www.ctrl.blog/entry/creative-commons-unicode-fallback-font.html */
+/* The font was downloaded from https://www.ctrl.blog/file/2020-04-19_cc-symbols.zip */
+@font-face {
+  font-family: 'CCSymbols';
+  font-display: swap;
+  font-synthesis: none;
+  src:
+    url('/fonts/CCSymbols.woff2') format('woff2'),
+    url('/fonts/CCSymbols.woff') format('woff');
+
+  unicode-range: U+00A9, U+229C, U+1F10D-1F10F, U+1F16D-1F16F;
+}
