@@ -81,14 +81,6 @@ const { metadata } = Astro.props;
       canonical={metadata?.canonicalUrl || Astro.url.href}
       noindex={metadata?.index === false}
       nofollow={metadata?.follow === false}
-      openGraph={{
-        basic: {
-          title: SITE_CONFIG.title,
-          type: 'website',
-          image: SITE_CONFIG.ogImage,
-          url: SITE_CONFIG.siteUrl,
-        },
-      }}
     />
   </head>
   <body class='min-h-screen flex flex-col pt-16 bg-white dark:bg-dark-bg'>
