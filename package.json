@@ -17,16 +17,16 @@
     "@iconify-json/fa7-brands": "^1.2.2",
     "@iconify-json/lucide": "^1.2.102",
     "@iconify-json/tabler": "^1.2.33",
-    "@tailwindcss/vite": "^4.2.2",
+    "@tailwindcss/vite": "^4.2.4",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "astro": "^6.1.7",
+    "astro": "^6.1.8",
     "astro-icon": "^1.1.5",
     "astro-seo": "^1.1.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "sharp": "^0.34.5",
-    "tailwindcss": "^4.2.2"
+    "tailwindcss": "^4.2.4"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19"
