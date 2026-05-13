@@ -1,15 +1,36 @@
 ---
-const { hoverColor, url } = Astro.props;
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  href: string;
+  label: string;
+  icon: string;
+  hoverColor?: string;
+}
+
+const { href, label, icon, hoverColor } = Astro.props;
 ---
 
 <a
-  href={url}
+  href={href}
   target='_blank'
   rel='noopener noreferrer'
-  style={`--hover-color: ${hoverColor};`}
-  class='group not-prose flex h-9 w-9 items-center justify-center cursor-pointer transition-all duration-150 hover:scale-105 active:scale-95'
+  aria-label={label}
+  style={hoverColor && `--hover-color: ${hoverColor};`}
+  class='group relative not-prose flex w-full items-center justify-center gap-3 rounded-lg border border-gray-400 px-4 py-3 dark:border-gray-200 cursor-pointer transition-all duration-150 hover:scale-105 active:scale-95 md:h-9 md:w-9 md:border-0 md:gap-0 md:px-0 md:py-0'
 >
-  <div class='transition-colors duration-150 group-hover:text-(--hover-color) dark:group-hover:text-gray-50'>
-    <slot />
-  </div>
+  <Icon
+    name={icon}
+    class='h-6 w-6 shrink-0 transition-colors duration-150 group-hover:text-(--hover-color) dark:group-hover:text-gray-50 md:h-8 md:w-8'
+    aria-hidden='true'
+  />
+  <span class='text-base md:hidden'>
+    {label}
+  </span>
+  <span
+    aria-hidden='true'
+    class='pointer-events-none hidden md:absolute md:top-full md:left-1/2 md:mt-2 md:-translate-x-1/2 md:whitespace-nowrap md:rounded md:bg-gray-900 md:px-2 md:py-1 md:text-xs md:text-white md:opacity-0 md:transition-opacity md:duration-150 md:group-hover:opacity-100 md:group-focus-visible:opacity-100 md:dark:bg-gray-100 md:dark:text-gray-900 md:block'
+  >
+    {label}
+  </span>
 </a>
