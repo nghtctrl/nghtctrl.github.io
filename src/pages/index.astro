@@ -1,6 +1,5 @@
 ---
 import { Image } from 'astro:assets';
-import { Icon } from 'astro-icon/components';
 import Layout from '../layouts/Layout.astro';
 import PaperCard from '../components/PaperCard.astro';
 import SocialMediaButton from '../components/SocialMediaButton.astro';
@@ -49,56 +48,37 @@ import kim2025Cupid from '../assets/paper_thumbnails/kim-2025-cupid.webp';
         class='mx-auto max-w-60 rounded-lg object-cover'
       />
       <div
-        class='flex justify-between mx-4 md:mx-auto mt-6 md:mt-4 mb-4 md:mb-0'
+        class='flex flex-col gap-4 md:mx-auto mt-6 md:mt-4 mb-4 md:mb-0 md:flex-row md:gap-0 md:justify-between'
       >
-        <SocialMediaButton url='/jiho-kim-cv.pdf'>
-          <Icon name='academicons:cv' class='w-8 h-8' aria-hidden='true' />
-        </SocialMediaButton>
         <SocialMediaButton
-          url='https://github.com/nghtctrl'
+          href='/jiho-kim-cv.pdf'
+          label='Curriculum Vitae'
+          icon='academicons:cv'
+        />
+        <SocialMediaButton
+          href='https://github.com/nghtctrl'
+          label='GitHub'
+          icon='fa7-brands:github'
           hoverColor='#101411'
-        >
-          <Icon name='fa7-brands:github' class='w-8 h-8' aria-hidden='true' />
-        </SocialMediaButton>
+        />
         <SocialMediaButton
-          url='https://www.linkedin.com/in/jiho-kim-128aa0199'
+          href='https://www.linkedin.com/in/jiho-kim-128aa0199'
+          label='LinkedIn'
+          icon='fa7-brands:linkedin'
           hoverColor='#0077B5'
-        >
-          <Icon name='fa7-brands:linkedin' class='w-8 h-8' aria-hidden='true' />
-        </SocialMediaButton>
-        <!-- <SocialMediaButton
-          url='https://bsky.app/profile/jiho-kim.bsky.social'
-          hoverColor='#1185FE'
-        >
-          <Icon name='fa7-brands:bluesky' class='w-8 h-8' aria-hidden='true' />
-        </SocialMediaButton> -->
-        <!-- <SocialMediaButton
-          rel='me'
-          url='https://hci.social/@jihokim'
-          hoverColor='#6364FF'
-        >
-          <Icon name='fa7-brands:mastodon' class='w-8 h-8' aria-hidden='true' />
-        </SocialMediaButton> -->
+        />
         <SocialMediaButton
-          url='https://scholar.google.com/citations?hl=en&user=aWisTO4AAAAJ&view_op=list_works&sortby=pubdate'
+          href='https://scholar.google.com/citations?hl=en&user=aWisTO4AAAAJ&view_op=list_works&sortby=pubdate'
+          label='Google Scholar'
+          icon='academicons:google-scholar'
           hoverColor='#4285F4'
-        >
-          <Icon
-            name='academicons:google-scholar'
-            class='w-8 h-8'
-            aria-hidden='true'
-          />
-        </SocialMediaButton>
+        />
         <SocialMediaButton
-          url='https://www.semanticscholar.org/author/Jiho-Kim/2289885996?sort=pub-date'
+          href='https://www.semanticscholar.org/author/Jiho-Kim/2289885996?sort=pub-date'
+          label='Semantic Scholar'
+          icon='academicons:semantic-scholar'
           hoverColor='#11223C'
-        >
-          <Icon
-            name='academicons:semantic-scholar'
-            class='w-8 h-8'
-            aria-hidden='true'
-          />
-        </SocialMediaButton>
+        />
       </div>
     </div>
   </div>
