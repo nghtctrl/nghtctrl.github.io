@@ -12,9 +12,9 @@ import Link from '../components/Link.astro';
     <p
       class='flex justify-center items-center text-gray-600 dark:text-gray-400'
     >
-      <Link url='/privacy-policy' self={true}>Privacy Policy</Link>
+      <Link href='/privacy-policy' isExternal={false}>Privacy Policy</Link>
       <Icon name='lucide:dot' class='w-6 h-6' aria-hidden='true' />
-      <Link url='/copyright' self={true}>Copyright</Link>
+      <Link href='/copyright' isExternal={false}>Copyright</Link>
     </p>
   </div>
 </footer>

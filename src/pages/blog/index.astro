@@ -39,7 +39,7 @@ const metadata = {
               return (
                 <li class='-ml-4'>
                   <span class='mr-1 text-gray-500'>{formattedDate}</span>
-                  <Link url={`/blog/${post.id}/`} self={true}>
+                  <Link href={`/blog/${post.id}/`} isExternal={false}>
                     {post.data.title}
                   </Link>
                 </li>
