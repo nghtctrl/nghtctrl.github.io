@@ -21,7 +21,7 @@
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
     "accessible-astro-components": "^5.2.0",
-    "astro": "^6.3.5",
+    "astro": "^6.3.6",
     "astro-icon": "^1.1.5",
     "astro-seo": "^1.1.0",
     "react": "^19.2.6",
