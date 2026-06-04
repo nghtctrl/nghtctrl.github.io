@@ -11,7 +11,7 @@
   "dependencies": {
     "@astrojs/mdx": "^5.0.6",
     "@astrojs/partytown": "^2.1.7",
-    "@astrojs/react": "^5.0.5",
+    "@astrojs/react": "^5.0.7",
     "@astrojs/sitemap": "^3.7.2",
     "@iconify-json/academicons": "^1.2.4",
     "@iconify-json/fa7-brands": "^1.2.2",
