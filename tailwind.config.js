@@ -5,6 +5,9 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      maxWidth: {
+        layout: '48rem',
+      },
       colors: {
         'dark-bg': '#151515',
         'lighter-dark-bg': '#202022',
