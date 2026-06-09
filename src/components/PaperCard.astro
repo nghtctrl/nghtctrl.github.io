@@ -8,6 +8,9 @@ interface Props {
   venue: string;
   imageSrc?: ImageMetadata;
   pdfUrl?: string;
+  arxivUrl?: string;
+  acmdlUrl?: string;
+  aclanthologyUrl?: string;
   demoUrl?: string;
   posterUrl?: string;
   videoUrl?: string;
@@ -22,6 +25,9 @@ const {
   venue,
   imageSrc,
   pdfUrl,
+  arxivUrl,
+  acmdlUrl,
+  aclanthologyUrl,
   demoUrl,
   posterUrl,
   videoUrl,
@@ -56,6 +62,9 @@ const formattedAuthors = authors.replace(
 
     <nav class='flex gap-2'>
       {pdfUrl && <BracketLink url={pdfUrl}> pdf </BracketLink>}
+      {arxivUrl && <BracketLink url={arxivUrl}> arXiv </BracketLink>}
+      {acmdlUrl && <BracketLink url={acmdlUrl}> ACM DL </BracketLink>}
+      {aclanthologyUrl && <BracketLink url={aclanthologyUrl}> ACL Anthology</BracketLink>}
       {demoUrl && <BracketLink url={demoUrl}> demo </BracketLink>}
       {datasetUrl && <BracketLink url={datasetUrl}> dataset </BracketLink>}
       {posterUrl && <BracketLink url={posterUrl}> poster </BracketLink>}
