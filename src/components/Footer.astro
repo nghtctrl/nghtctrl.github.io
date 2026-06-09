@@ -10,11 +10,10 @@ import Link from '../components/Link.astro';
 >
   <div class='max-w-layout mx-auto'>
     <p
-      class='flex justify-center items-center text-gray-600 dark:text-gray-400'
+      class='flex justify-between items-center text-gray-600 dark:text-gray-400'
     >
+      &copy; {new Date().getFullYear()} Jiho Kim
       <Link href='/privacy-policy' isExternal={false}>Privacy Policy</Link>
-      <Icon name='lucide:dot' class='w-6 h-6' aria-hidden='true' />
-      <Link href='/copyright' isExternal={false}>Copyright</Link>
     </p>
   </div>
 </footer>
