@@ -15,7 +15,7 @@
     "@astrojs/sitemap": "^3.7.3",
     "@iconify-json/academicons": "^1.2.4",
     "@iconify-json/fa7-brands": "^1.2.2",
-    "@iconify-json/lucide": "^1.2.113",
+    "@iconify-json/lucide": "^1.2.114",
     "@iconify-json/tabler": "^1.2.35",
     "@tailwindcss/vite": "^4.3.1",
     "@types/react": "^19.2.17",
@@ -26,7 +26,7 @@
     "astro-seo": "^1.1.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "sharp": "^0.35.1",
+    "sharp": "^0.35.2",
     "tailwindcss": "^4.3.1"
   },
   "devDependencies": {
