@@ -8,13 +8,12 @@ import Link from '../components/Link.astro';
   class='w-full p-4 bg-gray-50 dark:bg-lighter-dark-bg'
   role='contentinfo'
 >
-  <div class='max-w-3xl mx-auto'>
+  <div class='max-w-layout mx-auto'>
     <p
-      class='flex justify-center items-center text-gray-600 dark:text-gray-400'
+      class='flex justify-between items-center text-gray-600 dark:text-gray-400'
     >
-      <Link url='/privacy-policy' self={true}>Privacy Policy</Link>
-      <Icon name='lucide:dot' class='w-6 h-6' aria-hidden='true' />
-      <Link url='/copyright' self={true}>Copyright</Link>
+      &copy; {new Date().getFullYear()} Jiho Kim
+      <Link href='/privacy-policy' isExternal={false}>Privacy Policy</Link>
     </p>
   </div>
 </footer>

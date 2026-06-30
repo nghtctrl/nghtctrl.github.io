@@ -86,7 +86,7 @@ const { metadata } = Astro.props;
   <body class='min-h-screen flex flex-col pt-16 bg-white dark:bg-dark-bg'>
     <Header title={metadata?.title} />
     <main class='flex-1 my-12'>
-      <div class='max-w-3xl mx-auto px-4 md:px-0'>
+      <div class='max-w-layout mx-auto px-4 md:px-0'>
         <Prose>
           <slot />
         </Prose>
