@@ -15,7 +15,7 @@
     "@astrojs/sitemap": "^3.7.3",
     "@iconify-json/academicons": "^1.2.4",
     "@iconify-json/fa7-brands": "^1.2.3",
-    "@iconify-json/lucide": "^1.2.116",
+    "@iconify-json/lucide": "^1.2.117",
     "@iconify-json/tabler": "^1.2.35",
     "@tailwindcss/vite": "^4.3.2",
     "@types/react": "^19.2.17",
